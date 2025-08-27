@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1753710921;last_url|s:28:"http://localhost:8081/upload";_ci_previous_url|s:28:"http://localhost:8081/upload";isLoggedIn|b:1;logout|s:7:"/logout";user|a:3:{s:3:"iat";i:1753709476;s:3:"exp";i:1753713076;s:4:"data";O:8:"stdClass":2:{s:2:"id";s:1:"1";s:8:"username";s:5:"admin";}}

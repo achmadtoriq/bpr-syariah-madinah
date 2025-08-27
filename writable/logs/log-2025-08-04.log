@@ -1,0 +1,16 @@
+CRITICAL - 2025-08-04 04:19:28 --> ErrorException: Undefined variable $uri
+[Method: GET, Route: profil]
+in APPPATH/Views/main/profil.php on line 3.
+ 1 APPPATH/Views/main/profil.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/thors/playground/codeigneter/madinah-ci4/app/Views/main/profil.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/BaseController.php(64): view()
+ 6 APPPATH/Controllers/AboutUsController.php(13): App\Controllers\BaseController->render()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AboutUsController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')

@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1753687322;last_url|s:31:"http://localhost:8081/dashboard";_ci_previous_url|s:31:"http://localhost:8081/dashboard";isLoggedIn|b:1;logout|s:7:"/logout";user|a:3:{s:3:"iat";i:1753687010;s:3:"exp";i:1753690610;s:4:"data";O:8:"stdClass":2:{s:2:"id";s:1:"1";s:8:"username";s:5:"admin";}}

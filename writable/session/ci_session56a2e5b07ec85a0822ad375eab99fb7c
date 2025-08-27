@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1753780223;_ci_previous_url|s:77:"http://localhost:8081/login?error=Sesi+kamu+telah+habis.+Silakan+login+ulang.";isLoggedIn|b:1;logout|s:7:"/logout";user|a:3:{s:3:"iat";i:1753779577;s:3:"exp";i:1753779637;s:4:"data";O:8:"stdClass":2:{s:2:"id";s:1:"1";s:8:"username";s:5:"admin";}}__ci_vars|a:0:{}

@@ -1,0 +1,14 @@
+CRITICAL - 2025-07-22 08:20:20 --> ParseError: syntax error, unexpected token ";"
+[Method: GET, Route: /]
+in APPPATH/Views/layouts/main.php on line 18.
+ 1 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('layouts/main', [], true)
+ 3 APPPATH/Controllers/BaseController.php(67): view('layouts/main', [...])
+ 4 APPPATH/Controllers/Home.php(14): App\Controllers\BaseController->render('welcome_message', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')

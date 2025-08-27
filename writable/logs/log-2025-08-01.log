@@ -1,0 +1,57 @@
+CRITICAL - 2025-08-01 03:42:18 --> TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given
+[Method: GET, Route: galeri]
+in APPPATH/Views/dashboard/upload.php on line 97.
+ 1 SYSTEMPATH/View/View.php(224): include()
+ 2 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 4 APPPATH/Controllers/BaseController.php(64): view()
+ 5 APPPATH/Controllers/GaleriController.php(18): App\Controllers\BaseController->render()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GaleriController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-08-01 03:42:18 --> [Caused by] ErrorException: Undefined variable $images
+in APPPATH/Views/dashboard/upload.php on line 97.
+ 1 APPPATH/Views/dashboard/upload.php(97): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/thors/playground/codeigneter/madinah-ci4/app/Views/dashboard/upload.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/BaseController.php(64): view()
+ 6 APPPATH/Controllers/GaleriController.php(18): App\Controllers\BaseController->render()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GaleriController->index()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-08-01 03:52:29 --> ErrorException: Attempt to read property "loc_id" on array
+[Method: GET, Route: galeri]
+in APPPATH/Controllers/GaleriController.php on line 26.
+ 1 APPPATH/Controllers/GaleriController.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\GaleriController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-08-01 09:04:01 --> ErrorException: Undefined variable $uri
+[Method: GET, Route: /]
+in APPPATH/Views/layouts/header.php on line 22.
+ 1 APPPATH/Views/layouts/header.php(22): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/thors/playground/codeigneter/madinah-ci4/app/Views/layouts/header.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/BaseController.php(63): view()
+ 6 APPPATH/Controllers/Home.php(14): App\Controllers\BaseController->render()
+ 7 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')

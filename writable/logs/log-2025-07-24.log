@@ -1,0 +1,546 @@
+CRITICAL - 2025-07-24 06:46:55 --> CodeIgniter\Exceptions\InvalidArgumentException: "production" is not a valid database connection group.
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/Config.php on line 70.
+ 1 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect('production')
+ 2 APPPATH/Controllers/AuthController.php(18): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 06:52:58 --> CodeIgniter\Exceptions\InvalidArgumentException: "production" is not a valid database connection group.
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/Config.php on line 70.
+ 1 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect('production')
+ 2 APPPATH/Controllers/AuthController.php(18): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 06:53:15 --> CodeIgniter\Exceptions\InvalidArgumentException: "production" is not a valid database connection group.
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/Config.php on line 70.
+ 1 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect('production')
+ 2 APPPATH/Controllers/AuthController.php(18): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 06:53:38 --> CodeIgniter\Exceptions\InvalidArgumentException: "production" is not a valid database connection group.
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/Config.php on line 70.
+ 1 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect('production')
+ 2 APPPATH/Controllers/AuthController.php(18): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 06:54:29 --> CodeIgniter\Exceptions\InvalidArgumentException: "production" is not a valid database connection group.
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/Config.php on line 70.
+ 1 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect('production')
+ 2 APPPATH/Controllers/AuthController.php(18): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 06:55:20 --> CodeIgniter\Exceptions\InvalidArgumentException: "production" is not a valid database connection group.
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/Config.php on line 70.
+ 1 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect('production')
+ 2 APPPATH/Controllers/AuthController.php(22): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 06:56:19 --> CodeIgniter\Exceptions\InvalidArgumentException: "production" is not a valid database connection group.
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/Config.php on line 70.
+ 1 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect('production')
+ 2 APPPATH/Controllers/AuthController.php(22): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 06:56:39 --> CodeIgniter\Exceptions\InvalidArgumentException: "production" is not a valid database connection group.
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/Config.php on line 70.
+ 1 SYSTEMPATH/Model.php(155): CodeIgniter\Database\Config::connect('production')
+ 2 APPPATH/Controllers/AuthController.php(22): CodeIgniter\Model->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 4 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 07:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:12:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-24 07:12:27 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'admin_madinah', Object(SensitiveParameterValue), 'madinahbprs', 3306, '', 0)
+#1 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/thors/playground/codeigneter/madinah-ci4/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/thors/playground/codeigneter/madinah-ci4/system/BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 /opt/thors/playground/codeigneter/madinah-ci4/app/Controllers/AuthController.php(23): CodeIgniter\BaseModel->first()
+#7 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+#8 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /opt/thors/playground/codeigneter/madinah-ci4/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /opt/thors/playground/codeigneter/madinah-ci4/system/rewrite.php(44): require_once('/opt/thors/play...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/thors/playground/codeigneter/madinah-ci4/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/thors/playground/codeigneter/madinah-ci4/system/BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 /opt/thors/playground/codeigneter/madinah-ci4/app/Controllers/AuthController.php(23): CodeIgniter\BaseModel->first()
+#6 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+#7 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /opt/thors/playground/codeigneter/madinah-ci4/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /opt/thors/playground/codeigneter/madinah-ci4/system/rewrite.php(44): require_once('/opt/thors/play...')
+#13 {main}
+CRITICAL - 2025-07-24 07:12:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+ERROR - 2025-07-24 07:14:30 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'admin_madinah', Object(SensitiveParameterValue), 'madinahbprs', 3306, '', 0)
+#1 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 /opt/thors/playground/codeigneter/madinah-ci4/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /opt/thors/playground/codeigneter/madinah-ci4/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /opt/thors/playground/codeigneter/madinah-ci4/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /opt/thors/playground/codeigneter/madinah-ci4/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MigrationRunner.php(162): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 /opt/thors/playground/codeigneter/madinah-ci4/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 /opt/thors/playground/codeigneter/madinah-ci4/system/CLI/Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 /opt/thors/playground/codeigneter/madinah-ci4/system/CLI/Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(360): CodeIgniter\CLI\Console->run()
+#10 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 /opt/thors/playground/codeigneter/madinah-ci4/spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+DEBUG - 2025-07-24 07:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-24 07:15:05 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MySQLi/Connection.php(201): mysqli->real_connect('localhost', 'admin_madinah', Object(SensitiveParameterValue), 'madinahbprs', 3306, '', 0)
+#1 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /opt/thors/playground/codeigneter/madinah-ci4/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/thors/playground/codeigneter/madinah-ci4/system/BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 /opt/thors/playground/codeigneter/madinah-ci4/app/Controllers/AuthController.php(23): CodeIgniter\BaseModel->first()
+#7 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+#8 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 /opt/thors/playground/codeigneter/madinah-ci4/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 /opt/thors/playground/codeigneter/madinah-ci4/system/rewrite.php(44): require_once('/opt/thors/play...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /opt/thors/playground/codeigneter/madinah-ci4/system/Database/MySQLi/Connection.php:246
+Stack trace:
+#0 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/thors/playground/codeigneter/madinah-ci4/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /opt/thors/playground/codeigneter/madinah-ci4/system/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/thors/playground/codeigneter/madinah-ci4/system/BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 /opt/thors/playground/codeigneter/madinah-ci4/app/Controllers/AuthController.php(23): CodeIgniter\BaseModel->first()
+#6 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+#7 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 /opt/thors/playground/codeigneter/madinah-ci4/system/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 /opt/thors/playground/codeigneter/madinah-ci4/system/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 /opt/thors/playground/codeigneter/madinah-ci4/public/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 /opt/thors/playground/codeigneter/madinah-ci4/system/rewrite.php(44): require_once('/opt/thors/play...')
+#13 {main}
+CRITICAL - 2025-07-24 07:15:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 467.
+ 1 SYSTEMPATH/Database/BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH/Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Controllers/AuthController.php(23): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 07:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:42:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:42:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:44:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 07:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:53:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-24 08:53:54 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: login]
+in APPPATH/Controllers/AuthController.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 08:54:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-24 08:55:04 --> Error: Call to undefined function App\Controllers\generateJWT()
+[Method: POST, Route: login]
+in APPPATH/Controllers/AuthController.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 08:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-24 08:56:48 --> Error: Call to undefined function App\Controllers\set_cookie()
+[Method: POST, Route: login]
+in APPPATH/Controllers/AuthController.php on line 36.
+ 1 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\AuthController->attemptLogin()
+ 2 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 3 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 08:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 08:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:08:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-24 09:15:07 --> [DEPRECATED] exit(): Passing null to parameter #1 ($status) of type string|int is deprecated in APPPATH/Filters/AuthFilter.php on line 34.
+ 1 APPPATH/Filters/AuthFilter.php(34): exit(null)
+ 2 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 09:15:50 --> ErrorException: Undefined property: App\Filters\AuthFilter::$request
+[Method: GET, Route: dashboard]
+in APPPATH/Filters/AuthFilter.php on line 32.
+ 1 APPPATH/Filters/AuthFilter.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Filters\\AuthFilter::$request', '/opt/thors/playground/codeigneter/madinah-ci4/app/Filters/AuthFilter.php', 32)
+ 2 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:20:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:20:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-24 09:27:08 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: dashboard]
+in APPPATH/Filters/AuthFilter.php on line 48.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-24 09:27:40 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: dashboard]
+in APPPATH/Filters/AuthFilter.php on line 48.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:27:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-24 09:30:12 --> [DEPRECATED] Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$user is deprecated in APPPATH/Filters/AuthFilter.php on line 43.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-24 09:32:23 --> [DEPRECATED] Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$user is deprecated in APPPATH/Filters/AuthFilter.php on line 49.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-24 09:32:26 --> [DEPRECATED] Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$user is deprecated in APPPATH/Filters/AuthFilter.php on line 49.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-24 09:34:27 --> [DEPRECATED] Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$user is deprecated in APPPATH/Filters/AuthFilter.php on line 49.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-24 09:35:48 --> [DEPRECATED] Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$user is deprecated in APPPATH/Filters/AuthFilter.php on line 49.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 09:35:48 --> ErrorException: Attempt to read property "data" on array
+[Method: GET, Route: dashboard]
+in APPPATH/Views/dashboard/home.php on line 15.
+ 1 APPPATH/Views/dashboard/home.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "data" on array', '/opt/thors/playground/codeigneter/madinah-ci4/app/Views/dashboard/home.php', 15)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/thors/playground/codeigneter/madinah-ci4/app/Views/dashboard/home.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('dashboard/home', [], true)
+ 5 APPPATH/Controllers/DashboardController.php(13): view('dashboard/home', [])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-24 09:35:55 --> [DEPRECATED] Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$user is deprecated in APPPATH/Filters/AuthFilter.php on line 49.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 09:35:55 --> ErrorException: Attempt to read property "username" on array
+[Method: GET, Route: dashboard]
+in APPPATH/Views/dashboard/home.php on line 15.
+ 1 APPPATH/Views/dashboard/home.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "username" on array', '/opt/thors/playground/codeigneter/madinah-ci4/app/Views/dashboard/home.php', 15)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/thors/playground/codeigneter/madinah-ci4/app/Views/dashboard/home.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('dashboard/home', [], true)
+ 5 APPPATH/Controllers/DashboardController.php(13): view('dashboard/home', [])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:36:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-24 09:36:16 --> [DEPRECATED] Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$user is deprecated in APPPATH/Filters/AuthFilter.php on line 49.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-24 09:36:16 --> ErrorException: Undefined array key "username"
+[Method: GET, Route: dashboard]
+in APPPATH/Views/dashboard/home.php on line 15.
+ 1 APPPATH/Views/dashboard/home.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', '/opt/thors/playground/codeigneter/madinah-ci4/app/Views/dashboard/home.php', 15)
+ 2 SYSTEMPATH/View/View.php(224): include('/opt/thors/playground/codeigneter/madinah-ci4/app/Views/dashboard/home.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('dashboard/home', [], true)
+ 5 APPPATH/Controllers/DashboardController.php(13): view('dashboard/home', [])
+ 6 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:36:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-07-24 09:36:28 --> [DEPRECATED] Creation of dynamic property CodeIgniter\HTTP\IncomingRequest::$user is deprecated in APPPATH/Filters/AuthFilter.php on line 49.
+ 1 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:44:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:46:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-24 09:53:36 --> ArgumentCountError: Too few arguments to function CodeIgniter\HTTP\Response::redirect(), 0 passed in /opt/thors/playground/codeigneter/madinah-ci4/app/Filters/AuthFilter.php on line 54 and at least 1 expected
+[Method: GET, Route: dashboard]
+in SYSTEMPATH/HTTP/ResponseTrait.php on line 451.
+ 1 APPPATH/Filters/AuthFilter.php(54): CodeIgniter\HTTP\Response->redirect()
+ 2 SYSTEMPATH/Filters/Filters.php(241): App\Filters\AuthFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH/Filters/Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 4 SYSTEMPATH/CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+DEBUG - 2025-07-24 09:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 09:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 10:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-24 10:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

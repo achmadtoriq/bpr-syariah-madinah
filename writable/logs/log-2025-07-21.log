@@ -1,0 +1,100 @@
+CRITICAL - 2025-07-21 06:21:04 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: tree/data]
+in APPPATH/Controllers/TreeController.php on line 30.
+ 1 APPPATH/Controllers/TreeController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/opt/thors/playground/codeigneter/madinah-ci4/app/Controllers/TreeController.php', 30)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TreeController->data()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TreeController))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-21 06:21:18 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: tree/data]
+in APPPATH/Controllers/TreeController.php on line 30.
+ 1 APPPATH/Controllers/TreeController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/opt/thors/playground/codeigneter/madinah-ci4/app/Controllers/TreeController.php', 30)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TreeController->data()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TreeController))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-21 06:21:42 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: tree/data]
+in APPPATH/Controllers/TreeController.php on line 30.
+ 1 APPPATH/Controllers/TreeController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/opt/thors/playground/codeigneter/madinah-ci4/app/Controllers/TreeController.php', 30)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TreeController->data()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TreeController))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-21 06:22:17 --> ErrorException: Undefined array key "name"
+[Method: GET, Route: tree/data]
+in APPPATH/Controllers/TreeController.php on line 33.
+ 1 APPPATH/Controllers/TreeController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name"', '/opt/thors/playground/codeigneter/madinah-ci4/app/Controllers/TreeController.php', 33)
+ 2 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\TreeController->data()
+ 3 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TreeController))
+ 4 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-21 08:15:36 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 APPPATH/Controllers/BaseController.php(65): view('layout/main', [...])
+ 4 APPPATH/Controllers/Home.php(11): App\Controllers\BaseController->render('welcome_message', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-21 08:15:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 APPPATH/Controllers/BaseController.php(65): view('layout/main', [...])
+ 4 APPPATH/Controllers/Home.php(11): App\Controllers\BaseController->render('welcome_message', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-21 08:16:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 APPPATH/Controllers/BaseController.php(65): view('layout/main', [...])
+ 4 APPPATH/Controllers/Home.php(11): App\Controllers\BaseController->render('welcome_message', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
+CRITICAL - 2025-07-21 08:17:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/main.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/main.php')
+ 2 SYSTEMPATH/Common.php(1173): CodeIgniter\View\View->render('layout/main', [], true)
+ 3 APPPATH/Controllers/BaseController.php(65): view('layout/main', [...])
+ 4 APPPATH/Controllers/Home.php(14): App\Controllers\BaseController->render('welcome_message', [...])
+ 5 SYSTEMPATH/CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH/CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH/CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/opt/thors/playground/codeigneter/madinah-ci4/public/index.php')
