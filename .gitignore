@@ -17,5 +17,5 @@ application/logs/*
 !application/logs/.htaccess
 /vendor/
 
-node_modules
-.env
+# node_modules
+# .env

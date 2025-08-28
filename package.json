@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss -i ./public/css/custom-tailwindcss.css -o ./public/css/cli-tailwindcss.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,8 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12"
   }
 }
