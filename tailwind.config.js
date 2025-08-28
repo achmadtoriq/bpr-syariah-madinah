@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/Views/**/*.php", // agar Tailwind scan file Blade PHP
-    "./public/**/*.html",
+    './app/Views/**/*.php',
+    './app/Views/**/*.html',
+    './public/**/*.js',
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-};
+}
