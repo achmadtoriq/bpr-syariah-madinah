@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.js"></script>
 
 
+    <link rel="stylesheet" href="<?= base_url('css/custom-tailwindcss.css')?>">
     <link rel="stylesheet" href="<?= base_url('css/cli-tailwindcss.css')?>">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <script src="https://unpkg.com/alpinejs" defer></script>
