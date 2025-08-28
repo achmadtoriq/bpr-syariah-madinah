@@ -11,10 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.js"></script>
 
-
-    <link rel="stylesheet" href="<?= base_url('css/custom-tailwindcss.css')?>">
-    <link rel="stylesheet" href="<?= base_url('css/cli-tailwindcss.css')?>">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://kit.fontawesome.com/a7feba845e.js" crossorigin="anonymous"></script>
 
