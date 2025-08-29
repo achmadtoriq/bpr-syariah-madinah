@@ -29,6 +29,7 @@ class UploadController extends BaseController
     {
         $file = $this->request->getFile('image');
         $desc = $this->request->getPost('description');
+        $category = $this->request->getPost('category');
 
         if (!$file || !$file->isValid()) {
             return Services::response()
@@ -49,8 +50,9 @@ class UploadController extends BaseController
 
         /* insert data image */
         $this->imageModel->insert([
-            'description' => $desc,
-            'image_url' => $url_image
+            'description'   => $desc,
+            'image_url'     => $url_image,
+            'loc_id'        => $category
         ]);
 
         return $this->response->setJSON([
