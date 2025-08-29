@@ -8,6 +8,6 @@ class ImageModel extends Model
 {
     protected $table = 'images';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['description', 'image_url', 'created_at'];
+    protected $allowedFields = ['description', 'image_url', 'created_at', 'loc_id'];
     public $timestamps = false;
 }
