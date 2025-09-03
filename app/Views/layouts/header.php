@@ -7,7 +7,7 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
 
 <!-- ✅ HEADER / NAVBAR -->
 <header class="w-full fixed top-0 left-0 shadow z-50 bg-white">
-    <div class="bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white text-xs font-medium">
+    <div class="hidden md:block bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white text-xs font-medium">
         <div class="container mx-auto py-2">
             <div class="flex flex-1 justify-between items-center">
                 <p class="antialiased md:subpixel-antialiased"><i class="fa-solid fa-phone"></i> (0322) 314 999</p>
@@ -21,7 +21,7 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
 
         <!-- Logo -->
-        <img src="<?= base_url('assets/madinah.png') ?>" alt="Logo" class="w-auto size-10">
+        <img src="<?= base_url('assets/madinah.png') ?>" alt="Logo" class="w-auto size-7 md:size-10">
 
         <!-- Desktop Nav -->
         <!-- Navbar -->
@@ -73,9 +73,64 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
     </div>
 
     <!-- Mobile Nav -->
-    <div class="md:hidden px-4 pb-4" x-show="open" x-transition>
-        <a href="<?= base_url('/') ?>" class="block py-2 text-gray-700 hover:text-blue-500">Home</a>
-        <a href="<?= base_url('/about') ?>" class="block py-2 text-gray-700 hover:text-blue-500">About</a>
-        <a href="<?= base_url('/contact') ?>" class="block py-2 text-gray-700 hover:text-blue-500">Contact</a>
+    <div x-show="open" x-transition x-data="{ openTentangKami: false, openProduk: false }">
+        <div class="md:hidden px-4">
+            <a href="<?= base_url('/') ?>" class="overflow-y-auto block p-2 text-gray-800 hover:text-blue-500 hover:bg-gray-200 rounded">Home</a>
+
+            <!-- Tentang Kami Collapse -->
+            <div>
+                <button @click="openTentangKami = !openTentangKami"
+                    class="w-full flex justify-between items-center p-2 text-gray-800 hover:bg-gray-200 rounded hover:text-blue-500">
+                    Tentang Kami
+                    <svg :class="openTentangKami ? 'rotate-180' : ''"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <!-- Submenu Collapse -->
+                <div x-show="openTentangKami" x-collapse class="ml-4 mt-2 space-y-2">
+                    <a href="<?= base_url('/profil') ?>" class="block p-2 <?= $uri->getPath() === '/profil' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Profil Perusahaan</a>
+                    <a href="<?= base_url('/managemen') ?>" class="block p-2 <?= $uri->getPath() === '/managemen' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Manajemen</a>
+                    <a href="<?= base_url('/struktur_organisasi') ?>" class="block p-2 <?= $uri->getPath() === '/struktur_organisasi' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Struktur Ogranisasi</a>
+                    <a href="<?= base_url('/awards') ?>" class="block p-2 <?= $uri->getPath() === '/awards' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Penghargaan</a>
+                    <a href="<?= base_url('/keuangan') ?>" class="block p-2 <?= $uri->getPath() === '/keuangan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Keuangan</a>
+                </div>
+            </div>
+
+            <!-- Produk Collapse -->
+            <div>
+                <button @click="openProduk = !openProduk"
+                    class="w-full flex justify-between items-center p-2 text-gray-800 hover:bg-gray-200 rounded hover:text-blue-500">
+                    Produk
+                    <svg :class="openProduk ? 'rotate-180' : ''"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <!-- Submenu Collapse -->
+                <div x-show="openProduk" x-collapse class="ml-4 mt-2 space-y-2">
+                    <a href="<?= base_url('/tabungan') ?>" class="block p-2 <?= $uri->getPath() === '/tabungan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Tabungan</a>
+                    <a href="<?= base_url('/deposito') ?>" class="block p-2 <?= $uri->getPath() === '/deposito' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Deposito</a>
+                    <a href="<?= base_url('/pembiayaan') ?>" class="block p-2 <?= $uri->getPath() === '/pembiayaan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Pembiayaan</a>
+                    <a href="<?= base_url('/pelayanan') ?>" class="block p-2 <?= $uri->getPath() === '/pelayanan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Layanan Lainnya</a>
+                </div>
+            </div>
+
+            <a href="<?= base_url('/galeri') ?>" class="block p-2 <?= $uri->getPath() === '/galeri' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Galeri</a>
+            <a href="<?= base_url('/berita') ?>" class="block p-2 <?= $uri->getPath() === '/berita' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Berita</a>
+            <a href="<?= base_url('/karir') ?>" class="block p-2 <?= $uri->getPath() === '/karir' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Karir</a>
+            <a href="<?= base_url('/hubungi_kami') ?>" class="block p-2 <?= $uri->getPath() === '/hubungi_kami' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Kontak Kami</a>
+        </div>
+
+        <div class="grid grid-cols-2 justify-between items-center bg-blue-700 p-2 text-white font-semibold text-center">
+            <p class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-instagram"></i> Instagram</p>
+            <p class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-square-facebook"></i> Facebook</p>
+        </div>
     </div>
 </header>
