@@ -1,7 +1,7 @@
-<main class="w-full mx-auto mt-24 py-1">
-    <div class="container mx-auto my-10">
-        <div class="text-center mb-14">
-            <h1 class="text-3xl font-bold">Profil Perusahaan</h1>
+<main class="w-full mx-auto mt-14 md:mt-24 py-1">
+    <div class="container mx-auto my-5 md:my-10 p-5 md:p-1">
+        <div class="text-center mb-7 md:mb-14">
+            <h1 class="text-xl md:text-3xl font-bold">Profil Perusahaan</h1>
             <!-- Bouncing dots -->
             <div class="flex justify-center gap-2 mt-3 h-5">
                 <span class="w-3 h-3 bg-blue-600 rounded-full animate-bounce [animation-delay:0ms]"></span>
@@ -11,8 +11,8 @@
         </div>
 
         <div class="max-w-4xl mx-auto mb-10">
-            <div class="grid grid-cols-2 gap-6 tracking-normal text-justify">
-                <img src="/assets/kantor_madinah.jpeg" alt="" class="rounded-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-5 md:gap-x-5 tracking-normal text-justify">
+                <img src="<?php echo base_url('/assets/kantor_madinah.jpeg') ?>" alt="" class="w-auto rounded-sm">
                 <div>
                     <h2 class="font-bold text-xl mb-5 uppercase">Sejarah Perusahaan</h2>
                     <p class="text-base">
@@ -33,7 +33,7 @@
 
         </div>
 
-        <div class="max-w-4xl mx-auto p-6 border rounded-lg mb-10">
+        <div class="max-w-4xl mx-auto p-6 border rounded-lg mb-10 text-justify md:text-left">
             <div class="py-3 space-y-3">
                 <p class="font-semibold">VISI</p>
                 <p class="mb-4">PT. BPR Syariah Madinah Lamongan memiliki visi menjadi Bank Pembiayaan Rakyat Syariah terkemuka yang selalu mengutamakan kemajuan, kesejahteraan dan kepuasan nasabah.</p>
@@ -42,7 +42,7 @@
                 <p class="font-semibold">MISI</p>
                 <p class="mb-4">Untuk mencapai visi tersebut maka misi PT. BPR Syariah Madinah Lamongan adalah:</p>
 
-                <ol class="list-outside list-decimal space-y-3 mr-10 px-4">
+                <ol class="list-outside list-decimal space-y-3 md:mr-10 pl-4 md:px-4">
                     <li>Melakukan pelayanan perbankan sistem syariah terbaik dikelasnya berdasarkan iman dan taqwa kepada Allah swt (IMTAQ) dan ibadah dengan mengutamakan pelayanan kepada pengusaha mikro kecil, menengah dan pegawai/pekerja untuk membangun/menunjang perkembangan Ekonomi Islam masyarakat Islam khususnya dan masyarakat Indonesia pada umumnya.</li>
                     <li>Memberikan pelayanan terbaik dan prima kepada nasabah dengan melaksanakan Good Corporate Governance (GCG) berlandaskan IMTAQ.</li>
                     <li>Memberikan keuntungan dan manfaat yang optimal kepada share holders dan stake holders lainnya</li>
@@ -60,8 +60,8 @@
 
                 <!-- Corporate Culture -->
                 <!-- Background Logo -->
-                <div class="absolute inset-0 flex justify-center items-center opacity-35">
-                    <div class="w-[480px] h-[480px] bg-blue-500 rounded-full flex justify-center items-center text-[9rem] font-bold text-white">
+                <div class="absolute inset-0 flex justify-center items-center opacity-30">
+                    <div class="w-[480px] h-[480px] md:bg-blue-500 rounded-full flex justify-center items-center text-[8rem] md:text-[9rem] font-bold text-blue-500 md:text-white">
                         itQon
                     </div>
                 </div>

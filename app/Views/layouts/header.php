@@ -18,14 +18,14 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
             </div>
         </div>
     </div>
-    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="container mx-auto py-4 flex items-center justify-between">
 
         <!-- Logo -->
-        <img src="<?= base_url('assets/madinah.png') ?>" alt="Logo" class="w-auto size-7 md:size-10">
+        <img src="<?= base_url('assets/madinah.png') ?>" alt="Logo" class="w-auto h-7 md:h-10 px-4">
 
         <!-- Desktop Nav -->
         <!-- Navbar -->
-        <nav class="hidden md:flex space-x-12" x-data="{ open_kami: false, open_produk: false }">
+        <nav class="hidden md:flex space-x-12 px-4" x-data="{ open_kami: false, open_produk: false }">
             <a href="<?= base_url() ?>" class="<?= $uri->getPath() === '/' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Home</a>
 
             <!-- Dropdown "Tentang Kami" -->
@@ -62,7 +62,7 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
         </nav>
 
         <!-- Mobile Button -->
-        <button class="md:hidden text-gray-700" @click="open = !open">
+        <button class="md:hidden text-gray-700 px-4" @click="open = !open">
             <!-- Hamburger Icon -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">

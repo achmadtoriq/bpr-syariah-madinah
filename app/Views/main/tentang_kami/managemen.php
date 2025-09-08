@@ -1,7 +1,7 @@
-<main class="w-full mx-auto mt-24 py-1">
-    <div class="container mx-auto my-10">
-        <div class="text-center mb-14">
-            <h1 class="text-3xl font-bold">Managemen Kami</h1>
+<main class="w-full mx-auto mt-14 md:mt-24 py-1">
+    <div class="container mx-auto my-5 md:my-10 px-5">
+        <div class="text-center mb-7 md:mb-14">
+            <h1 class="text-xl md:text-3xl font-bold">Managemen Kami</h1>
             <!-- Bouncing dots -->
             <div class="flex justify-center gap-2 mt-3 h-5">
                 <span class="w-3 h-3 bg-blue-600 rounded-full animate-bounce [animation-delay:0ms]"></span>
@@ -12,13 +12,13 @@
 
         <div class="border rounded-md mb-14">
             <p class="bg-gray-400 text-white rounded-t-md p-2 font-semibold">Pemegang Saham</p>
-            <div class="grid grid-cols-2 gap-4 p-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 md:gap-y-4 p-5">
 
-                <div class="grid grid-cols-5 gap-3">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
                     <img src="" alt="" class="col-span-2">
                     <div class="space-y-4 col-span-3">
                         <div class="space-y-1">
-                            <h2 class="text-2xl font-bold">Hj. Makhdumah Spd., Mpd</h2>
+                            <h2 class="text-xl md:text-2xl font-bold">Hj. Makhdumah Spd., Mpd</h2>
                             <p class="text-base">Pemegang Saham Pengendali</p>
                         </div>
 
@@ -33,7 +33,7 @@
                             </ul>
                         </div>
 
-                        <div class="">
+                        <div class="text-justify">
                             <p class="font-bold">Pelatihan :</p>
                             <ul class="list-disc list-outside ml-5">
                                 <li>Seminar " Peran istri dalam menunjang karir suami"</li>
@@ -48,11 +48,11 @@
 
                 </div>
 
-                <div class="grid grid-cols-5 gap-3">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
                     <img src="" alt="" class="col-span-2">
                     <div class="space-y-4 col-span-3">
                         <div class="space-y-1">
-                            <h2 class="text-2xl font-bold">DR. H. Yuhronur Efendi, MBA</h2>
+                            <h2 class="text-xl md:text-2xl font-bold">DR. H. Yuhronur Efendi, MBA</h2>
                             <p class="text-base">Pemegang Saham</p>
                         </div>
 
@@ -73,7 +73,7 @@
                             </ul>
                         </div>
 
-                        <div class="">
+                        <div class="text-justify">
                             <p class="font-bold">Pelatihan :</p>
                             <ul class="list-disc list-outside ml-5">
                                 <li>Administrasi Keuangan Daerah (Diklatprop. Jatim)</li>
@@ -92,13 +92,13 @@
 
         <div class="border rounded-md mb-14">
             <p class="bg-gray-400 text-white rounded-t-md p-2 font-semibold">Dewan Komisaris</p>
-            <div class="grid grid-cols-2 gap-4 p-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 md:gap-y-4 p-5">
 
-                <div class="grid grid-cols-5 gap-3">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
                     <img src="" alt="" class="col-span-2">
                     <div class="space-y-4 col-span-3">
                         <div class="space-y-1">
-                            <h2 class="text-2xl font-bold">Deni Arifianto, MM</h2>
+                            <h2 class="text-xl md:text-2xl font-bold">Deni Arifianto, MM</h2>
                             <p class="text-base">Komisaris Utama</p>
                         </div>
 
@@ -123,7 +123,7 @@
                             </ul>
                         </div>
 
-                        <div class="">
+                        <div class="text-justify">
                             <p class="font-bold">Pelatihan :</p>
                             <ul class="list-disc list-outside ml-5">
                                 <li>Pelatihan Sertifikasi Kompetensi Komisaris BPRS</li>
@@ -132,17 +132,17 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-5 gap-3">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
                     <img src="" alt="" class="col-span-2">
                     <div class="space-y-4 col-span-3">
                         <div class="space-y-1">
-                            <h2 class="text-2xl font-bold">Drs. Nyuwito, MM</h2>
+                            <h2 class="text-xl md:text-2xl font-bold">Drs. Nyuwito, MM</h2>
                             <p class="text-base">Komisaris</p>
                         </div>
 
                         <p>Warga Negara Indonesia, Lahir di Lamongan 12 Februari 1954</p>
                         <p><span class="font-bold">Pendidikan:</span> Lulusan Magister STIE Mitra Indonesia Yogyakarta</p>
-                        <div>
+                        <div class="text-justify">
                             <p class="font-bold">Pengalaman Kerja :</p>
                             <ul class="list-disc list-outside ml-5">
                                 <li>Dirut Bank Daerah Lamongan, 2003 - 2006</li>
@@ -151,7 +151,7 @@
                             </ul>
                         </div>
 
-                        <div class="">
+                        <div class="text-justify">
                             <p class="font-bold">Pelatihan :</p>
                             <ul class="list-disc list-outside ml-5">
                                 <li>Sertifikasi profesi Lembaga Keuangan Mikro Direktur Bank Pengkreditan Rakyat, 2000</li>
@@ -166,13 +166,13 @@
 
         <div class="border rounded-md mb-14">
             <p class="bg-gray-400 text-white rounded-t-md p-2 font-semibold">Dewan Pengawas Syariah</p>
-            <div class="grid grid-cols-1 gap-4 p-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 md:gap-y-4 p-5">
 
-                <div class="grid grid-cols-5 gap-3">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
                     <img src="" alt="" class="col-span-2">
                     <div class="space-y-4 col-span-3">
                         <div class="space-y-1">
-                            <h2 class="text-2xl font-bold">KH. Abdul Aziz Choiri</h2>
+                            <h2 class="text-xl md:text-2xl font-bold">KH. Abdul Aziz Choiri</h2>
                             <p class="text-base">Ketua Dewan Pengawas Syariah</p>
                         </div>
 
@@ -207,13 +207,13 @@
 
         <div class="border rounded-md mb-14">
             <p class="bg-gray-400 text-white rounded-t-md p-2 font-semibold">Direksi</p>
-            <div class="grid grid-cols-2 gap-4 p-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 md:gap-y-4 p-5">
 
-                <div class="grid grid-cols-5 gap-3">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
                     <img src="" alt="" class="col-span-2">
                     <div class="space-y-4 col-span-3">
                         <div class="space-y-1">
-                            <h2 class="text-2xl font-bold">Swida Dwi Handoyo, S.E</h2>
+                            <h2 class="text-xl md:text-2xl font-bold">Swida Dwi Handoyo, S.E</h2>
                             <p class="text-base">Direktur Utama</p>
                         </div>
 
@@ -221,7 +221,7 @@
 
                         <p><span class="font-bold">Pendidikan:</span> Lulusan Sarjana Ekonomi / S-1 (Jurusan Studi Pembangunan) Universitas Negeri Jember, 1993</p>
 
-                        <div>
+                        <div class="text-justify">
                             <p class="font-bold">Pengalaman Kerja :</p>
                             <ul class="list-disc list-outside ml-5">
                                 <li>Pengelola BPT BMT "Barokatul Ummah" Jember, 1995 - 1996</li>
@@ -234,7 +234,7 @@
                             </ul>
                         </div>
 
-                        <div class="">
+                        <div class="text-justify">
                             <p class="font-bold">Pelatihan :</p>
                             <ul class="list-disc list-outside ml-5">
                                 <li>Pendidikandan Pelatihan Baitul Mal Wa Tamwil (BMT) oleh Lembaga Manajemen Potensi Ummat (LPMU), 1995</li>
@@ -253,11 +253,11 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-5 gap-3">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
                     <img src="" alt="" class="col-span-2">
                     <div class="space-y-4 col-span-3">
                         <div class="space-y-1">
-                            <h2 class="text-2xl font-bold">Anwar, S.E</h2>
+                            <h2 class="text-xl md:text-2xl font-bold">Anwar, S.E</h2>
                             <p class="text-base">Direktur</p>
                         </div>
 
@@ -265,7 +265,7 @@
 
                         <p><span class="font-bold">Pendidikan:</span> Lulusan Sarjana Ekonomi / S-1 (Jurusan Ekonomi Manajemen) Universitas Islam Lamongan, 2006</p>
 
-                        <div>
+                        <div class="text-justify">
                             <p class="font-bold">Pengalaman Kerja :</p>
                             <ul class="list-disc list-outside ml-5">
                                 <li>Account officer / AO PT. BPR Mitra Dhanaceswara, 1995 - 2002</li>
@@ -278,7 +278,7 @@
                             </ul>
                         </div>
 
-                        <div class="">
+                        <div class="text-justify">
                             <p class="font-bold">Pelatihan :</p>
                             <ul class="list-disc list-outside ml-5">
                                 <li>Achievement Motivation Training oleh LPK "IMKAI" Yogyakarta</li>
