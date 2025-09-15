@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\DocumentModel;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class AboutUsController extends BaseController
@@ -88,6 +89,8 @@ class AboutUsController extends BaseController
 
     public function laporan() {
         $title = "Laporan Perusahaan";
-        return $this->render('/main/tentang_kami/laporan', compact('title'));
+        $docModel = new DocumentModel();
+        $docs = $docModel->findAll();
+        return $this->render('/main/tentang_kami/laporan', compact('title', 'docs'));
     }
 }

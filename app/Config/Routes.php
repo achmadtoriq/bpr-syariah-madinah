@@ -5,6 +5,7 @@ use App\Controllers\AuthController;
 use App\Controllers\BeritaController;
 use App\Controllers\ContactUsController;
 use App\Controllers\DashboardController;
+use App\Controllers\DocsController;
 use App\Controllers\GaleriController;
 use App\Controllers\Home;
 use App\Controllers\KarirController;
@@ -56,6 +57,11 @@ $routes->group('/', ['filter' => 'auth'], function($routes) {
     $routes->get('artikel', [NewsController::class, 'create']);
     $routes->post('artikel/store', [NewsController::class, 'store']);
     $routes->get('artikel/(:segment)', [NewsController::class, 'show']);
+
+    $routes->get('docs', [DocsController::class, 'index']);
+    $routes->get('docs-upload/refresh', [DocsController::class, 'table']);
+    $routes->post('docs-upload/store', [DocsController::class, 'store']);
+    $routes->delete('docs-upload/delete/(:num)', [DocsController::class, 'delete']);
 });
 
 $routes->set404Override(function() {

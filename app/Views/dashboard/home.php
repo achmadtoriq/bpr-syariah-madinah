@@ -10,5 +10,8 @@
         <a href="<?= base_url('artikel') ?>" class="p-4 border rounded-sm">
             <button>Buat Artikel</button>
         </a>
+        <a href="<?= base_url('docs') ?>" class="p-4 border rounded-sm">
+            <button>Upload Dokumen</button>
+        </a>
     </div>
 </div>
