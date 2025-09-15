@@ -37,7 +37,7 @@
                 <h2 class="text-lg font-semibold inline-block border-b-4 border-blue-600 pb-1">
                     Laporan Publikasi
                 </h2>
-                <div class="gap-3 grid grid-cols-5 text-sm">
+                <div class="gap-3 grid grid-cols-1 md:grid-cols-5 text-sm">
                     <?php
                     foreach ($publikasi as $value) {
                     ?>
@@ -67,7 +67,7 @@
                 <h2 class="text-lg font-semibold inline-block border-b-4 border-blue-600 pb-1">
                     Laporan Tata Kelola
                 </h2>
-                <div class="gap-3 grid grid-cols-5 text-sm">
+                <div class="gap-3 grid grid-cols-1 md:grid-cols-5 text-sm">
                     <?php
                     foreach ($tata as $value) {
                     ?>
@@ -97,7 +97,7 @@
                 <h2 class="text-lg font-semibold inline-block border-b-4 border-blue-600 pb-1">
                     Laporan Tahunan
                 </h2>
-                <div class="gap-3 grid grid-cols-5 text-sm">
+                <div class="gap-3 grid grid-cols-1 md:grid-cols-5 text-sm">
                     <?php
                     foreach ($tahunan as $value) {
                     ?>
