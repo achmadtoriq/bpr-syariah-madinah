@@ -29,12 +29,14 @@
                 <div class="mt-2 grid grid-cols-1">
                     <select id="category_id" name="category_id" x-model="category" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         <option value="" disabled>Pilih kategori</option>
-                        <?php 
-                            $categories = array(
-                                "1" => "Kegiatan",
-                                "2" => "Pengembangan SDI",
-                                "3" => "Inklusi & Literasi"
-                            );
+                        <?php
+                        $categories = array(
+                            "1" => "Kegiatan",
+                            "2" => "Pengembangan SDI",
+                            "3" => "Inklusi & Literasi",
+                            "4" => "Banner Homepage",
+                            "5" => "Pas Photo"
+                        );
                         ?>
                         <?php if (isset($categories) && is_array($categories)): ?>
                             <?php foreach ($categories as $key => $cat): ?>
@@ -184,6 +186,19 @@
                 this.error = '';
                 if (this.cropper) this.cropper.destroy();
                 const image = this.$refs.image;
+
+                let aspect = ''
+                switch (this.category) {
+                    case '4':
+                        this.aspectRatio = '21/9'
+                        break;
+                    case '5':
+                        this.aspectRatio = '3/4'
+                        break;
+                    default:
+                        break;
+                }
+
                 this.cropper = new Cropper(image, {
                     aspectRatio: eval(this.aspectRatio),
                     viewMode: 1,

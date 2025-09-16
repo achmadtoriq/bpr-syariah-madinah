@@ -1,8 +1,17 @@
+<?php
+    $data = array(
+        1 => "Laporan Tahunan & AKB",
+        2 => "Laporan Tata Kelola",
+        3 => "Laporan Publikasi"
+    )
+?>
+
 <table class="min-w-full border border-gray-300 mt-4">
     <thead class="bg-gray-100">
         <tr>
             <th class="border p-2 text-left">No.</th>
             <th class="border p-2 text-left">Nama File</th>
+            <th class="border p-2 text-left">Kategori</th>
             <th class="border p-2 text-left">Tanggal Upload</th>
             <th class="border p-2 text-center">Aksi</th>
         </tr>
@@ -13,6 +22,7 @@
                 <tr>
                     <td class="border p-2"><?= $i + 1 ?></td>
                     <td class="border p-2"><?= esc($doc['name']) ?></td>
+                    <td class="border p-2"><?= esc($data[$doc['type']]) ?></td>
                     <td class="border p-2"><?= date('d-m-Y H:i', strtotime($doc['created_at'])) ?></td>
                     <td class="border p-2 text-center">
                         <div class="flex flex-row justify-center items-center gap-2">
