@@ -6,6 +6,7 @@ function fileUpload() {
     status: "",
     loading: false,
     loadingDownload: null,
+    category: '',
 
     checkFile() {
       const file = this.$refs.fileInput.files[0];
@@ -27,17 +28,31 @@ function fileUpload() {
 
     async uploadFile() {
       const file = this.$refs.fileInput.files[0];
+
+      if(this.Name == '') {
+        this.message = "Nama file harus di isi.";
+        this.status = "error";
+        return;
+      }
+
+      if(this.category == '') {
+        this.message = "Category harus di pilih.";
+        this.status = "error";
+        return;
+      }
+
       if (!file) {
         this.message = "Pilih file PDF terlebih dahulu.";
         this.status = "error";
         return;
-      }
+      } 
 
       this.loading = true;
       this.message = "";
 
       const formData = new FormData();
       formData.append("name", this.Name);
+      formData.append("type", this.category)
       formData.append("file", file);
 
       try {

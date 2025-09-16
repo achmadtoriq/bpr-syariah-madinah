@@ -30,6 +30,7 @@ class DocsController extends BaseController
 
         $file = $this->request->getFile('file');
         $name = $this->request->getPost('name');
+        $type = $this->request->getPost('type');
 
         // ✅ Validasi file
         if (!$file->isValid()) {
@@ -68,6 +69,7 @@ class DocsController extends BaseController
         $model = new DocumentModel();
         $model->insert([
             'name'       => $name,
+            'type'       => $type,
             'path'       => 'laporan/' . $newName
         ]);
 
