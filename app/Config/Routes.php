@@ -9,6 +9,7 @@ use App\Controllers\DocsController;
 use App\Controllers\GaleriController;
 use App\Controllers\Home;
 use App\Controllers\KarirController;
+use App\Controllers\ManagemenController;
 use App\Controllers\NewsController;
 use App\Controllers\ProdukController;
 use App\Controllers\UploadController;
@@ -62,6 +63,10 @@ $routes->group('/', ['filter' => 'auth'], function($routes) {
     $routes->get('docs-upload/refresh', [DocsController::class, 'table']);
     $routes->post('docs-upload/store', [DocsController::class, 'store']);
     $routes->delete('docs-upload/delete/(:num)', [DocsController::class, 'delete']);
+
+    $routes->get('managemen-list', [ManagemenController::class, 'index']);
+    $routes->get('managemen-form', [ManagemenController::class, 'create']);
+    $routes->post('managemen/store', [ManagemenController::class, 'store']);
 });
 
 $routes->set404Override(function() {

@@ -91,5 +91,22 @@
             </div>
         </a>
 
+        <a href="<?= base_url('managemen-list') ?>" class="p-4 border rounded-md space-y-8">
+            <div class="flex items-center justify-between">
+                <button class="font-bold">Data Management</button>
+                <div class="border flex justify-center items-center aspect-square border-black text-xs font-bold rounded-full px-4 py-4 text-center">
+                    <i class="fa-solid fa-users-line text-2xl text-gray-700"></i>
+                </div>
+            </div>
+            <div class="flex gap-4 justify-center">
+                <div class="flex flex-col items-center">
+                    <h2 class="inline-flex items-center text-4xl justify-center p-3  border-gray-400 rounded-full font-bold">
+                        0
+                    </h2>
+                    <span class="text-sm mt-1">Management</span>
+                </div>
+            </div>
+        </a>
+
     </div>
 </div>
