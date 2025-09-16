@@ -39,13 +39,24 @@
             </div>
             <div class="flex gap-4 justify-center">
                 <?php
-                foreach ($countArtikel as $value) {
+                if (count($countArtikel) > 0) {
+                    foreach ($countArtikel as $value) {
                 ?>
+                        <div class="flex flex-col items-center">
+                            <h2 class="inline-flex items-center text-4xl justify-center p-3  border-gray-400 rounded-full font-bold">
+                                <?= $value['total'] ?>
+                            </h2>
+                            <span class="text-sm mt-1 capitalize"><?= esc($value['status']) ?></span>
+                        </div>
+                    <?php
+                    }
+                } else {
+                    ?>
                     <div class="flex flex-col items-center">
                         <h2 class="inline-flex items-center text-4xl justify-center p-3  border-gray-400 rounded-full font-bold">
-                            <?= $value['total'] ?>
+                            0
                         </h2>
-                        <span class="text-sm mt-1 capitalize"><?= esc($value['status']) ?></span>
+                        <span class="text-sm mt-1 capitalize">Published</span>
                     </div>
                 <?php
                 }
