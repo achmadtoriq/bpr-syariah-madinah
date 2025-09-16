@@ -1,13 +1,15 @@
-<div class="container mx-auto mt-28">
+<div class="container mx-auto mt-28 space-y-5">
 
     <?php
     if ($tipe == 1) :
     ?>
+        <div class="w-full flex flex-1 p-3 justify-end">
+            <a href="<?php echo base_url('artikel')?>" target="_blank" class="px-3 py-2 border rounded-md bg-green-500 text-white font-bold">
+                Buat Artikel
+            </a>
+        </div>
         <div class="grid grid-cols-5 gap-3">
             <?php
-            echo '<pre>';
-            print_r($articles);
-            echo '</pre>';
             if (isset($articles) && is_array($articles)):
                 foreach ($articles as $article):
             ?>
