@@ -44,8 +44,8 @@ $data = array(
             <?php endforeach; ?>
         <?php else: ?>
             <tr>
-                <td colspan="4" class="border p-4 text-center text-gray-500">
-                    Belum ada file diupload.
+                <td colspan="8" class="border p-4 text-center text-gray-500">
+                    Belum ada data.
                 </td>
             </tr>
         <?php endif; ?>
