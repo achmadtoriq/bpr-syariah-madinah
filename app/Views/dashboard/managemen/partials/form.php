@@ -30,24 +30,57 @@
                     </div>
                 </div>
 
-                <div class="col-span-full space-y-4">
-                    <label>Nama:</label>
-                    <input type="text" x-model="form.nama" class="border p-2 w-full">
+                <!-- Category -->
+                <div class="sm:col-span-full">
+                    <label for="role_id" class="block text-sm font-medium mb-2">Kategori</label>
+                    <div class="mt-2 grid grid-cols-1">
+                        <select id="role_id" name="role_id" x-model="form.role" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option value="" disabled>Pilih kategori</option>
+                            <?php
+                            $categories = array(
+                                "1" => "Pemegang Saham",
+                                "2" => "Dewan Komisaris",
+                                "3" => "Dewan Pengawas Syariah",
+                                "4" => "Direksi"
+                            );
+                            ?>
+                            <?php if (isset($categories) && is_array($categories)): ?>
+                                <?php foreach ($categories as $key => $cat): ?>
+                                    <option value="<?= esc($key) ?>">
+                                        <?= esc($cat) ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </select>
+                        <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4">
+                            <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </div>
                 </div>
 
-                <div class="col-span-full space-y-4">
-                    <label>Kewarganegaraan:</label>
-                    <input type="text" x-model="form.kewarganegaraan" class="border p-2 w-full">
+                <div class="col-span-full">
+                    <label for="jabatan" class="block text-sm font-medium mb-2">Jabatan</label>
+                    <input type="text" name="jabatan" x-model="form.jabatan" class="border p-2 w-full">
                 </div>
 
-                <div class="col-span-full space-y-4">
-                    <label>Tempat Lahir:</label>
-                    <input type="text" x-model="form.tempat_lahir" class="border p-2 w-full">
+                <div class="col-span-full">
+                    <label for="name" class="block text-sm font-medium mb-2">Nama</label>
+                    <input type="text" name="name" x-model="form.nama" class="border p-2 w-full">
                 </div>
 
-                <div class="col-span-full space-y-4">
-                    <label>Tanggal Lahir:</label>
-                    <input type="date" x-model="form.tanggal_lahir" class="border p-2 w-full">
+                <div class="col-span-full">
+                    <label for="kewarganegaraan" class="block text-sm font-medium mb-2">Kewarganegaraan</label>
+                    <input type="text" name="kewarganegaraan" x-model="form.kewarganegaraan" class="border p-2 w-full">
+                </div>
+
+                <div class="col-span-full">
+                    <label for="tempat_lahir" class="block text-sm font-medium mb-2">Tempat Lahir</label>
+                    <input type="text" name="tempat_lahir" x-model="form.tempat_lahir" class="border p-2 w-full">
+                </div>
+
+                <div class="col-span-full">
+                    <label for="tanggal_lahir" class="block text-sm font-medium mb-2">Tanggal Lahir</label>
+                    <input type="date" name="tanggal_lahir" x-model="form.tanggal_lahir" class="border p-2 w-full">
                 </div>
 
                 <div class="col-span-full space-y-4">
@@ -102,7 +135,8 @@
             imageUrl: '',
             cropper: null,
             form: {
-                role: 'pemegang_saham',
+                role: '',
+                jabatan: '',
                 nama: '',
                 kewarganegaraan: '',
                 tempat_lahir: '',
@@ -198,8 +232,6 @@
                         }
                     }
 
-                    console.log([...formData.entries()]); // cek apakah image ikut
-
                     const res = await fetch('<?= base_url('managemen/store') ?>', {
                         method: 'POST',
                         body: formData
@@ -212,7 +244,8 @@
                         this.csrf = result.csrf;
                         this.resetImage();
                         this.form = {
-                            role: 'pemegang_saham',
+                            role: '',
+                            jabatan: '',
                             nama: '',
                             kewarganegaraan: '',
                             tempat_lahir: '',
@@ -221,9 +254,11 @@
                             pengalaman_kerja: [''],
                             pelatihan: ['']
                         };
+
+                        // ⏱ Reload setelah 3 detik
+                        setTimeout(() => history.back(), 1000);
                     }
                 } catch (err) {
-                    console.error(err);
                     this.message = 'Terjadi kesalahan saat menyimpan';
                 }
             }

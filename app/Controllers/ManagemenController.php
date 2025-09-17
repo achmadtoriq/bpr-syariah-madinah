@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\ManagemenModel;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class ManagemenController extends BaseController
@@ -32,6 +33,7 @@ class ManagemenController extends BaseController
         try {
             $data = array(
                 'role'            => $this->request->getPost('role'),
+                'jabatan'         => $this->request->getPost('jabatan'),
                 'nama'            => $this->request->getPost('nama'),
                 'kewarganegaraan' => $this->request->getPost('kewarganegaraan'),
                 'tempat_lahir'    => $this->request->getPost('tempat_lahir'),
@@ -50,16 +52,19 @@ class ManagemenController extends BaseController
                     mkdir($uploadPath, 0777, true);
                 }
 
-                // Pakai nama file asli atau generate baru
-                $safeName = $file->getRandomName();
-                $file->move($uploadPath, $safeName);
+                // Bersihkan nama file dari karakter . , diganti _
+                $safeNama = preg_replace('/[.,]/', '_', strtolower($data['nama']));
+                $newName = $safeNama . '.' . $file->getExtension();
 
-                $data['foto'] = 'public/uploads/managemen/' . $safeName;
+                // Pakai nama file asli atau generate baru
+                $file->move($uploadPath, str_replace(' ', '_',  $newName));
+
+                $data['photo'] = 'uploads/managemen/' . $newName;
             }
 
             // --- Simpan ke DB ---
-            // $model = new PemegangSahamModel();
-            // $model->insert($data);
+            $model = new ManagemenModel();
+            $model->insert($data);
 
             return $this->response->setJSON([
                 'status' => 'success',
@@ -68,11 +73,11 @@ class ManagemenController extends BaseController
             ]);
 
         } catch (\Throwable $e) {
-            // return $this->response->setJSON([
-            //     'status' => 'error',
-            //     'message' => 'Terjadi kesalahan: ' . $e->getMessage(),
-            //     'csrf' => csrf_hash(),
-            // ]);
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Terjadi kesalahan: ' . $e->getMessage(),
+                'csrf' => csrf_hash(),
+            ]);
         }
     }
 }
