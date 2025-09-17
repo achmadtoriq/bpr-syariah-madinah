@@ -100,10 +100,18 @@
             </div>
             <div class="flex gap-4 justify-center">
                 <div class="flex flex-col items-center">
-                    <h2 class="inline-flex items-center text-4xl justify-center p-3  border-gray-400 rounded-full font-bold">
-                        0
-                    </h2>
-                    <span class="text-sm mt-1">Management</span>
+                    <?php
+                    foreach ($countManagement as $value) {
+                    ?>
+                        <div class="flex flex-col items-center">
+                            <h2 class="inline-flex items-center text-4xl justify-center p-3  border-gray-400 rounded-full font-bold">
+                                <?= $value['total'] ?>
+                            </h2>
+                            <span class="text-sm mt-1 capitalize">Management</span>
+                        </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </a>
