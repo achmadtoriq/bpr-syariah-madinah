@@ -67,6 +67,7 @@ $routes->group('/', ['filter' => 'auth'], function($routes) {
     $routes->get('managemen-list', [ManagemenController::class, 'index']);
     $routes->get('managemen-form', [ManagemenController::class, 'create']);
     $routes->post('managemen/store', [ManagemenController::class, 'store']);
+    $routes->delete('managemen/delete/(:num)', [ManagemenController::class, 'delete']);
 });
 
 $routes->set404Override(function() {

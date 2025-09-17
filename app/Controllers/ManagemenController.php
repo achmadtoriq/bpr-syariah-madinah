@@ -11,12 +11,16 @@ class ManagemenController extends BaseController
     public function index()
     {
         $title = 'Management Dashboard';
-        return $this->render_dashboard('dashboard/managemen/main', compact('title'));
+        $model = new ManagemenModel();
+        $managements = $model->findAll();
+        $flag = true;
+        return $this->render_dashboard('dashboard/managemen/main', compact('title', 'managements', 'flag'));
     }
 
     public function create() {
         $title = 'Create Data Management';
-        return $this->render_dashboard('dashboard/managemen/partials/form', compact('title'));
+        $flag = false;
+        return $this->render_dashboard('dashboard/managemen/main', compact('title', 'flag'));
     }
 
     public function store()
@@ -79,5 +83,32 @@ class ManagemenController extends BaseController
                 'csrf' => csrf_hash(),
             ]);
         }
+    }
+
+    public function delete($id)
+    {
+        $model = new ManagemenModel();
+        $managemen = $model->find($id);
+
+        if (!$managemen) {
+            return $this->response->setJSON([
+                'status' => 'error',
+                'message' => 'Data tidak ditemukan.'
+            ]);
+        }
+
+        // Hapus file dari folder public/laporan
+        $filePath = ROOTPATH . 'public/uploads/managemen/' . $managemen['photo'];
+        if (file_exists($filePath)) {
+            unlink($filePath);
+        }
+
+        // Hapus dari database
+        $model->delete($id);
+
+        return $this->response->setJSON([
+            'status' => 'success',
+            'message' => 'Data berhasil dihapus.'
+        ]);
     }
 }
