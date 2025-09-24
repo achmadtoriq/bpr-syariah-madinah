@@ -51,18 +51,18 @@
                                         ?>
                                         </ul>
                                     </div>
-                                    <div class="flex flex-col">
+                                    <!-- <div class="flex flex-col">
                                         <p class="font-bold">Pelatihan:</p>
                                         <ul class="list-outside list-disc ml-8">
                                         <?php
-                                            foreach (json_decode($p['pelatihan']) as $training) : 
+                                            // foreach (json_decode($p['pelatihan']) as $training) : 
                                             ?>
-                                                <li><?= esc($training)?></li>
+                                                <li><?//= esc($training)?></li>
                                             <?php
-                                            endforeach;
+                                            // endforeach;
                                         ?>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         <?php endforeach;
