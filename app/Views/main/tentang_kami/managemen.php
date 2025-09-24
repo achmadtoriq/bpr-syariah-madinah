@@ -39,18 +39,18 @@
                                         ?>
                                         </ul>
                                     </div>
-                                    <!-- <div class="flex flex-col">
+                                    <div class="flex flex-col">
                                         <p class="font-bold">Pengalaman Kerja:</p>
                                         <ul class="list-outside list-disc ml-8">
                                         <?php
-                                            // foreach (json_decode($p['pengalaman_kerja']) as $work) : 
+                                            foreach (json_decode($p['pengalaman_kerja']) as $work) : 
                                             ?>
-                                                <li><?//= esc($work)?></li>
+                                                <li><?= esc($work)?></li>
                                             <?php
-                                            // endforeach;
+                                            endforeach;
                                         ?>
                                         </ul>
-                                    </div> -->
+                                    </div>
                                     <!-- <div class="flex flex-col">
                                         <p class="font-bold">Pelatihan:</p>
                                         <ul class="list-outside list-disc ml-8">
