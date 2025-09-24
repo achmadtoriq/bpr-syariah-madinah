@@ -27,18 +27,18 @@
                                         <p class="text-base"><?= esc($p['jabatan']) ?></p>
                                     </div>
                                     <p><?= esc($p['kewarganegaraan']) ?>, lahir di <?= esc($p['tempat_lahir']).' '.date('d F Y', strtotime($p['tanggal_lahir'])) ?> </p>
-                                    <!-- <div class="flex flex-1 gap-2">
+                                    <div class="flex flex-1 gap-2">
                                         <p class="font-bold">Pendidikan:</p>
                                         <ul class="list-outside list-disc ml-5">
                                         <?php
-                                            // foreach (json_decode($p['pendidikan']) as $edu) : 
+                                            foreach (json_decode($p['pendidikan']) as $edu) : 
                                             ?>
-                                                <li><?//= esc($edu)?></li>
+                                                <li><?= esc($edu)?></li>
                                             <?php
-                                            // endforeach;
+                                            endforeach;
                                         ?>
                                         </ul>
-                                    </div> -->
+                                    </div>
                                     <!-- <div class="flex flex-col">
                                         <p class="font-bold">Pengalaman Kerja:</p>
                                         <ul class="list-outside list-disc ml-8">
