@@ -10,6 +10,72 @@
             </div>
         </div>
 
+        <div class="container mx-auto p-6 space-y-8">
+
+            <?php foreach ($group_management as $posisi => $pejabatList): ?>
+                <div class="border rounded-md">
+                    <p class="bg-gray-400 text-white rounded-t-md p-2 font-semibold"><?= esc($posisi) ?></p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 md:gap-y-4 p-5">
+
+                        <?php foreach ($pejabatList as $p):
+                        ?>
+                            <div class="grid grid-cols-1 md:grid-cols-5 gap-3">
+                                <img src="<?= base_url($p['photo']) ?>" alt="" class="object-cover rounded-full border" />
+                                <div class="space-y-4 col-span-4">
+                                    <div class="space-y-1">
+                                        <h2 class="text-xl md:text-2xl font-bold"><?= esc($p['nama']) ?></h2>
+                                        <p class="text-base"><?= esc($p['jabatan']) ?></p>
+                                    </div>
+                                    <p><?= esc($p['kewarganegaraan']) ?>, lahir di <?= esc($p['tempat_lahir']).' '.date('d F Y', strtotime($p['tanggal_lahir'])) ?> </p>
+                                    <div class="flex flex-1 gap-2">
+                                        <p class="font-bold">Pendidikan:</p>
+                                        <ul class="list-outside list-disc ml-5">
+                                        <?php
+                                            foreach (json_decode($p['pendidikan']) as $edu) : 
+                                            ?>
+                                                <li><?= esc($edu)?></li>
+                                            <?php
+                                            endforeach;
+                                        ?>
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="font-bold">Pengalaman Kerja:</p>
+                                        <ul class="list-outside list-disc ml-8">
+                                        <?php
+                                            foreach (json_decode($p['pengalaman_kerja']) as $work) : 
+                                            ?>
+                                                <li><?= esc($work)?></li>
+                                            <?php
+                                            endforeach;
+                                        ?>
+                                        </ul>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <p class="font-bold">Pelatihan:</p>
+                                        <ul class="list-outside list-disc ml-8">
+                                        <?php
+                                            foreach (json_decode($p['pelatihan']) as $training) : 
+                                            ?>
+                                                <li><?= esc($training)?></li>
+                                            <?php
+                                            endforeach;
+                                        ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach;
+                        ?>
+
+                    </div>
+                </div>
+            <?php endforeach; ?>
+
+        </div>
+
+
+        <!--
         <div class="border rounded-md mb-14">
             <p class="bg-gray-400 text-white rounded-t-md p-2 font-semibold">Pemegang Saham</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 md:gap-y-4 p-5">
@@ -305,6 +371,6 @@
 
             </div>
         </div>
-
+        -->
     </div>
 </main>

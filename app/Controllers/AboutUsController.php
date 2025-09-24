@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\DocumentModel;
+use App\Models\ManagemenModel;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class AboutUsController extends BaseController
@@ -15,8 +16,18 @@ class AboutUsController extends BaseController
     }
 
     public function managemen() {
+        $map = array(1 => 'Pemegang Saham', 2 => 'Dewan Komisaris', 3 => 'Dewan Pengawas Syariah', 4 => 'Direksi');
+        
+        $models = new ManagemenModel();
+        $managements = $models->orderBy('role', 'asc')->findAll();
         $title = "Managemen Perusahaan";
-        return $this->render('/main/tentang_kami/managemen', compact('title'));
+
+        $group_management = array();
+        foreach ($managements as $row) {
+            $group_management[$map[$row['role']]][] = $row;
+        }
+
+        return $this->render('/main/tentang_kami/managemen', compact('title', 'group_management'));
     }
 
     public function struktur() {
