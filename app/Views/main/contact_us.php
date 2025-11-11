@@ -15,28 +15,34 @@
                 <div id="map" class="relative w-full h-[500px] rounded shadow"></div>
             </div>
             <div class="border rounded-md shadow-sm p-5">
-                <h2 class="text-2xl font-bold">Informasi Kontak</h2>
-                <div class="text-base">
-                    <div class="flex flex-1 items-center gap-2 mt-4">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>Jl. Lamongrejo No.77, Krajan, Jetis, Kec. Lamongan,
-                            Kabupaten Lamongan, Jawa Timur 62214</p>
-                    </div>
-                    <div class="flex flex-1 items-center gap-2 mt-4">
-                        <i class="fa-solid fa-phone"></i>
-                        <p>(0322) 314 999</p>
-                    </div>
-                    <div class="flex flex-1 items-center gap-2 mt-4">
-                        <i class="fa-solid fa-fax"></i>
-                        <p>(0322) 324 999</p>
-                    </div>
-                    <div class="flex flex-1 items-center gap-2 mt-4">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p>bank.madinah@gmail.com</p>
-                    </div>
-                    <div class="flex flex-1 items-center gap-2 mt-4">
-                        <i class="fa-solid fa-globe"></i>
-                        <p>bprsmadinahlamongan.co.id</p>
+                <div class="py-5">
+                    <img src="<?= base_url('assets/madinah.png') ?>" alt="Logo" class="mx-auto w-1/3 size-16 bg-white p-2 rounded-md">
+                    <h2 class="text-3xl font-bold text-center">BPRS Madinah Lamongan</h2>
+                </div>
+                <div class="py-5">
+                    <h2 class="text-2xl font-bold">Informasi Kontak</h2>
+                    <div class="text-base">
+                        <div class="flex flex-1 items-center gap-2 mt-4">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Jl. Lamongrejo No.77, Krajan, Jetis, Kec. Lamongan,
+                                Kabupaten Lamongan, Jawa Timur 62214</p>
+                        </div>
+                        <div class="flex flex-1 items-center gap-2 mt-4">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>(0322) 314 999</p>
+                        </div>
+                        <div class="flex flex-1 items-center gap-2 mt-4">
+                            <i class="fa-solid fa-fax"></i>
+                            <p>(0322) 324 999</p>
+                        </div>
+                        <div class="flex flex-1 items-center gap-2 mt-4">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>bank.madinah@gmail.com</p>
+                        </div>
+                        <div class="flex flex-1 items-center gap-2 mt-4">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>bprsmadinahlamongan.co.id</p>
+                        </div>
                     </div>
                 </div>
             </div>
