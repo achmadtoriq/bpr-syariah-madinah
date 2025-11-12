@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="<?= base_url('css/style.css')?>">
 </head>
 
-<body class="w-full">
+<body class="w-full" x-data="modalHandler()">
     <!-- ✅ HEADER -->
     <?php echo $header ?? '' ?>
 
