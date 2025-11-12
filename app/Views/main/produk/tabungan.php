@@ -129,6 +129,102 @@
                     </button>
                 </div>
             </div>
+
+            <div
+                x-data="{ hover: false }"
+                @mouseenter="hover = true"
+                @mouseleave="hover = false"
+                class="relative w-full overflow-hidden shadow-lg cursor-pointer">
+                <!-- Gambar -->
+                <img
+                    src="<?= base_url('produk/tabungan_umroh.png') ?>"
+                    alt="Tabungan Sibarkah"
+                    class="object-cover w-full h-full transition-transform duration-500"
+                    :class="hover ? 'scale-105' : 'scale-100'">
+
+                <!-- Overlay animasi dari bawah -->
+                <div
+                    class="absolute bottom-0 left-0 w-full flex justify-center items-center transition-all duration-500"
+                    :class="hover ? 'h-full opacity-100 bg-sky-900/60' : 'h-0 opacity-0 bg-sky-900/0'">
+
+                    <button
+                        class="bg-white text-sky-700 font-semibold px-6 py-2 rounded-full shadow-lg transition hover:bg-green-100 z-10">
+                        Detail
+                    </button>
+                </div>
+            </div>
+
+            <div
+                x-data="{ hover: false }"
+                @mouseenter="hover = true"
+                @mouseleave="hover = false"
+                class="relative w-full overflow-hidden shadow-lg cursor-pointer">
+                <!-- Gambar -->
+                <img
+                    src="<?= base_url('produk/tabungan_simpel.png') ?>"
+                    alt="Tabungan Sibarkah"
+                    class="object-cover w-full h-full transition-transform duration-500"
+                    :class="hover ? 'scale-105' : 'scale-100'">
+
+                <!-- Overlay animasi dari bawah -->
+                <div
+                    class="absolute bottom-0 left-0 w-full flex justify-center items-center transition-all duration-500"
+                    :class="hover ? 'h-full opacity-100 bg-sky-900/60' : 'h-0 opacity-0 bg-sky-900/0'">
+
+                    <button
+                        class="bg-white text-sky-700 font-semibold px-6 py-2 rounded-full shadow-lg transition hover:bg-green-100 z-10">
+                        Detail
+                    </button>
+                </div>
+            </div>
+
+            <div
+                x-data="{ hover: false }"
+                @mouseenter="hover = true"
+                @mouseleave="hover = false"
+                class="relative w-full overflow-hidden shadow-lg cursor-pointer">
+                <!-- Gambar -->
+                <img
+                    src="<?= base_url('produk/tabungan_walimah.png') ?>"
+                    alt="Tabungan Sibarkah"
+                    class="object-cover w-full h-full transition-transform duration-500"
+                    :class="hover ? 'scale-105' : 'scale-100'">
+
+                <!-- Overlay animasi dari bawah -->
+                <div
+                    class="absolute bottom-0 left-0 w-full flex justify-center items-center transition-all duration-500"
+                    :class="hover ? 'h-full opacity-100 bg-sky-900/60' : 'h-0 opacity-0 bg-sky-900/0'">
+
+                    <button
+                        class="bg-white text-sky-700 font-semibold px-6 py-2 rounded-full shadow-lg transition hover:bg-green-100 z-10">
+                        Detail
+                    </button>
+                </div>
+            </div>
+
+            <div
+                x-data="{ hover: false }"
+                @mouseenter="hover = true"
+                @mouseleave="hover = false"
+                class="relative w-full overflow-hidden shadow-lg cursor-pointer">
+                <!-- Gambar -->
+                <img
+                    src="<?= base_url('produk/tabungan_sibermas.png') ?>"
+                    alt="Tabungan Sibarkah"
+                    class="object-cover w-full h-full transition-transform duration-500"
+                    :class="hover ? 'scale-105' : 'scale-100'">
+
+                <!-- Overlay animasi dari bawah -->
+                <div
+                    class="absolute bottom-0 left-0 w-full flex justify-center items-center transition-all duration-500"
+                    :class="hover ? 'h-full opacity-100 bg-sky-900/60' : 'h-0 opacity-0 bg-sky-900/0'">
+
+                    <button
+                        class="bg-white text-sky-700 font-semibold px-6 py-2 rounded-full shadow-lg transition hover:bg-green-100 z-10">
+                        Detail
+                    </button>
+                </div>
+            </div>
         
         </div>
     </div>
