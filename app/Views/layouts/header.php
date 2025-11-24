@@ -12,8 +12,8 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
             <div class="flex flex-1 justify-between items-center">
                 <p class="antialiased md:subpixel-antialiased"><i class="fa-solid fa-phone"></i> (0322) 314 999</p>
                 <div class="grid grid-cols-2">
-                    <p class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-instagram"></i> Instagram</p>
-                    <p class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-square-facebook"></i> Facebook</p>
+                    <a href="https://www.instagram.com/bprsmadinahlamongan?igsh=bjZtNjljaTJxaTJ2" target="_blank" rel="noopener noreferrer" class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/share/1VyH892rBD/" target="_blank" rel="noopener noreferrer" class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
                 </div>
             </div>
         </div>
