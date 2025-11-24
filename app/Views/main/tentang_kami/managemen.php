@@ -31,11 +31,13 @@
                                         <p class="font-bold">Pendidikan:</p>
                                         <ul class="list-outside list-disc ml-5">
                                             <?php
-                                            foreach (json_decode($p['pendidikan']) as $edu) :
+                                            if (count(json_decode($p['pendidikan'])) > 0) {
+                                                foreach (json_decode($p['pendidikan']) as $edu) :
                                             ?>
-                                                <li><?= esc($edu) ?></li>
+                                                    <li><?= esc($edu) ?></li>
                                             <?php
-                                            endforeach;
+                                                endforeach;
+                                            }
                                             ?>
                                         </ul>
                                     </div>
@@ -43,23 +45,27 @@
                                         <p class="font-bold">Pengalaman Kerja:</p>
                                         <ul class="list-outside list-disc ml-8">
                                             <?php
-                                            foreach (json_decode($p['pengalaman_kerja']) as $work) :
+                                            if (count(json_decode($p['pengalaman_kerja'])) > 0) {
+                                                foreach (json_decode($p['pengalaman_kerja']) as $work) :
                                             ?>
-                                                <li><?= esc($work) ?></li>
+                                                    <li><?= esc($work) ?></li>
                                             <?php
-                                            endforeach;
+                                                endforeach;
+                                            }
                                             ?>
                                         </ul>
                                     </div>
                                     <div class="flex flex-col">
                                         <p class="font-bold">Pelatihan:</p>
                                         <ul class="list-outside list-disc ml-8">
-                                        <?php
-                                        foreach (json_decode($p['pelatihan']) as $training) : 
-                                        ?>
-                                                <li><?= esc($training)?></li>
                                             <?php
-                                            endforeach;
+                                            if (count(json_decode($p['pelatihan'])) > 0) {
+                                                foreach (json_decode($p['pelatihan']) as $training) :
+                                            ?>
+                                                    <li><?= esc($training) ?></li>
+                                            <?php
+                                                endforeach;
+                                            }
                                             ?>
                                         </ul>
                                     </div>

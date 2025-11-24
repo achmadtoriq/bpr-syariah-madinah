@@ -26,11 +26,6 @@ class AboutUsController extends BaseController
         $managements = $models->orderBy('role', 'asc')->findAll();
         $title = "Managemen Perusahaan | BPRS Madinah Lamongan";
 
-        echo '<pre>';
-        print_r($managements);
-        echo '</pre>';
-        die();
-
         $group_management = array();
         foreach ($managements as $row) {
             $group_management[$map[$row['role']]][] = $row;
