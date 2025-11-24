@@ -56,8 +56,8 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
             </div>
 
             <a href="<?= base_url('/galeri') ?>" class="<?= $uri->getPath() === '/galeri' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Galeri</a>
-            <a href="<?= base_url('/berita') ?>" class="<?= $uri->getPath() === '/berita' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Berita</a>
-            <a href="<?= base_url('/karir') ?>" class="<?= $uri->getPath() === '/karir' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Karir</a>
+            <!-- <a href="<?= base_url('/berita') ?>" class="<?= $uri->getPath() === '/berita' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Berita</a>
+            <a href="<?= base_url('/karir') ?>" class="<?= $uri->getPath() === '/karir' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Karir</a> -->
             <a href="<?= base_url('/hubungi_kami') ?>" class="<?= $uri->getPath() === '/hubungi_kami' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Kontak Kami</a>
         </nav>
 
@@ -123,8 +123,8 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
             </div>
 
             <a href="<?= base_url('/galeri') ?>" class="block p-2 <?= $uri->getPath() === '/galeri' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Galeri</a>
-            <a href="<?= base_url('/berita') ?>" class="block p-2 <?= $uri->getPath() === '/berita' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Berita</a>
-            <a href="<?= base_url('/karir') ?>" class="block p-2 <?= $uri->getPath() === '/karir' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Karir</a>
+            <!-- <a href="<?= base_url('/berita') ?>" class="block p-2 <?= $uri->getPath() === '/berita' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Berita</a>
+            <a href="<?= base_url('/karir') ?>" class="block p-2 <?= $uri->getPath() === '/karir' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Karir</a> -->
             <a href="<?= base_url('/hubungi_kami') ?>" class="block p-2 <?= $uri->getPath() === '/hubungi_kami' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Kontak Kami</a>
         </div>
 
