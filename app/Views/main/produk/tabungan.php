@@ -17,7 +17,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/tabungan_sibarkah.png') ?>"
+                    src="<?= base_url('assets/produk/tabungan_sibarkah.png') ?>"
                     alt="Tabungan Sibarkah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -46,7 +46,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/tabungan_qordiyu.png') ?>"
+                    src="<?= base_url('assets/produk/tabungan_qordiyu.png') ?>"
                     alt="Tabungan Sibarkah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -75,7 +75,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/tabungan_haji.png') ?>"
+                    src="<?= base_url('assets/produk/tabungan_haji.png') ?>"
                     alt="Tabungan Sibarkah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -104,7 +104,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/tabungan_qurban.png') ?>"
+                    src="<?= base_url('assets/produk/tabungan_qurban.png') ?>"
                     alt="Tabungan Sibarkah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -133,7 +133,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/tabungan_tarbiyah.png') ?>"
+                    src="<?= base_url('assets/produk/tabungan_tarbiyah.png') ?>"
                     alt="Tabungan Sibarkah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -162,7 +162,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/tabungan_umroh.png') ?>"
+                    src="<?= base_url('assets/produk/tabungan_umroh.png') ?>"
                     alt="Tabungan Sibarkah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -191,7 +191,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/tabungan_simpel.png') ?>"
+                    src="<?= base_url('assets/produk/tabungan_simpel.png') ?>"
                     alt="Tabungan Sibarkah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -220,7 +220,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/tabungan_walimah.png') ?>"
+                    src="<?= base_url('assets/produk/tabungan_walimah.png') ?>"
                     alt="Tabungan Sibarkah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -249,7 +249,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/tabungan_sibermas.png') ?>"
+                    src="<?= base_url('assets/produk/tabungan_sibermas.png') ?>"
                     alt="Tabungan Sibarkah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -292,7 +292,7 @@
         </button>
 
         <div class="grid grid-cols-2 gap-8">
-            <img src="<?= base_url('produk/brosur_tabungan.webp') ?>?>" alt="" srcset="">
+            <img src="<?= base_url('assets/produk/brosur_tabungan.webp') ?>?>" alt="" srcset="">
             <div>
                 <h3 class="text-2xl font-bold text-indigo-700 mb-2" x-text="modalData.title"></h3>
                 <p class="text-gray-600 mb-4" x-text="modalData.desc"></p>

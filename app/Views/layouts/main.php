@@ -6,8 +6,6 @@
     <meta name="description" content="The small framework with powerful features">
     <title><?= esc($title ?? 'My App') ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico">
-
     <link href="<?= base_url("assets/icon_madinah.ico") ?>" rel="shortcut icon" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.css" rel="stylesheet">
@@ -26,7 +24,7 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <link rel="stylesheet" href="<?= base_url('assets/ckeditor5-46.0.0/ckeditor5/ckeditor5.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 </head>
 
 <body class="w-full" x-data="modalHandler()">

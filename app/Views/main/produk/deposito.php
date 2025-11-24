@@ -11,7 +11,7 @@
         </div>
 
         <div class="grid grid-cols-2 mt-10">
-            <img src="<?= base_url('produk/brosur_deposito.webp') ?>?>" alt="" srcset="" class="w-[90%]">
+            <img src="<?= base_url('assets/produk/brosur_deposito.webp') ?>?>" alt="" srcset="" class="w-[90%]">
             <div>
                 <p class="text-gray-600 mb-4">Deposito merupakan tabungan berjangka dengan akad mudharabah al mutlaqoh dari pihak ke tiga BPRS yang dananya diperlakukan sebagai investasi secara produktif dalam bentuk pembiayaan kepada masyarakat, pengusaha dan perorangan secara profesional. Penempatan dana masyarakat kedalam deposito ini akan memperoleh bagi hasil. Pembayaran bagi hasil antara nasabah dan BPRS sesuai nisbah (porsi) berdasarkan akad yang telah disepakati.</p>
 

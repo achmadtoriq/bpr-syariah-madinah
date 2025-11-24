@@ -17,7 +17,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/madinah_pay_system.webp') ?>"
+                    src="<?= base_url('assets/produk/madinah_pay_system.webp') ?>"
                     alt="Sistem Pengelolahan Keuangan Sekolah"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
@@ -45,7 +45,7 @@
                 class="relative w-full overflow-hidden shadow-lg cursor-pointer">
                 <!-- Gambar -->
                 <img
-                    src="<?= base_url('produk/payment_online.webp') ?>"
+                    src="<?= base_url('assets/produk/payment_online.webp') ?>"
                     alt="Payment Online"
                     class="object-cover w-full h-full transition-transform duration-500"
                     :class="hover ? 'scale-105' : 'scale-100'">
