@@ -64,13 +64,13 @@ class DocsController extends BaseController
         $newName = $cleanName . '.' . $ext;
 
         // ✅ Pindahkan file ke folder public/laporan
-        $file->move(ROOTPATH . 'public/laporan', $newName);
+        $file->move(ROOTPATH . 'public/assets/laporan', $newName);
 
         $model = new DocumentModel();
         $model->insert([
             'name'       => $name,
             'type'       => $type,
-            'path'       => 'laporan/' . $newName
+            'path'       => 'assets/laporan/' . $newName
         ]);
 
         return $this->response->setJSON([

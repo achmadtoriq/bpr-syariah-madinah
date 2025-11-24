@@ -42,16 +42,16 @@ class ManagemenController extends BaseController
                 'kewarganegaraan' => $this->request->getPost('kewarganegaraan'),
                 'tempat_lahir'    => $this->request->getPost('tempat_lahir'),
                 'tanggal_lahir'   => $this->request->getPost('tanggal_lahir'),
-                'pendidikan'      => json_encode($this->request->getPost('pendidikan') ?? []),
-                'pengalaman_kerja'=> json_encode($this->request->getPost('pengalaman_kerja') ?? []),
-                'pelatihan'       => json_encode($this->request->getPost('pelatihan') ?? []),
+                'pendidikan'      => implode(";", $this->request->getPost('pendidikan')),
+                'pengalaman_kerja'=> implode(";", $this->request->getPost('pengalaman_kerja')),
+                'pelatihan'       => implode(";", $this->request->getPost('pelatihan')),
             );
 
             // --- Upload Image ---
             $file = $this->request->getFile('image');
             if ($file && $file->isValid()) {
                 // Buat folder penyimpanan (misal: writable/uploads/pemegang-saham)
-                $uploadPath = ROOTPATH . 'public/uploads/managemen';
+                $uploadPath = ROOTPATH . 'public/assets/uploads/managemen';
                 if (!is_dir($uploadPath)) {
                     mkdir($uploadPath, 0777, true);
                 }
@@ -63,7 +63,7 @@ class ManagemenController extends BaseController
                 // Pakai nama file asli atau generate baru
                 $file->move($uploadPath, str_replace(' ', '_',  $newName));
 
-                $data['photo'] = 'uploads/managemen/' . $newName;
+                $data['photo'] = 'assets/uploads/managemen/' . $newName;
             }
 
             // --- Simpan ke DB ---

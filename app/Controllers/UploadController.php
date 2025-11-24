@@ -44,9 +44,9 @@ class UploadController extends BaseController
         }
 
         $newName = 'bprsmadinah_' . time() . '.jpg';
-        $file->move(ROOTPATH . 'public/uploads', $newName);
+        $file->move(ROOTPATH . 'public/assets/uploads', $newName);
 
-        $url_image = 'uploads/' . $newName;
+        $url_image = 'assets/uploads/' . $newName;
 
         /* insert data image */
         $this->imageModel->insert([
