@@ -13,7 +13,7 @@
 
     <script src="https://cdn.tailwindcss.com" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
-    <script src="https://kit.fontawesome.com/a7feba845e.js" crossorigin="anonymous" async></script>
+    <script src="https://kit.fontawesome.com/a7feba845e.js" crossorigin="anonymous" defer></script>
 
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
