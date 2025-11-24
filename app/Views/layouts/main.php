@@ -8,10 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
 
+    <link href="<?= base_url("assets/icon_madinah.ico") ?>" rel="shortcut icon" type="image/x-icon">
+
     <link href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.js"></script>
 
-    <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://kit.fontawesome.com/a7feba845e.js" crossorigin="anonymous"></script>
 
@@ -23,8 +25,8 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <link rel="stylesheet" href="<?= base_url('assets/ckeditor5-46.0.0/ckeditor5/ckeditor5.css')?>">
-    <link rel="stylesheet" href="<?= base_url('css/style.css')?>">
+    <link rel="stylesheet" href="<?= base_url('assets/ckeditor5-46.0.0/ckeditor5/ckeditor5.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 
 <body class="w-full" x-data="modalHandler()">
@@ -36,6 +38,30 @@
 
     <!-- ✅ FOOTER -->
     <?= $footer ?? '' ?>
+
+    <!-- Alpine Component -->
+    <script>
+        function modalHandler() {
+            return {
+                show: false,
+                modalData: {
+                    title: '',
+                    desc: '',
+                    features: [],
+                    benefit: [],
+                    ketentuan: [],
+                    custom: {}
+                },
+                openModal(data) {
+                    this.modalData = data;
+                    this.show = true;
+                },
+                closeModal() {
+                    this.show = false;
+                }
+            };
+        }
+    </script>
 </body>
 
 </html>

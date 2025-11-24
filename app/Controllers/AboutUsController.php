@@ -11,7 +11,7 @@ class AboutUsController extends BaseController
 {
     public function index()
     {
-        $title = "Profil Perusahaan";
+        $title = "Profil Perusahaan | BPRS Madinah Lamongan";
         return $this->render('/main/tentang_kami/profil', compact('title'));
     }
 
@@ -20,7 +20,7 @@ class AboutUsController extends BaseController
         
         $models = new ManagemenModel();
         $managements = $models->orderBy('role', 'asc')->findAll();
-        $title = "Managemen Perusahaan";
+        $title = "Managemen Perusahaan | BPRS Madinah Lamongan";
 
         $group_management = array();
         foreach ($managements as $row) {
@@ -31,12 +31,12 @@ class AboutUsController extends BaseController
     }
 
     public function struktur() {
-        $title = "Struktur Perusahaan";
+        $title = "Struktur Perusahaan | BPRS Madinah Lamongan";
         return $this->render('/main/tentang_kami/struktur', compact('title'));
     }
 
     public function awards() {
-        $title = "Penghargaan Perusahaan";
+        $title = "Penghargaan Perusahaan | BPRS Madinah Lamongan";
         $awards = [
             [
                 "imagePath" => '/penghargaan/satu.jpg',
@@ -99,7 +99,7 @@ class AboutUsController extends BaseController
     }
 
     public function laporan() {
-        $title = "Laporan Perusahaan";
+        $title = "Laporan Perusahaan | BPRS Madinah Lamongan";
         $docModel = new DocumentModel();
         $docs = $docModel->findAll();
         return $this->render('/main/tentang_kami/laporan', compact('title', 'docs'));

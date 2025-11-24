@@ -17,6 +17,7 @@ class GaleriController extends BaseController
 
     public function index()
     {
+        $title = 'Galeri Aktivitas | BPRS Madinah Lamongan';
         $data_type_1 = array();
         $data_type_2 = array();
         $data_type_3 = array();
@@ -47,7 +48,7 @@ class GaleriController extends BaseController
             ['id' => 'madinah3', 'label' => 'Inklusi & Literasi', 'content' => $data_type_3],
         ];
 
-        return $this->render('main/galeri', compact('tabs'));
+        return $this->render('main/galeri', compact('tabs', 'title'));
     }
 
     public function getImages()

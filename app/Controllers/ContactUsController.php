@@ -9,7 +9,7 @@ class ContactUsController extends BaseController
 {
     public function index()
     {
-        $title = "Hubungi Kami";
+        $title = "Hubungi Kami | BPRS Madinah Lamongan";
         $locations = [
             [
                 'name' => 'BPRS Madinah Lamongan',

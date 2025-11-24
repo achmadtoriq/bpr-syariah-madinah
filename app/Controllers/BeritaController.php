@@ -9,7 +9,7 @@ class BeritaController extends BaseController
 {
     public function index()
     {
-        $title = "Berita";
+        $title = "Berita | BPRS Madinah Lamongan";
         return $this->render('/main/berita', compact('title'));
     }
 }

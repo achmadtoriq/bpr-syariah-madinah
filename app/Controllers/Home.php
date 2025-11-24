@@ -12,7 +12,7 @@ class Home extends BaseController
         
         // return view('welcome_message');
         return $this->render('main/home', [
-            'title' => 'Home Page'
+            'title' => 'BPRS Madinah Lamongan'
         ]);
     }
 }

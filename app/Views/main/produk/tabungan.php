@@ -314,25 +314,3 @@
         </div>
     </div>
 </div>
-
-<!-- Alpine Component -->
-<script>
-    function modalHandler() {
-        return {
-            show: false,
-            modalData: {
-                title: '',
-                desc: '',
-                features: [],
-                benefit: []
-            },
-            openModal(data) {
-                this.modalData = data;
-                this.show = true;
-            },
-            closeModal() {
-                this.show = false;
-            }
-        };
-    }
-</script>

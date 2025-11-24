@@ -9,7 +9,7 @@ class KarirController extends BaseController
 {
     public function index()
     {
-        $title = "Karir";
+        $title = "Karir | BPRS Madinah Lamongan";
         return $this->render('/main/karir', compact('title'));
     }
 }
