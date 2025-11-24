@@ -33,11 +33,11 @@
         </div>
 
         <div class="grid grid-cols-3 gap-4 justify-center items-center my-5 md:my-10">
-            <img src="<?php echo base_url('assets/produk/produk_1.jpg')
+            <img src="<?php echo base_url('assets/produk_layanan/produk_1.jpg')
                         ?>" alt="Logo" class="mx-auto w-auto rounded-md">
-            <img src="<?php echo base_url('assets/produk/produk_2.jpg')
+            <img src="<?php echo base_url('assets/produk_layanan/produk_2.jpg')
                         ?>" alt="Logo" class="mx-auto w-auto rounded-md">
-            <img src="<?php echo base_url('assets/produk/produk_3.jpg')
+            <img src="<?php echo base_url('assets/produk_layanan/produk_3.jpg')
                         ?>" alt="Logo" class="mx-auto w-auto rounded-md">
         </div>
     </div>
