@@ -26,12 +26,13 @@ class AboutUsController extends BaseController
         $managements = $models->orderBy('role', 'asc')->findAll();
         $title = "Managemen Perusahaan | BPRS Madinah Lamongan";
 
+        die(print_r($managements));
+
         $group_management = array();
         foreach ($managements as $row) {
             $group_management[$map[$row['role']]][] = $row;
         }
 
-        print_r($group_management);
 
         return $this->render('/main/tentang_kami/managemen', compact('title', 'group_management'));
     }
