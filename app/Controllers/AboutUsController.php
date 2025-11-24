@@ -31,6 +31,8 @@ class AboutUsController extends BaseController
             $group_management[$map[$row['role']]][] = $row;
         }
 
+        print_r($group_management);
+
         return $this->render('/main/tentang_kami/managemen', compact('title', 'group_management'));
     }
 
