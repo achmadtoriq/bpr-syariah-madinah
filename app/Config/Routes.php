@@ -23,7 +23,7 @@ $routes->get('/', [Home::class, 'index']);
 
 /* Tentang Kami */
 $routes->get('/profil', [AboutUsController::class, 'index']);
-$routes->get('/managemen', [AboutUsController::class, 'managemen']);
+$routes->get('/management', [AboutUsController::class, 'managemen']);
 $routes->get('/struktur_organisasi', [AboutUsController::class, 'struktur']);
 $routes->get('/awards', [AboutUsController::class, 'awards']);
 $routes->get('/keuangan', [AboutUsController::class, 'laporan']);
