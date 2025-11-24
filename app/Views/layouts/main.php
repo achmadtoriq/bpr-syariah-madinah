@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="<?= base_url("assets/icon_madinah.ico") ?>" rel="shortcut icon" type="image/x-icon">
 
-    <link href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.css" rel="preload">
     <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.5.13/dist/cropper.min.js" defer></script>
 
     <script src="https://cdn.tailwindcss.com" defer></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
-    <script src="https://kit.fontawesome.com/a7feba845e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a7feba845e.js" crossorigin="anonymous" async></script>
 
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
