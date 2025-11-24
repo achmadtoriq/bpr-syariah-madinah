@@ -16,10 +16,6 @@ class AboutUsController extends BaseController
     }
 
     public function managemen() {
-        ini_set('display_errors', '1');
-        ini_set('display_startup_errors', '1');
-        error_reporting(E_ALL);
-
         $map = array(1 => 'Pemegang Saham', 2 => 'Dewan Komisaris', 3 => 'Dewan Pengawas Syariah', 4 => 'Direksi');
         
         $models = new ManagemenModel();
