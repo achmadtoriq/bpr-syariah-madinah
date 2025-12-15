@@ -18,4 +18,4 @@
     </div>
 </div>
 
-<script src="<?= base_url('js/managemen-controls.js') ?>"></script>
+<script src="<?= base_url('assets/js/managemen-controls.js') ?>"></script>
