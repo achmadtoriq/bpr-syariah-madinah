@@ -19,22 +19,33 @@
                     <li>Laporan Keuangan</li>
                 </ul>
             </div>
-            <div>
-                <h1 class="text-xl md:text-2xl font-bold mb-3">Produk Kami</h1>
-                <ul>
-                    <li>Tabungan</li>
-                    <li>Deposito</li>
-                    <li>Pembiayaan</li>
-                </ul>
-            </div>
-            <div>
-                <h1 class="text-xl md:text-2xl font-bold mb-3">Ikuti Kami</h1>
-                <div class="flex flex-1 flex-wrap gap-2">
-                    <p class="antialiased md:subpixel-antialiased text-4xl md:text-4xl p-1 md:p-2"><i class="fa-brands fa-instagram"></i></p>
-                    <p class="antialiased md:subpixel-antialiased text-4xl md:text-4xl p-1 md:p-2"><i class="fa-brands fa-square-facebook"></i></p>
-                    <p class="antialiased md:subpixel-antialiased text-4xl md:text-4xl p-1 md:p-2"><i class="fa-solid fa-location-dot"></i></p>
+            <div class="col-span-2 grid grid-cols-1 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold mb-3">Produk Kami</h1>
+                        <ul>
+                            <li>Tabungan</li>
+                            <li>Deposito</li>
+                            <li>Pembiayaan</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold mb-3">Ikuti Kami</h1>
+                        <div class="flex flex-1 flex-wrap gap-2">
+                            <p class="antialiased md:subpixel-antialiased text-4xl md:text-4xl p-1 md:p-2"><i class="fa-brands fa-instagram"></i></p>
+                            <p class="antialiased md:subpixel-antialiased text-4xl md:text-4xl p-1 md:p-2"><i class="fa-brands fa-square-facebook"></i></p>
+                            <p class="antialiased md:subpixel-antialiased text-4xl md:text-4xl p-1 md:p-2"><i class="fa-solid fa-location-dot"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-4 border-white rounded-lg">
+                    <div class="p-4">
+                        <p class="text-justify"><strong>PT. BPRS Syariah Madinah</strong> berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK) serta merupakan peserta penjaminan Lembaga Penjamin Simpanan (LPS). </p>
+                        <p class="text-justify">Maksimum nilai simpanan yang dijamin LPS per nasabah per bank adalah Rp 2 miliar.</p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
