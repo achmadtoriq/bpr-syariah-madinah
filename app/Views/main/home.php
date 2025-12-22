@@ -12,9 +12,9 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-2 justify-center items-center">
             <img src="<?php echo base_url('assets/ib_perbankan_syariah.png')
                         ?>" alt="Logo" class="mx-auto w-auto p-1 md:p-2 h-14 md:h-20 md:grayscale hover:grayscale-0 cursor-pointer">
-            <img src="<?php echo base_url('assets/ojk.png')
+            <img src="<?php echo base_url('assets/bpr_syariah_sahabat_umkm.png')
                         ?>" alt="Logo" class="mx-auto w-auto p-1 md:p-2 h-14 md:h-20 md:grayscale hover:grayscale-0 cursor-pointer">
-            <img src="<?php echo base_url('assets/lembaga_penjamin_simpanan.png')
+            <img src="<?php echo base_url('assets/himbarsi_logo.png')
                         ?>" alt="Logo" class="mx-auto w-auto p-1 md:p-2 h-14 md:h-20 md:grayscale hover:grayscale-0 cursor-pointer">
             <img src="<?php echo base_url('assets/ayo_ke_bank_syariah.png')
                         ?>" alt="Logo" class="mx-auto w-auto p-1 md:p-2 h-10 md:h-16 md:grayscale hover:grayscale-0 cursor-pointer">
