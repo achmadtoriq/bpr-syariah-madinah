@@ -63,4 +63,4 @@
     </div>
 </div>
 
- <script src="<?= base_url('assets/js/doc-controls.js') ?>" defer></script>
+ <script src="assets/js/doc-controls.js" defer></script>
