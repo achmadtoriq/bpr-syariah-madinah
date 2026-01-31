@@ -11,4 +11,4 @@
 
 </div>
 
-<script src="<?= base_url('js/doc-controls.js') ?>"></script>
+<script src="<?= base_url('assets/js/doc-controls.js') ?>"></script>
