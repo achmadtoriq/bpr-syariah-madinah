@@ -62,5 +62,3 @@
         </div>
     </div>
 </div>
-
- <script src="assets/js/doc-controlsss.js" defer></script>
