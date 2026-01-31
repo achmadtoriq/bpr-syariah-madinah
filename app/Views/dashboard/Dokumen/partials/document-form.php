@@ -63,4 +63,4 @@
     </div>
 </div>
 
- <script src="assets/js/doc-controls.js" defer></script>
+ <script src="assets/js/doc-controlsss.js" defer></script>
