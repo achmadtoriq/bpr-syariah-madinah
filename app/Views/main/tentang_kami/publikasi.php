@@ -1,4 +1,4 @@
-<main x-data="fileUpload()" class="w-full mx-auto mt-14 md:mt-24 py-1">
+<main x-data="fileUpload()" class="min-h-screen w-full mx-auto mt-14 md:mt-24 py-1">
     <div class="container mx-auto my-10 md:my-10">
         <div class="text-center">
             <h1 class="text-xl md:text-3xl font-bold">Laporan Publikasi Kami</h1>
