@@ -27,7 +27,7 @@ $routes->get('/managemen', [AboutUsController::class, 'managemen']);
 $routes->get('/struktur_organisasi', [AboutUsController::class, 'struktur']);
 $routes->get('/awards', [AboutUsController::class, 'awards']);
 $routes->get('/keuangan', [AboutUsController::class, 'laporan']);
-$routes->get('/publikasi', [AboutUsController::class, 'publikasi']);
+$routes->get('/piagam', [AboutUsController::class, 'piagam']);
 
 /* Produk Kami */
 $routes->get('/tabungan', [ProdukController::class, 'index']);

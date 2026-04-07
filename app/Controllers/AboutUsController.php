@@ -105,10 +105,10 @@ class AboutUsController extends BaseController
         return $this->render('/main/tentang_kami/laporan', compact('title', 'docs'));
     }
 
-    public function publikasi() {
-        $title = "Laporan Publikasi Perusahaan | BPRS Madinah Lamongan";
+    public function piagam() {
+        $title = "Piagam Audit Perusahaan | BPRS Madinah Lamongan";
         $docModel = new DocumentModel();
-        $docs = $docModel->findAll();
-        return $this->render('/main/tentang_kami/publikasi', compact('title', 'docs'));
+        $docs = array();//$docModel->findAll();
+        return $this->render('/main/tentang_kami/piagam', compact('title', 'docs'));
     }
 }

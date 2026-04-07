@@ -39,7 +39,7 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
                     <a href="<?= base_url('/struktur_organisasi') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/struktur_organisasi' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Struktur Ogranisasi</a>
                     <a href="<?= base_url('/awards') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/awards' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Penghargaan</a>
                     <a href="<?= base_url('/keuangan') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/keuangan' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Keuangan</a>
-                    <a href="<?= base_url('/publikasi') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/publikasi' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Laporan publikasi</a>
+                    <a href="<?= base_url('/piagam') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/piagam' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Piagam Audit</a>
                 </div>
             </div>
 
@@ -98,7 +98,7 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
                     <a href="<?= base_url('/struktur_organisasi') ?>" class="block p-2 <?= $uri->getPath() === '/struktur_organisasi' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Struktur Ogranisasi</a>
                     <a href="<?= base_url('/awards') ?>" class="block p-2 <?= $uri->getPath() === '/awards' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Penghargaan</a>
                     <a href="<?= base_url('/keuangan') ?>" class="block p-2 <?= $uri->getPath() === '/keuangan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Keuangan</a>
-                    <a href="<?= base_url('/publikasi') ?>" class="block p-2 <?= $uri->getPath() === '/publikasi' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Publikasi</a>
+                    <a href="<?= base_url('/piagam') ?>" class="block p-2 <?= $uri->getPath() === '/piagam' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Piagam Audit</a>
                 </div>
             </div>
 
