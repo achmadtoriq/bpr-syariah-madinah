@@ -108,7 +108,7 @@ class AboutUsController extends BaseController
     public function piagam() {
         $title = "Piagam Audit Perusahaan | BPRS Madinah Lamongan";
         $docModel = new DocumentModel();
-        $docs = array();//$docModel->findAll();
+        $docs = $docModel->findAll();
         return $this->render('/main/tentang_kami/piagam', compact('title', 'docs'));
     }
 }
