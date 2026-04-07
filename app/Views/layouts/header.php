@@ -1,12 +1,12 @@
 <?php
 $uri = service('uri');
 $arr_produk = array('/tabungan', '/deposito', '/pembiayaan', '/pelayanan');
-$arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/penghargaan', '/keuangan');
+$arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/penghargaan', '/keuangan', '/publikasi');
 ?>
 
 
 <!-- ✅ HEADER / NAVBAR -->
-<header class="w-full fixed top-0 left-0 shadow z-50 bg-white">
+<header class="w-full fixed top-0 left-0 shadow z-50 bg-white dura">
     <div class="hidden md:block bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white text-xs font-medium">
         <div class="container mx-auto py-2">
             <div class="flex flex-1 justify-between items-center">
@@ -39,6 +39,7 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
                     <a href="<?= base_url('/struktur_organisasi') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/struktur_organisasi' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Struktur Ogranisasi</a>
                     <a href="<?= base_url('/awards') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/awards' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Penghargaan</a>
                     <a href="<?= base_url('/keuangan') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/keuangan' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Keuangan</a>
+                    <a href="<?= base_url('/publikasi') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/publikasi' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Laporan publikasi</a>
                 </div>
             </div>
 
@@ -97,6 +98,7 @@ $arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/pen
                     <a href="<?= base_url('/struktur_organisasi') ?>" class="block p-2 <?= $uri->getPath() === '/struktur_organisasi' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Struktur Ogranisasi</a>
                     <a href="<?= base_url('/awards') ?>" class="block p-2 <?= $uri->getPath() === '/awards' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Penghargaan</a>
                     <a href="<?= base_url('/keuangan') ?>" class="block p-2 <?= $uri->getPath() === '/keuangan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Keuangan</a>
+                    <a href="<?= base_url('/publikasi') ?>" class="block p-2 <?= $uri->getPath() === '/publikasi' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Publikasi</a>
                 </div>
             </div>
 

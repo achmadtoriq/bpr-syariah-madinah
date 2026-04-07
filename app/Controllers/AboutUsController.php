@@ -104,4 +104,11 @@ class AboutUsController extends BaseController
         $docs = $docModel->findAll();
         return $this->render('/main/tentang_kami/laporan', compact('title', 'docs'));
     }
+
+    public function publikasi() {
+        $title = "Laporan Publikasi Perusahaan | BPRS Madinah Lamongan";
+        $docModel = new DocumentModel();
+        $docs = $docModel->findAll();
+        return $this->render('/main/tentang_kami/publikasi', compact('title', 'docs'));
+    }
 }
