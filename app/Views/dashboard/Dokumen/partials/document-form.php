@@ -18,7 +18,8 @@
                     $categories = array(
                         "1" => "Laporan Tahunan & AKB",
                         "2" => "Laporan Tata Kelola",
-                        "3" => "Laporan Publikasi"
+                        "3" => "Laporan Publikasi",
+                        "4" => "Piagam Audit"
                     );
                     ?>
                     <?php if (isset($categories) && is_array($categories)): ?>
