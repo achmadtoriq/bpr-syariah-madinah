@@ -75,7 +75,8 @@
                 $dataLaporan = array(
                     1 => "Tahunan & AKB",
                     2 => "Tata Kelola",
-                    3 => "Publikasi"
+                    3 => "Publikasi",
+                    4 => "Piagam Audit"
                 );
                 foreach ($countDocs as $value) {
                 ?>

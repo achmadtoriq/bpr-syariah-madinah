@@ -13,10 +13,6 @@ class DashboardController extends BaseController
 {
     public function index()
     {
-        ini_set('display_errors', '1');
-        ini_set('display_startup_errors', '1');
-        error_reporting(E_ALL);
-
         $title = 'Dashboard Page';
         $image = new ImageModel();
         $article = new NewsModel();
