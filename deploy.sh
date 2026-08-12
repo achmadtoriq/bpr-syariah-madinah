@@ -5,10 +5,21 @@ set -e
 
 echo "🚀 Starting CodeIgniter 4 Fast Deployment..."
 
-# 0. Ensure .env exists
+# 0. Ensure .env exists in root and in public/
 if [ ! -f ".env" ] && [ -f "env" ]; then
     echo "⚙️ Creating default .env from env template..."
     cp env .env
+fi
+
+if [ -f ".env" ]; then
+    echo "📄 Ensuring .env is present in public/ directory..."
+    cp .env public/.env 2>/dev/null || true
+fi
+
+# Ensure public/.htaccess is synced
+if [ -f "public/.htaccess" ]; then
+    echo "🔒 Syncing public/.htaccess..."
+    chmod 644 public/.htaccess 2>/dev/null || true
 fi
 
 # 1. PHP Dependencies Check (Skipped if pre-built on GitHub)
