@@ -16,13 +16,13 @@ if [ -f ".env" ]; then
     cp .env public/.env 2>/dev/null || true
 fi
 
-# Ensure public/.htaccess is synced
-if [ -f "public/.htaccess" ]; then
-    echo "🔒 Syncing public/.htaccess..."
-    chmod 644 public/.htaccess 2>/dev/null || true
-fi
+# 1. Enforce LiteSpeed / suPHP Secure Permissions (0755 dirs, 0644 files)
+echo "🔒 Setting LiteSpeed secure directory & file permissions..."
+find . -type d -exec chmod 755 {} + 2>/dev/null || true
+find . -type f -exec chmod 644 {} + 2>/dev/null || true
+chmod +x deploy.sh 2>/dev/null || true
 
-# 1. PHP Dependencies Check (Skipped if pre-built on GitHub)
+# 2. PHP Dependencies Check (Skipped if pre-built on GitHub)
 if [ -d "vendor" ] && [ -f "vendor/autoload.php" ]; then
     echo "📦 Using pre-built Composer vendor packages from GitHub."
 elif [ -f "composer.json" ] && command -v composer &> /dev/null; then
@@ -30,7 +30,7 @@ elif [ -f "composer.json" ] && command -v composer &> /dev/null; then
     composer install --no-dev --optimize-autoloader --no-interaction
 fi
 
-# 2. Frontend Assets Check (Skipped if pre-built on GitHub)
+# 3. Frontend Assets Check (Skipped if pre-built on GitHub)
 if [ -f "public/assets/css/style.css" ]; then
     echo "🎨 Using pre-built Tailwind CSS assets from GitHub."
 elif [ -f "package.json" ]; then
@@ -40,10 +40,6 @@ elif [ -f "package.json" ]; then
         npm run build:css
     fi
 fi
-
-# 3. Set Writable Directory Permissions
-echo "🔒 Setting writable folder permissions..."
-chmod -R 777 writable/ 2>/dev/null || chmod -R 775 writable/ 2>/dev/null || true
 
 # 4. Run Database Migrations
 echo "🗄️ Running database migrations..."
