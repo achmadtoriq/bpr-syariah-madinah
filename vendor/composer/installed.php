@@ -3,7 +3,7 @@
         'name' => 'codeigniter4/framework',
         'pretty_version' => 'dev-feature/deployment-workflow',
         'version' => 'dev-feature/deployment-workflow',
-        'reference' => '1124c421a347b10dd5d5de87dd3010a9e6b6bfae',
+        'reference' => '3d156980a7bc35ce4b1d4b9a1390b9d86e740c1d',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'codeigniter4/framework' => array(
             'pretty_version' => 'dev-feature/deployment-workflow',
             'version' => 'dev-feature/deployment-workflow',
-            'reference' => '1124c421a347b10dd5d5de87dd3010a9e6b6bfae',
+            'reference' => '3d156980a7bc35ce4b1d4b9a1390b9d86e740c1d',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
