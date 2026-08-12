@@ -1,4 +1,4 @@
-name: Build & Auto-Commit Mantap
+name: Build & Auto-Commit Vendor & Assets
 
 on:
   push:
@@ -36,6 +36,9 @@ jobs:
         run: |
           npm ci || npm install
           npm run build:css
+
+      - name: Configure Git SSL Verification Failsafe
+        run: git config --global http.sslVerify false
 
       - name: Commit & Push Compiled Vendor & Assets if changed
         uses: stefanzweifel/git-auto-commit-action@v5
