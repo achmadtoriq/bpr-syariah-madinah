@@ -3,25 +3,24 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
-echo "🚀 Starting CodeIgniter 4 Deployment..."
+echo "🚀 Starting CodeIgniter 4 Fast Deployment..."
 
-# 1. Update Composer dependencies
-if [ -f "composer.json" ]; then
-    echo "📦 Installing PHP dependencies..."
+# 1. PHP Dependencies Check (Skipped if pre-built on GitHub)
+if [ -d "vendor" ] && [ -f "vendor/autoload.php" ]; then
+    echo "📦 Using pre-built Composer vendor packages from GitHub."
+elif [ -f "composer.json" ] && command -v composer &> /dev/null; then
+    echo "📦 Installing PHP dependencies via Composer..."
     composer install --no-dev --optimize-autoloader --no-interaction
 fi
 
-# 2. Build Frontend Assets (Tailwind CSS)
-if [ -f "package.json" ]; then
+# 2. Frontend Assets Check (Skipped if pre-built on GitHub)
+if [ -f "public/assets/css/style.css" ]; then
+    echo "🎨 Using pre-built Tailwind CSS assets from GitHub."
+elif [ -f "package.json" ]; then
     if command -v npm &> /dev/null; then
         echo "🎨 Building CSS assets with NPM..."
         npm ci || npm install
         npm run build:css
-    elif command -v npx &> /dev/null; then
-        echo "🎨 Building CSS assets with NPX..."
-        npx tailwindcss@3 -i ./resources/css/input.css -o ./public/assets/css/style.css --minify
-    else
-        echo "ℹ️ NPM/Node.js tidak ditemukan di hosting. Menggunakan CSS hasil kompilasi GitHub Actions."
     fi
 fi
 
@@ -37,4 +36,4 @@ php spark migrate --all 2>/dev/null || php spark migrate 2>/dev/null || true
 echo "🧹 Clearing CodeIgniter cache..."
 php spark cache:clear 2>/dev/null || true
 
-echo "✅ Deployment script completed successfully!"
+echo "✅ Fast Deployment completed successfully in seconds!"
