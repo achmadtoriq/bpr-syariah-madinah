@@ -53,8 +53,8 @@ class GaleriController extends BaseController
 
     public function getImages()
     {
-        // Contoh data; kamu bisa ambil dari DB
-        $data_img = $this->imageModel->findAll();
+        $limit = $this->request->getGet('limit') ? (int)$this->request->getGet('limit') : 12;
+        $data_img = $this->imageModel->orderBy('id', 'DESC')->limit($limit)->findAll();
 
         return $this->response->setJSON($data_img);
     }

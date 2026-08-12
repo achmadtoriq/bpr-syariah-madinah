@@ -44,7 +44,19 @@ class UploadController extends BaseController
         }
 
         $newName = 'bprsmadinah_' . time() . '.jpg';
-        $file->move(ROOTPATH . 'public/assets/uploads', $newName);
+        $targetDir = ROOTPATH . 'public/assets/uploads';
+        $file->move($targetDir, $newName);
+        $fullPath = $targetDir . '/' . $newName;
+
+        // Auto compress and resize uploaded image to max 1200px
+        try {
+            Services::image()
+                ->withFile($fullPath)
+                ->resize(1200, 1200, true, 'height')
+                ->save($fullPath, 82);
+        } catch (\Throwable $e) {
+            // Silently fallback if image processing is not supported
+        }
 
         $url_image = 'assets/uploads/' . $newName;
 

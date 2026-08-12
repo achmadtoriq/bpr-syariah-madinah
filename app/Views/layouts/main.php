@@ -20,8 +20,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
-    <script src="https://unpkg.com/alpinejs" defer></script>
-    <script src="https://kit.fontawesome.com/a7feba845e.js" crossorigin="anonymous" defer></script>
+
+    <!-- Alpine.js Plugins & Core -->
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- FontAwesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.net/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
@@ -60,11 +65,8 @@
             }
         };
 
-        document.addEventListener('DOMContentLoaded', initAOS);
-        window.addEventListener('load', initAOS);
-        window.addEventListener('resize', () => {
-            if (window.AOS) AOS.refresh();
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            initAOS();
 
             if (window.jQuery && jQuery.fn.select2) {
                 jQuery('[data-select2]').each(function() {
@@ -87,6 +89,11 @@
                     });
                 });
             }
+        });
+
+        window.addEventListener('load', initAOS);
+        window.addEventListener('resize', () => {
+            if (window.AOS) AOS.refresh();
         });
 
         function modalHandler() {
@@ -145,6 +152,8 @@
         .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
             background-color: #2563eb;
         }
+    </style>
+
     <!-- 💬 FLOATING WHATSAPP BUTTON -->
     <div x-data="{ openWa: false }" class="fixed bottom-6 right-6 z-50">
         <!-- Popup Menu -->
@@ -180,3 +189,4 @@
 </body>
 
 </html>
+

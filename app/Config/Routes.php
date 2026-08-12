@@ -84,7 +84,8 @@ $routes->group('/', function($routes) {
 });
 
 $routes->set404Override(function() {
-    if (service('request')->isAJAX()) {
+    $request = service('request');
+    if (method_exists($request, 'isAJAX') && $request->isAJAX()) {
         return service('response')
             ->setStatusCode(404)
             ->setJSON(['message' => 'Halaman tidak ditemukan']);
@@ -92,3 +93,4 @@ $routes->set404Override(function() {
 
     return view('errors/html/custom_404');
 });
+
