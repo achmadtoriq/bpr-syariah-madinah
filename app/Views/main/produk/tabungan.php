@@ -1,139 +1,4 @@
-<main class="w-full bg-slate-50 text-slate-900 font-sans min-h-screen" x-data="{
-    searchQuery: '',
-    selectedCategory: 'all',
-    showModal: false,
-    modalData: {
-        title: '',
-        acad: '',
-        desc: '',
-        features: [],
-        benefit: [],
-        image: ''
-    },
-    products: [
-        {
-            id: 'sibarkah',
-            title: 'Tabungan SIBARKAH',
-            category: 'umum',
-            acad: 'Mudharabah',
-            acadLabel: 'Akad Mudharabah Mutlaqah',
-            desc: 'Tabungan Sibarkah adalah tabungan yang dijalankan dengan prinsip akad mudharabah, di mana nasabah (shohibul mal) berhak mendapat bagi hasil dari pihak bank (mudharib) sesuai dengan nisbah yang telah disepakati bersama.',
-            features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
-            benefit: ['Dana dapat ditarik sewaktu-waktu', 'Nasabah berhak mendapat bagi hasil setiap bulan', 'Setoran awal sangat ringan (mulai Rp 10.000)', 'Bebas biaya administrasi bulanan'],
-            image: '<?= base_url('assets/produk/tabungan_sibarkah.png') ?>',
-            badge: 'Bagi Hasil Bulanan'
-        },
-        {
-            id: 'qordiyu',
-            title: 'Tabungan QORDIYU',
-            category: 'umum',
-            acad: 'Wadi\'ah',
-            acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
-            desc: 'Tabungan Qordiyu merupakan simpanan dengan prinsip wadi’ah yad adh-dhamanah, di mana bank mengelola dana nasabah dan nasabah dapat mengambil dananya kapan saja secara utuh.',
-            features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
-            benefit: ['Dana dapat ditarik sewaktu-waktu', 'Setoran awal sangat ringan', 'Bebas biaya administrasi bulanan', 'Potensi pemberian bonus sesuai kebijakan bank'],
-            image: '<?= base_url('assets/produk/tabungan_qordiyu.png') ?>',
-            badge: 'Tarik Kapan Saja'
-        },
-        {
-            id: 'haji',
-            title: 'Tabungan Al-Madinah (Haji)',
-            category: 'ibadah',
-            acad: 'Wadi\'ah',
-            acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
-            desc: 'Tabungan Al-Madinah diperuntukkan khusus bagi masyarakat yang merencanakan pendaftaran dan keberangkatan ibadah haji secara aman terencana.',
-            features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
-            benefit: ['Setoran awal ringan (mulai Rp 50.000)', 'Bebas biaya administrasi bulanan', 'Integrasi kemudahan pendaftaran porsi haji'],
-            image: '<?= base_url('assets/produk/tabungan_haji.png') ?>',
-            badge: 'Rencana Ibadah Haji'
-        },
-        {
-            id: 'qurban',
-            title: 'Tabungan Qurban',
-            category: 'ibadah',
-            acad: 'Wadi\'ah',
-            acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
-            desc: 'Tabungan Qurban membantu masyarakat menyisihkan dana secara konsisten untuk pembelian hewan kurban pada Hari Raya Idul Adha.',
-            features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
-            benefit: ['Setoran terjangkau dan berkala', 'Bebas biaya administrasi bulanan', 'Pencairan tepat waktu menjelang Idul Adha'],
-            image: '<?= base_url('assets/produk/tabungan_qurban.png') ?>',
-            badge: 'Rencana Kurban'
-        },
-        {
-            id: 'tarbiyah',
-            title: 'Tabungan Tarbiyah',
-            category: 'pendidikan',
-            acad: 'Wadi\'ah',
-            acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
-            desc: 'Tabungan Tarbiyah dirancang khusus untuk membantu para orang tua menyimpan dan mempersiapkan dana pendidikan putra-putri di masa depan.',
-            features: ['Fotocopy KTP / Identitas Diri Orang Tua', 'Fotocopy Akta Kelahiran Anak / KK', 'Mengisi Formulir Pembukaan Rekening'],
-            benefit: ['Membantu kedisiplinan dana pendidikan', 'Setoran sangat ringan & terjangkau', 'Bebas biaya administrasi bulanan'],
-            image: '<?= base_url('assets/produk/tabungan_tarbiyah.png') ?>',
-            badge: 'Dana Pendidikan'
-        },
-        {
-            id: 'arofah',
-            title: 'Tabungan Arofah (Umroh)',
-            category: 'ibadah',
-            acad: 'Wadi\'ah',
-            acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
-            desc: 'Tabungan Arofah adalah solusi perencanaan dana bagi masyarakat yang mendambakan perjalanan ibadah umrah ke Tanah Suci.',
-            features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
-            benefit: ['Setoran fleksibel sesuai kemampuan', 'Bebas biaya administrasi bulanan', 'Pendampingan konsultasi rencana umrah'],
-            image: '<?= base_url('assets/produk/tabungan_umroh.png') ?>',
-            badge: 'Rencana Umroh'
-        },
-        {
-            id: 'simpel',
-            title: 'Tabungan SimPel iB',
-            category: 'pendidikan',
-            acad: 'Wadi\'ah',
-            acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
-            desc: 'Tabungan Simpanan Pelajar (SimPel iB) diperuntukkan bagi siswa/pelajar guna membangun budaya menabung sejak dini dengan syarat yang sangat mudah.',
-            features: ['Kerjasama MoU Sekolah dengan BPRS Madinah', 'Fotocopy Kartu Pelajar / Akta Lahir', 'Fotocopy KTP Orang Tua & Kartu Keluarga', 'Formulir Pembukaan Rekening SimPel iB'],
-            benefit: ['Setoran awal super ringan (mulai Rp 1.000)', 'Bebas biaya administrasi bulanan', 'Berkesempatan mendapatkan gimmick / hadiah menarik'],
-            image: '<?= base_url('assets/produk/tabungan_simpel.png') ?>',
-            badge: 'Khusus Pelajar'
-        },
-        {
-            id: 'walimah',
-            title: 'Tabungan Walimah',
-            category: 'umum',
-            acad: 'Wadi\'ah',
-            acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
-            desc: 'Tabungan Walimah diciptakan bagi masyarakat yang ingin menyisihkan sebagian dana untuk hajatan resepsi nikah atau hajat besar keluarga di masa depan.',
-            features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
-            benefit: ['Setoran terencana dan fleksibel', 'Bebas biaya administrasi bulanan', 'Aman dan siap dicairkan saat hajatan'],
-            image: '<?= base_url('assets/produk/tabungan_walimah.png') ?>',
-            badge: 'Rencana Hajat'
-        },
-        {
-            id: 'sibermas',
-            title: 'Tabungan Sibermas',
-            category: 'sosial',
-            acad: 'Wadi\'ah',
-            acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
-            desc: 'Tabungan Sibermas merupakan wujud sinergi BPRS Madinah dengan takmir masjid di Kabupaten Lamongan untuk pengelolaan dana kas masjid secara profesional dan amanah.',
-            features: ['Surat Keputusan (SK) Pengurus Takmir Masjid', 'Fotocopy KTP Pengurus (Ketua & Bendahara)', 'Mengisi Formulir Pembukaan Rekening Instansi'],
-            benefit: ['Pengelolaan kas masjid akuntabel & syariah', 'Bebas biaya administrasi bulanan', 'Laporan transaksi kas berkala transparan'],
-            image: '<?= base_url('assets/produk/tabungan_sibermas.png') ?>',
-            badge: 'Kas Masjid & Sosial'
-        }
-    ],
-    get filteredProducts() {
-        return this.products.filter(p => {
-            const matchSearch = p.title.toLowerCase().includes(this.searchQuery.toLowerCase()) || 
-                                p.desc.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-                                p.acadLabel.toLowerCase().includes(this.searchQuery.toLowerCase());
-            const matchCat = this.selectedCategory === 'all' || p.category === this.selectedCategory;
-            return matchSearch && matchCat;
-        });
-    },
-    openProductModal(prod) {
-        this.modalData = prod;
-        this.showModal = true;
-    }
-}">
+<main class="w-full bg-slate-50 text-slate-900 font-sans min-h-screen" x-data="tabunganPage()">
     <!-- 🏢 EXECUTIVE HERO BANNER SECTION -->
     <section class="relative bg-gradient-to-b from-blue-50/80 via-white to-slate-50 text-slate-900 pt-28 pb-12 md:pt-36 md:pb-16 border-b border-slate-200 overflow-hidden">
         <!-- Soft Ambient Light Glows -->
@@ -401,3 +266,146 @@
         </div>
     </section>
 </main>
+
+<script>
+    function tabunganPage() {
+        return {
+            searchQuery: '',
+            selectedCategory: 'all',
+            showModal: false,
+            modalData: {
+                title: '',
+                acad: '',
+                desc: '',
+                features: [],
+                benefit: [],
+                image: ''
+            },
+            products: [
+                {
+                    id: 'sibarkah',
+                    title: 'Tabungan SIBARKAH',
+                    category: 'umum',
+                    acad: 'Mudharabah',
+                    acadLabel: 'Akad Mudharabah Mutlaqah',
+                    desc: 'Tabungan Sibarkah adalah tabungan yang dijalankan dengan prinsip akad mudharabah, di mana nasabah (shohibul mal) berhak mendapat bagi hasil dari pihak bank (mudharib) sesuai dengan nisbah yang telah disepakati bersama.',
+                    features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
+                    benefit: ['Dana dapat ditarik sewaktu-waktu', 'Nasabah berhak mendapat bagi hasil setiap bulan', 'Setoran awal sangat ringan (mulai Rp 10.000)', 'Bebas biaya administrasi bulanan'],
+                    image: '<?= base_url('assets/produk/tabungan_sibarkah.png') ?>',
+                    badge: 'Bagi Hasil Bulanan'
+                },
+                {
+                    id: 'qordiyu',
+                    title: 'Tabungan QORDIYU',
+                    category: 'umum',
+                    acad: 'Wadi\'ah',
+                    acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
+                    desc: 'Tabungan Qordiyu merupakan simpanan dengan prinsip wadi’ah yad adh-dhamanah, di mana bank mengelola dana nasabah dan nasabah dapat mengambil dananya kapan saja secara utuh.',
+                    features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
+                    benefit: ['Dana dapat ditarik sewaktu-waktu', 'Setoran awal sangat ringan', 'Bebas biaya administrasi bulanan', 'Potensi pemberian bonus sesuai kebijakan bank'],
+                    image: '<?= base_url('assets/produk/tabungan_qordiyu.png') ?>',
+                    badge: 'Tarik Kapan Saja'
+                },
+                {
+                    id: 'haji',
+                    title: 'Tabungan Al-Madinah (Haji)',
+                    category: 'ibadah',
+                    acad: 'Wadi\'ah',
+                    acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
+                    desc: 'Tabungan Al-Madinah diperuntukkan khusus bagi masyarakat yang merencanakan pendaftaran dan keberangkatan ibadah haji secara aman terencana.',
+                    features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
+                    benefit: ['Setoran awal ringan (mulai Rp 50.000)', 'Bebas biaya administrasi bulanan', 'Integrasi kemudahan pendaftaran porsi haji'],
+                    image: '<?= base_url('assets/produk/tabungan_haji.png') ?>',
+                    badge: 'Rencana Ibadah Haji'
+                },
+                {
+                    id: 'qurban',
+                    title: 'Tabungan Qurban',
+                    category: 'ibadah',
+                    acad: 'Wadi\'ah',
+                    acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
+                    desc: 'Tabungan Qurban membantu masyarakat menyisihkan dana secara konsisten untuk pembelian hewan kurban pada Hari Raya Idul Adha.',
+                    features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
+                    benefit: ['Setoran terjangkau dan berkala', 'Bebas biaya administrasi bulanan', 'Pencairan tepat waktu menjelang Idul Adha'],
+                    image: '<?= base_url('assets/produk/tabungan_qurban.png') ?>',
+                    badge: 'Rencana Kurban'
+                },
+                {
+                    id: 'tarbiyah',
+                    title: 'Tabungan Tarbiyah',
+                    category: 'pendidikan',
+                    acad: 'Wadi\'ah',
+                    acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
+                    desc: 'Tabungan Tarbiyah dirancang khusus untuk membantu para orang tua menyimpan dan mempersiapkan dana pendidikan putra-putri di masa depan.',
+                    features: ['Fotocopy KTP / Identitas Diri Orang Tua', 'Fotocopy Akta Kelahiran Anak / KK', 'Mengisi Formulir Pembukaan Rekening'],
+                    benefit: ['Membantu kedisiplinan dana pendidikan', 'Setoran sangat ringan & terjangkau', 'Bebas biaya administrasi bulanan'],
+                    image: '<?= base_url('assets/produk/tabungan_tarbiyah.png') ?>',
+                    badge: 'Dana Pendidikan'
+                },
+                {
+                    id: 'arofah',
+                    title: 'Tabungan Arofah (Umroh)',
+                    category: 'ibadah',
+                    acad: 'Wadi\'ah',
+                    acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
+                    desc: 'Tabungan Arofah adalah solusi perencanaan dana bagi masyarakat yang mendambakan perjalanan ibadah umrah ke Tanah Suci.',
+                    features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
+                    benefit: ['Setoran fleksibel sesuai kemampuan', 'Bebas biaya administrasi bulanan', 'Pendampingan konsultasi rencana umrah'],
+                    image: '<?= base_url('assets/produk/tabungan_umroh.png') ?>',
+                    badge: 'Rencana Umroh'
+                },
+                {
+                    id: 'simpel',
+                    title: 'Tabungan SimPel iB',
+                    category: 'pendidikan',
+                    acad: 'Wadi\'ah',
+                    acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
+                    desc: 'Tabungan Simpanan Pelajar (SimPel iB) diperuntukkan bagi siswa/pelajar guna membangun budaya menabung sejak dini dengan syarat yang sangat mudah.',
+                    features: ['Kerjasama MoU Sekolah dengan BPRS Madinah', 'Fotocopy Kartu Pelajar / Akta Lahir', 'Fotocopy KTP Orang Tua & Kartu Keluarga', 'Formulir Pembukaan Rekening SimPel iB'],
+                    benefit: ['Setoran awal super ringan (mulai Rp 1.000)', 'Bebas biaya administrasi bulanan', 'Berkesempatan mendapatkan gimmick / hadiah menarik'],
+                    image: '<?= base_url('assets/produk/tabungan_simpel.png') ?>',
+                    badge: 'Khusus Pelajar'
+                },
+                {
+                    id: 'walimah',
+                    title: 'Tabungan Walimah',
+                    category: 'umum',
+                    acad: 'Wadi\'ah',
+                    acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
+                    desc: 'Tabungan Walimah diciptakan bagi masyarakat yang ingin menyisihkan sebagian dana untuk hajatan resepsi nikah atau hajat besar keluarga di masa depan.',
+                    features: ['Fotocopy KTP / Identitas Diri Asli', 'Fotocopy NPWP (jika ada)', 'Mengisi Formulir Pembukaan Rekening BPRS Madinah'],
+                    benefit: ['Setoran terencana dan fleksibel', 'Bebas biaya administrasi bulanan', 'Aman dan siap dicairkan saat hajatan'],
+                    image: '<?= base_url('assets/produk/tabungan_walimah.png') ?>',
+                    badge: 'Rencana Hajat'
+                },
+                {
+                    id: 'sibermas',
+                    title: 'Tabungan Sibermas',
+                    category: 'sosial',
+                    acad: 'Wadi\'ah',
+                    acadLabel: 'Akad Wadi\'ah Yad Adh-Dhamanah',
+                    desc: 'Tabungan Sibermas merupakan wujud sinergi BPRS Madinah dengan takmir masjid di Kabupaten Lamongan untuk pengelolaan dana kas masjid secara profesional dan amanah.',
+                    features: ['Surat Keputusan (SK) Pengurus Takmir Masjid', 'Fotocopy KTP Pengurus (Ketua & Bendahara)', 'Mengisi Formulir Pembukaan Rekening Instansi'],
+                    benefit: ['Pengelolaan kas masjid akuntabel & syariah', 'Bebas biaya administrasi bulanan', 'Laporan transaksi kas berkala transparan'],
+                    image: '<?= base_url('assets/produk/tabungan_sibermas.png') ?>',
+                    badge: 'Kas Masjid & Sosial'
+                }
+            ],
+
+            get filteredProducts() {
+                return this.products.filter(p => {
+                    const matchSearch = p.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+                                        p.desc.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+                                        p.acadLabel.toLowerCase().includes(this.searchQuery.toLowerCase());
+                    const matchCat = this.selectedCategory === 'all' || p.category === this.selectedCategory;
+                    return matchSearch && matchCat;
+                });
+            },
+
+            openProductModal(prod) {
+                this.modalData = prod;
+                this.showModal = true;
+            }
+        };
+    }
+</script>

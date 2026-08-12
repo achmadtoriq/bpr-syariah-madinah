@@ -1,27 +1,4 @@
-<main class="w-full bg-slate-50 text-slate-900 font-sans min-h-screen" x-data="{
-    nominal: 10000000,
-    tenor: 12,
-    showImageModal: false,
-    formatRupiah(val) {
-        return 'Rp ' + Number(val).toLocaleString('id-ID');
-    },
-    formatNumberInput(num) {
-        if (!num && num !== 0) return '';
-        return num.toString().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    },
-    get indicativeRate() {
-        if (this.tenor == 1) return 0.045; // 4.5% p.a equivalent
-        if (this.tenor == 3) return 0.050; // 5.0% p.a equivalent
-        if (this.tenor == 6) return 0.055; // 5.5% p.a equivalent
-        return 0.060;                      // 6.0% p.a equivalent for 12 months
-    },
-    get monthlyReturn() {
-        return Math.round((this.nominal * this.indicativeRate) / 12);
-    },
-    get totalReturnAtMaturity() {
-        return Math.round(this.nominal + (this.monthlyReturn * this.tenor));
-    }
-}">
+<main class="w-full bg-slate-50 text-slate-900 font-sans min-h-screen" x-data="depositoPage()">
     <!-- 🏢 EXECUTIVE HERO BANNER SECTION -->
     <section class="relative bg-gradient-to-b from-blue-50/80 via-white to-slate-50 text-slate-900 pt-28 pb-12 md:pt-36 md:pb-16 border-b border-slate-200 overflow-hidden">
         <!-- Ambient Decorative Glows -->
@@ -460,3 +437,37 @@
         </div>
     </section>
 </main>
+
+<script>
+    function depositoPage() {
+        return {
+            nominal: 10000000,
+            tenor: 12,
+            showImageModal: false,
+
+            formatRupiah(val) {
+                return 'Rp ' + Number(val || 0).toLocaleString('id-ID');
+            },
+
+            formatNumberInput(num) {
+                if (!num && num !== 0) return '';
+                return num.toString().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            },
+
+            get indicativeRate() {
+                if (this.tenor == 1) return 0.045; // 4.5% p.a equivalent
+                if (this.tenor == 3) return 0.050; // 5.0% p.a equivalent
+                if (this.tenor == 6) return 0.055; // 5.5% p.a equivalent
+                return 0.060;                      // 6.0% p.a equivalent for 12 months
+            },
+
+            get monthlyReturn() {
+                return Math.round((this.nominal * this.indicativeRate) / 12);
+            },
+
+            get totalReturnAtMaturity() {
+                return Math.round(this.nominal + (this.monthlyReturn * this.tenor));
+            }
+        };
+    }
+</script>

@@ -1,135 +1,4 @@
-<main class="w-full bg-slate-50 text-slate-900 font-sans min-h-screen" x-data="{
-    plafon: 25000000,
-    tenor: 24,
-    searchQuery: '',
-    selectedCategory: 'all',
-    showModal: false,
-    modalData: {},
-    formatRupiah(val) {
-        return 'Rp ' + Number(val).toLocaleString('id-ID');
-    },
-    formatNumberInput(num) {
-        if (!num && num !== 0) return '';
-        return num.toString().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    },
-    get marginRate() {
-        if (this.tenor <= 12) return 0.085; // 8.5% p.a equivalent
-        if (this.tenor <= 24) return 0.090; // 9.0% p.a equivalent
-        if (this.tenor <= 36) return 0.095; // 9.5% p.a equivalent
-        return 0.100;                       // 10.0% p.a equivalent
-    },
-    get monthlyInstallment() {
-        const totalProfit = this.plafon * (this.marginRate * (this.tenor / 12));
-        return Math.round((this.plafon + totalProfit) / this.tenor);
-    },
-    products: [
-        {
-            id: 'murabahah',
-            title: 'Pembiayaan Murabahah',
-            category: 'jualbeli',
-            acad: 'Murabahah',
-            acadLabel: 'Akad Jual Beli (Murabahah)',
-            desc: 'Pembiayaan Murabahah adalah pembiayaan berbasis sistem jual beli di mana BPRS Madinah membiayai pembeliaan barang modal usaha atau kebutuhan konsumtif dengan margin keuntungan transparan yang disepakati bersama.',
-            custom: {
-                'Perorangan': {
-                    'Syarat & Ketentuan': [
-                        'Fotocopy KTP Suami & Istri (Identitas Asli)',
-                        'Fotocopy Kartu Keluarga (KK) & Surat Nikah',
-                        'Fotocopy jaminan/agunan (BPKB / SHM Land)',
-                        'Gesek nomor rangka & mesin (jika agunan BPKB) / SPPT PBB (jika SHM)'
-                    ],
-                    'Keunggulan': [
-                        'Dapat digunakan untuk modal kerja, pembelian kendaraan, renovasi rumah, serta tambahan tanah/rumah',
-                        'Bebas biaya provisi dan pinalti serta dilindungi asuransi jiwa syariah',
-                        'Angsuran bersifat tetap hingga akhir masa pembiayaan',
-                        'Tersedia pilihan skema angsuran musiman/panen'
-                    ]
-                },
-                'Lembaga / Instansi': {
-                    'Syarat & Ketentuan': [
-                        'Fotocopy KTP Pengurus / Penanggung Jawab',
-                        'Fotocopy KK & Surat Nikah Pengurus',
-                        'Fotocopy SK Pendirian Lembaga / Instansi & Agunan Legal'
-                    ],
-                    'Keunggulan': [
-                        'Pembiayaan pengadaan aset lembaga, renovasi gedung, kendaraan operasional, dll',
-                        'Bebas biaya provisi dan pinalti serta berasuransi jiwa',
-                        'Angsuran tetap dan terstruktur transparan'
-                    ]
-                }
-            },
-            badge: 'Paling Populer',
-            image: '<?= base_url('assets/produk/pembiayaan_murabahah.webp') ?>'
-        },
-        {
-            id: 'musyarokah',
-            title: 'Pembiayaan Musyarokah',
-            category: 'bagihasil',
-            acad: 'Musyarokah',
-            acadLabel: 'Akad Kemitraan (Musyarokah)',
-            desc: 'Pembiayaan Musyarokah merupakan akad kerja sama penggabungan modal antara nasabah dan BPRS Madinah untuk mengelola suatu usaha bersama, dengan nisbah bagi hasil yang disepakati bersama.',
-            ketentuan: [
-                'Fotocopy KTP Suami & Istri',
-                'Fotocopy KK & Surat Nikah',
-                'Jangka waktu pembiayaan fleksibel (maksimal 6 bulan, dapat diperpanjang)',
-                'Agunan resmi berupa BPKB Kendaraan atau Sertifikat SHM'
-            ],
-            benefit: [
-                'Ideal untuk pembiayaan proyek atau modal usaha bergulir',
-                'Bagi hasil disesuaikan dengan keuntungan riil usaha',
-                'Dukungan kemitraan usaha yang transparan dan amanah'
-            ],
-            badge: 'Bagi Hasil Kemitraan',
-            image: '<?= base_url('assets/produk/pembiayaan_musyarokah.webp') ?>'
-        },
-        {
-            id: 'mudharabah',
-            title: 'Pembiayaan Mudharabah',
-            category: 'bagihasil',
-            acad: 'Mudharabah',
-            acadLabel: 'Akad Bagi Hasil Usaha (Mudharabah)',
-            desc: 'Pembiayaan Mudharabah merupakan akad pembiayaan di mana BPRS Madinah menyediakan 100% modal usaha dan nasabah bertindak sebagai pengelola usaha secara profesional.',
-            ketentuan: [
-                'Fotocopy KTP Suami & Istri',
-                'Fotocopy KK & Surat Nikah',
-                'Proposal rencana usaha & kelayakan bisnis',
-                'Agunan pendukung berupa BPKB atau SHM'
-            ],
-            benefit: [
-                'Solusi bagi pengusaha potensial yang membutuhkan modal usaha utuh',
-                'Bagi hasil proporsional sesuai hasil operasional bisnis',
-                'Pendampingan tata kelola keuangan usaha'
-            ],
-            badge: '100% Modal Usaha',
-            image: '<?= base_url('assets/produk/pembiayaan_mudharabah.webp') ?>'
-        },
-        {
-            id: 'ijaroh',
-            title: 'Pembiayaan Ijaroh',
-            category: 'sewa',
-            acad: 'Ijaroh',
-            acadLabel: 'Akad Sewa Menyewa (Ijaroh)',
-            desc: 'Pembiayaan Ijaroh adalah pembiayaan berbasis sewa menyewa barang atau jasa antara BPRS Madinah dan Nasabah untuk memanfaatkan manfaat suatu barang/jasa dalam jangka waktu tertentu.',
-            ketentuan: [
-                'Fotocopy KTP Suami & Istri',
-                'Fotocopy KK & Surat Nikah',
-                'Bukti tagihan/kebutuhan sewa barang atau jasa (pendidikan, sewa, renovasi, kesehatan)',
-                'Agunan pendukung berupa BPKB atau SHM'
-            ],
-            benefit: [
-                'Sangat cocok untuk biaya sewa tempat usaha, biaya pendidikan, kesehatan, & sewa barang',
-                'Sewa tetap dan terjangkau setiap bulan',
-                'Proses cepat dan transparan tanpa riba'
-            ],
-            badge: 'Sewa Barang & Jasa',
-            image: '<?= base_url('assets/produk/pembiayaan_ijaroh.webp') ?>'
-        }
-    ],
-    openProductModal(prod) {
-        this.modalData = prod;
-        this.showModal = true;
-    }
-}">
+<main class="w-full bg-slate-50 text-slate-900 font-sans min-h-screen" x-data="pembiayaanPage()">
     <!-- 🏢 EXECUTIVE HERO BANNER SECTION -->
     <section class="relative bg-gradient-to-b from-blue-50/80 via-white to-slate-50 text-slate-900 pt-28 pb-12 md:pt-36 md:pb-16 border-b border-slate-200 overflow-hidden">
         <!-- Ambient Glow Effects -->
@@ -540,3 +409,140 @@
         </div>
     </section>
 </main>
+
+<script>
+    function pembiayaanPage() {
+        return {
+            plafon: 25000000,
+            tenor: 24,
+            searchQuery: '',
+            selectedCategory: 'all',
+            showModal: false,
+            modalData: {},
+            formatRupiah(val) {
+                return 'Rp ' + Number(val || 0).toLocaleString('id-ID');
+            },
+            formatNumberInput(num) {
+                if (!num && num !== 0) return '';
+                return num.toString().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            },
+            get marginRate() {
+                if (this.tenor <= 12) return 0.085; // 8.5% p.a equivalent
+                if (this.tenor <= 24) return 0.090; // 9.0% p.a equivalent
+                if (this.tenor <= 36) return 0.095; // 9.5% p.a equivalent
+                return 0.100;                       // 10.0% p.a equivalent
+            },
+            get monthlyInstallment() {
+                const totalProfit = this.plafon * (this.marginRate * (this.tenor / 12));
+                return Math.round((this.plafon + totalProfit) / this.tenor);
+            },
+            products: [
+                {
+                    id: 'murabahah',
+                    title: 'Pembiayaan Murabahah',
+                    category: 'jualbeli',
+                    acad: 'Murabahah',
+                    acadLabel: 'Akad Jual Beli (Murabahah)',
+                    desc: 'Pembiayaan Murabahah adalah pembiayaan berbasis sistem jual beli di mana BPRS Madinah membiayai pembeliaan barang modal usaha atau kebutuhan konsumtif dengan margin keuntungan transparan yang disepakati bersama.',
+                    custom: {
+                        'Perorangan': {
+                            'Syarat & Ketentuan': [
+                                'Fotocopy KTP Suami & Istri (Identitas Asli)',
+                                'Fotocopy Kartu Keluarga (KK) & Surat Nikah',
+                                'Fotocopy jaminan/agunan (BPKB / SHM Land)',
+                                'Gesek nomor rangka & mesin (jika agunan BPKB) / SPPT PBB (jika SHM)'
+                            ],
+                            'Keunggulan': [
+                                'Dapat digunakan untuk modal kerja, pembelian kendaraan, renovasi rumah, serta tambahan tanah/rumah',
+                                'Bebas biaya provisi dan pinalti serta dilindungi asuransi jiwa syariah',
+                                'Angsuran bersifat tetap hingga akhir masa pembiayaan',
+                                'Tersedia pilihan skema angsuran musiman/panen'
+                            ]
+                        },
+                        'Lembaga / Instansi': {
+                            'Syarat & Ketentuan': [
+                                'Fotocopy KTP Pengurus / Penanggung Jawab',
+                                'Fotocopy KK & Surat Nikah Pengurus',
+                                'Fotocopy SK Pendirian Lembaga / Instansi & Agunan Legal'
+                            ],
+                            'Keunggulan': [
+                                'Pembiayaan pengadaan aset lembaga, renovasi gedung, kendaraan operasional, dll',
+                                'Bebas biaya provisi dan pinalti serta berasuransi jiwa',
+                                'Angsuran tetap dan terstruktur transparan'
+                            ]
+                        }
+                    },
+                    badge: 'Paling Populer',
+                    image: '<?= base_url('assets/produk/pembiayaan_murabahah.webp') ?>'
+                },
+                {
+                    id: 'musyarokah',
+                    title: 'Pembiayaan Musyarokah',
+                    category: 'bagihasil',
+                    acad: 'Musyarokah',
+                    acadLabel: 'Akad Kemitraan (Musyarokah)',
+                    desc: 'Pembiayaan Musyarokah merupakan akad kerja sama penggabungan modal antara nasabah dan BPRS Madinah untuk mengelola suatu usaha bersama, dengan nisbah bagi hasil yang disepakati bersama.',
+                    ketentuan: [
+                        'Fotocopy KTP Suami & Istri',
+                        'Fotocopy KK & Surat Nikah',
+                        'Jangka waktu pembiayaan fleksibel (maksimal 6 bulan, dapat diperpanjang)',
+                        'Agunan resmi berupa BPKB Kendaraan atau Sertifikat SHM'
+                    ],
+                    benefit: [
+                        'Ideal untuk pembiayaan proyek atau modal usaha bergulir',
+                        'Bagi hasil disesuaikan dengan keuntungan riil usaha',
+                        'Dukungan kemitraan usaha yang transparan dan amanah'
+                    ],
+                    badge: 'Bagi Hasil Kemitraan',
+                    image: '<?= base_url('assets/produk/pembiayaan_musyarokah.webp') ?>'
+                },
+                {
+                    id: 'mudharabah',
+                    title: 'Pembiayaan Mudharabah',
+                    category: 'bagihasil',
+                    acad: 'Mudharabah',
+                    acadLabel: 'Akad Bagi Hasil Usaha (Mudharabah)',
+                    desc: 'Pembiayaan Mudharabah merupakan akad pembiayaan di mana BPRS Madinah menyediakan 100% modal usaha dan nasabah bertindak sebagai pengelola usaha secara profesional.',
+                    ketentuan: [
+                        'Fotocopy KTP Suami & Istri',
+                        'Fotocopy KK & Surat Nikah',
+                        'Proposal rencana usaha & kelayakan bisnis',
+                        'Agunan pendukung berupa BPKB atau SHM'
+                    ],
+                    benefit: [
+                        'Solusi bagi pengusaha potensial yang membutuhkan modal usaha utuh',
+                        'Bagi hasil proporsional sesuai hasil operasional bisnis',
+                        'Pendampingan tata kelola keuangan usaha'
+                    ],
+                    badge: '100% Modal Usaha',
+                    image: '<?= base_url('assets/produk/pembiayaan_mudharabah.webp') ?>'
+                },
+                {
+                    id: 'ijaroh',
+                    title: 'Pembiayaan Ijaroh',
+                    category: 'sewa',
+                    acad: 'Ijaroh',
+                    acadLabel: 'Akad Sewa Menyewa (Ijaroh)',
+                    desc: 'Pembiayaan Ijaroh adalah pembiayaan berbasis sewa menyewa barang atau jasa antara BPRS Madinah dan Nasabah untuk memanfaatkan manfaat suatu barang/jasa dalam jangka waktu tertentu.',
+                    ketentuan: [
+                        'Fotocopy KTP Suami & Istri',
+                        'Fotocopy KK & Surat Nikah',
+                        'Bukti tagihan/kebutuhan sewa barang atau jasa (pendidikan, sewa, renovasi, kesehatan)',
+                        'Agunan pendukung berupa BPKB atau SHM'
+                    ],
+                    benefit: [
+                        'Sangat cocok untuk biaya sewa tempat usaha, biaya pendidikan, kesehatan, & sewa barang',
+                        'Sewa tetap dan terjangkau setiap bulan',
+                        'Proses cepat dan transparan tanpa riba'
+                    ],
+                    badge: 'Sewa Barang & Jasa',
+                    image: '<?= base_url('assets/produk/pembiayaan_ijaroh.webp') ?>'
+                }
+            ],
+            openProductModal(prod) {
+                this.modalData = prod;
+                this.showModal = true;
+            }
+        };
+    }
+</script>
