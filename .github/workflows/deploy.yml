@@ -1,4 +1,4 @@
-name: Build & Auto-Commit Vendor & Assets
+name: Build & Auto-Commit Mantap
 
 on:
   push:
