@@ -167,7 +167,7 @@
                                 <label class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-2">Nominal Deposito (Rp)</label>
                                 <div class="relative">
                                     <span class="absolute left-4 top-1/2 -translate-y-1/2 text-blue-400 font-bold text-base">Rp</span>
-                                    <input type="text" inputmode="numeric" pattern="[0-9]*" :value="formatNumberInput(depositoNominal)" @input="let val = $event.target.value.replace(/\D/g, ''); depositoNominal = val ? parseInt(val, 10) : 0; $event.target.value = formatNumberInput(depositoNominal)" class="w-full bg-slate-900/80 border border-white/15 rounded-xl pl-12 pr-4 py-3 text-blue-400 font-bold text-lg focus:outline-none focus:border-blue-400 transition shadow-inner" />
+                                    <input type="text" inputmode="numeric" pattern="[0-9]*" :value="formatNumberInput(depositoNominal)" x-effect="$el.value = formatNumberInput(depositoNominal)" @input="let val = $event.target.value.replace(/\D/g, ''); depositoNominal = val ? parseInt(val, 10) : 0" class="w-full bg-slate-900/80 border border-white/15 rounded-xl pl-12 pr-4 py-3 text-blue-400 font-bold text-lg focus:outline-none focus:border-blue-400 transition shadow-inner" />
                                 </div>
                                 <div class="flex flex-wrap gap-2 mt-3">
                                     <button @click="depositoNominal = 10000000" class="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-lg text-xs text-slate-300 transition">10 Juta</button>
@@ -216,7 +216,7 @@
                                 <label class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-2">Jumlah Pembiayaan (Rp)</label>
                                 <div class="relative">
                                     <span class="absolute left-4 top-1/2 -translate-y-1/2 text-amber-400 font-bold text-base">Rp</span>
-                                    <input type="text" inputmode="numeric" pattern="[0-9]*" :value="formatNumberInput(pembiayaanNominal)" @input="let val = $event.target.value.replace(/\D/g, ''); pembiayaanNominal = val ? parseInt(val, 10) : 0; $event.target.value = formatNumberInput(pembiayaanNominal)" class="w-full bg-slate-900/80 border border-white/15 rounded-xl pl-12 pr-4 py-3 text-amber-400 font-bold text-lg focus:outline-none focus:border-amber-400 transition shadow-inner" />
+                                    <input type="text" inputmode="numeric" pattern="[0-9]*" :value="formatNumberInput(pembiayaanNominal)" x-effect="$el.value = formatNumberInput(pembiayaanNominal)" @input="let val = $event.target.value.replace(/\D/g, ''); pembiayaanNominal = val ? parseInt(val, 10) : 0" class="w-full bg-slate-900/80 border border-white/15 rounded-xl pl-12 pr-4 py-3 text-amber-400 font-bold text-lg focus:outline-none focus:border-amber-400 transition shadow-inner" />
                                 </div>
                                 <div class="flex flex-wrap gap-2 mt-3">
                                     <button @click="pembiayaanNominal = 10000000" class="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-lg text-xs text-slate-300 transition">10 Juta</button>

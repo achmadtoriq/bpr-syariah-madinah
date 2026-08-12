@@ -89,11 +89,13 @@
                 
                 <!-- Inputs Left -->
                 <div class="md:col-span-7 space-y-6">
+                    <!-- Plafon Slider & Input -->
+                    <div class="space-y-2">
                         <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 mb-1">
                             <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Plafon Pembiayaan</label>
                             <div class="relative w-full sm:w-56">
-                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-blue-700 font-bold text-xs">Rp</span>
-                                <input type="text" inputmode="numeric" pattern="[0-9]*" :value="formatNumberInput(plafon)" @input="let val = $event.target.value.replace(/\D/g, ''); plafon = val ? parseInt(val, 10) : 0; $event.target.value = formatNumberInput(plafon)" class="w-full bg-white border border-slate-300 focus:border-blue-600 rounded-xl pl-9 pr-3 py-1.5 text-blue-700 font-extrabold text-sm focus:outline-none transition shadow-sm text-right">
+                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-blue-700 font-extrabold text-xs pointer-events-none">Rp</span>
+                                <input type="text" inputmode="numeric" pattern="[0-9]*" :value="formatNumberInput(plafon)" x-effect="$el.value = formatNumberInput(plafon)" @input="let val = $event.target.value.replace(/\D/g, ''); plafon = val ? parseInt(val, 10) : 0" class="w-full bg-white border-2 border-slate-300 focus:border-blue-600 rounded-xl pl-10 pr-3 py-2 text-slate-900 font-extrabold text-sm focus:outline-none transition shadow-sm text-left">
                             </div>
                         </div>
                         <input type="range" min="5000000" max="250000000" step="5000000" x-model.number="plafon" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
@@ -105,17 +107,17 @@
                     </div>
 
                     <!-- Preset Plafon Pills -->
-                    <div class="flex flex-wrap gap-2">
-                        <button @click="plafon = 10000000" :class="plafon === 10000000 ? 'bg-blue-600 text-white font-bold' : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 font-semibold'" class="px-3 py-1.5 text-xs rounded-xl transition cursor-pointer">
+                    <div class="flex flex-wrap gap-2.5">
+                        <button @click="plafon = 10000000" :class="plafon === 10000000 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-400 font-semibold'" class="px-4 py-2 text-xs rounded-xl border border-slate-300 transition cursor-pointer shadow-sm">
                             Rp 10 Juta
                         </button>
-                        <button @click="plafon = 25000000" :class="plafon === 25000000 ? 'bg-blue-600 text-white font-bold' : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 font-semibold'" class="px-3 py-1.5 text-xs rounded-xl transition cursor-pointer">
+                        <button @click="plafon = 25000000" :class="plafon === 25000000 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-400 font-semibold'" class="px-4 py-2 text-xs rounded-xl border border-slate-300 transition cursor-pointer shadow-sm">
                             Rp 25 Juta
                         </button>
-                        <button @click="plafon = 50000000" :class="plafon === 50000000 ? 'bg-blue-600 text-white font-bold' : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 font-semibold'" class="px-3 py-1.5 text-xs rounded-xl transition cursor-pointer">
+                        <button @click="plafon = 50000000" :class="plafon === 50000000 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-400 font-semibold'" class="px-4 py-2 text-xs rounded-xl border border-slate-300 transition cursor-pointer shadow-sm">
                             Rp 50 Juta
                         </button>
-                        <button @click="plafon = 100000000" :class="plafon === 100000000 ? 'bg-blue-600 text-white font-bold' : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 font-semibold'" class="px-3 py-1.5 text-xs rounded-xl transition cursor-pointer">
+                        <button @click="plafon = 100000000" :class="plafon === 100000000 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-400 font-semibold'" class="px-4 py-2 text-xs rounded-xl border border-slate-300 transition cursor-pointer shadow-sm">
                             Rp 100 Juta
                         </button>
                     </div>
@@ -124,16 +126,16 @@
                     <div class="space-y-2">
                         <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Jangka Waktu (Tenor)</label>
                         <div class="grid grid-cols-4 gap-3">
-                            <button @click="tenor = 12" :class="tenor === 12 ? 'bg-blue-600 text-white font-bold border-blue-600 shadow-md' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400 font-semibold'" class="py-2.5 px-2 text-xs rounded-2xl border text-center transition cursor-pointer">
+                            <button @click="tenor = 12" :class="tenor === 12 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:border-blue-400 font-semibold'" class="py-2.5 px-2 text-xs rounded-2xl border border-slate-300 text-center transition cursor-pointer shadow-sm">
                                 12 Bulan
                             </button>
-                            <button @click="tenor = 24" :class="tenor === 24 ? 'bg-blue-600 text-white font-bold border-blue-600 shadow-md' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400 font-semibold'" class="py-2.5 px-2 text-xs rounded-2xl border text-center transition cursor-pointer">
+                            <button @click="tenor = 24" :class="tenor === 24 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:border-blue-400 font-semibold'" class="py-2.5 px-2 text-xs rounded-2xl border border-slate-300 text-center transition cursor-pointer shadow-sm">
                                 24 Bulan
                             </button>
-                            <button @click="tenor = 36" :class="tenor === 36 ? 'bg-blue-600 text-white font-bold border-blue-600 shadow-md' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400 font-semibold'" class="py-2.5 px-2 text-xs rounded-2xl border text-center transition cursor-pointer">
+                            <button @click="tenor = 36" :class="tenor === 36 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:border-blue-400 font-semibold'" class="py-2.5 px-2 text-xs rounded-2xl border border-slate-300 text-center transition cursor-pointer shadow-sm">
                                 36 Bulan
                             </button>
-                            <button @click="tenor = 48" :class="tenor === 48 ? 'bg-blue-600 text-white font-bold border-blue-600 shadow-md' : 'bg-white text-slate-700 border-slate-200 hover:border-blue-400 font-semibold'" class="py-2.5 px-2 text-xs rounded-2xl border text-center transition cursor-pointer">
+                            <button @click="tenor = 48" :class="tenor === 48 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:border-blue-400 font-semibold'" class="py-2.5 px-2 text-xs rounded-2xl border border-slate-300 text-center transition cursor-pointer shadow-sm">
                                 48 Bulan
                             </button>
                         </div>
