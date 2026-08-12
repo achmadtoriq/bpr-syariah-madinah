@@ -1,8 +1,8 @@
 ---
-# Konfigurasi Auto-Deployment cPanel Git Version Control Jagoan Hosting
 deployment:
   tasks:
     - export DEPLOYPATH=/home/bprsmadi/bpr-syariah-madinah-test
-    - cd $DEPLOYPATH
-    - chmod +x deploy.sh
-    - ./deploy.sh
+    - /bin/cp deploy.sh $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/chmod +x $DEPLOYPATH/deploy.sh
+    - $DEPLOYPATH/deploy.sh
