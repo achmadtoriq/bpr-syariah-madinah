@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/bprsmadi/public_html/bpr-syariah-madinah-test
+    - export DEPLOYPATH=/home/bprsmadi/public_html/bpr-syariah-madinah-staging
     - /bin/cp deploy.sh $DEPLOYPATH
     - /bin/cp .htaccess $DEPLOYPATH 2>/dev/null || true
     - /bin/cp public/.htaccess $DEPLOYPATH/public/.htaccess 2>/dev/null || true

@@ -2,9 +2,7 @@ name: Build & Auto-Commit Vendor & Assets
 
 on:
   push:
-    branches: [ main, feature/deployment-workflow ]
-  pull_request:
-    branches: [ main ]
+    branches: [ feature/deployment-workflow ]
 
 jobs:
   build-and-commit:
