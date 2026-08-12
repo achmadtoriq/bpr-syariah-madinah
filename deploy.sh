@@ -5,6 +5,12 @@ set -e
 
 echo "🚀 Starting CodeIgniter 4 Fast Deployment..."
 
+# 0. Ensure .env exists
+if [ ! -f ".env" ] && [ -f "env" ]; then
+    echo "⚙️ Creating default .env from env template..."
+    cp env .env
+fi
+
 # 1. PHP Dependencies Check (Skipped if pre-built on GitHub)
 if [ -d "vendor" ] && [ -f "vendor/autoload.php" ]; then
     echo "📦 Using pre-built Composer vendor packages from GitHub."
@@ -26,7 +32,7 @@ fi
 
 # 3. Set Writable Directory Permissions
 echo "🔒 Setting writable folder permissions..."
-chmod -R 775 writable/ 2>/dev/null || chmod -R 777 writable/ 2>/dev/null || true
+chmod -R 777 writable/ 2>/dev/null || chmod -R 775 writable/ 2>/dev/null || true
 
 # 4. Run Database Migrations
 echo "🗄️ Running database migrations..."
