@@ -1,0 +1,35 @@
+name: Build & Auto-Commit CSS Assets
+
+on:
+  push:
+    branches: [ main, feature/deployment-workflow ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-commit:
+    name: Build CSS Assets on GitHub
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Node Dependencies & Build CSS
+        run: |
+          npm ci || npm install
+          npm run build:css
+
+      - name: Commit & Push Compiled CSS Assets if changed
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "build(assets): compile tailwind css via github actions [skip ci]"
+          file_pattern: "public/assets/css/style.css"
+          branch: ${{ github.ref_name }}

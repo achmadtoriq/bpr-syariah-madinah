@@ -56,8 +56,9 @@ class AuthController extends BaseController
     public function logout()
     {
         session()->destroy();
-        // Hapus cookie
-        $this->response->deleteCookie('access_token');
-        return redirect()->to('/login')->withCookies(); // penting!
+        // Hapus cookie token
+        $this->response->deleteCookie('access_token', '/');
+        $this->response->deleteCookie('refresh_token', '/');
+        return redirect()->to('/login')->withCookies();
     }
 }

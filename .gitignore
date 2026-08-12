@@ -11,10 +11,16 @@ user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
-#codeigniter 3
-application/logs/*
-!application/logs/index.html
-!application/logs/.htaccess
+# Node & Env
+node_modules/
+.env
 
-# node_modules
-# .env
+# CodeIgniter 4 Writable Runtime Directories
+writable/debugbar/*
+!writable/debugbar/index.html
+writable/session/*
+!writable/session/index.html
+writable/logs/*
+!writable/logs/index.html
+writable/uploads/email_attachments/*
+!writable/uploads/email_attachments/index.html

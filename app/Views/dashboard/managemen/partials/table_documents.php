@@ -1,50 +1,57 @@
 <?php
-$data = array(
-    "1" => "Pemegang Saham",
-    "2" => "Dewan Komisaris",
-    "3" => "Dewan Pengawas Syariah",
-    "4" => "Direksi"
-)
+$data = [
+    '1' => 'Pemegang Saham',
+    '2' => 'Dewan Komisaris',
+    '3' => 'Dewan Pengawas Syariah',
+    '4' => 'Direksi',
+];
 ?>
 
-<table class="min-w-full border border-gray-300 mt-4 text-sm">
-    <thead class="bg-gray-100">
-        <tr>
-            <th class="border p-2 text-left">No.</th>
-            <th class="border p-2 text-left">Posisi</th>
-            <th class="border p-2 text-left">Jabatan</th>
-            <th class="border p-2 text-left">Nama</th>
-            <th class="border p-2 text-left">Kewarganegaraan</th>
-            <th class="border p-2 text-center">Photo</th>
-            <th class="border p-2 text-center">Tanggal dibuat</th>
-            <th class="border p-2 text-center">Aksi</th>
+<table class="min-w-full divide-y divide-slate-200 text-sm">
+    <thead>
+        <tr class="text-left text-xs font-bold uppercase tracking-wide text-slate-500">
+            <th class="px-4 py-3">No.</th>
+            <th class="px-4 py-3">Posisi</th>
+            <th class="px-4 py-3">Jabatan</th>
+            <th class="px-4 py-3">Nama</th>
+            <th class="px-4 py-3">Kewarganegaraan</th>
+            <th class="px-4 py-3 text-center">Photo</th>
+            <th class="px-4 py-3 text-center">Tanggal dibuat</th>
+            <th class="px-4 py-3 text-center">Aksi</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="divide-y divide-slate-100">
         <?php if (!empty($managements)): ?>
             <?php foreach ($managements as $i => $man): ?>
-                <tr>
-                    <td class="border p-2"><?= $i + 1 ?></td>
-                    <td class="border p-2"><?= esc($data[$man['role']]) ?></td>
-                    <td class="border p-2"><?= esc($man['jabatan']) ?></td>
-                    <td class="border p-2"><?= esc($man['nama']) ?></td>
-                    <td class="border p-2"><?= esc($man['kewarganegaraan']) . ', ' . esc($man['tempat_lahir']) . ' ' . date('d F Y', strtotime($man['tanggal_lahir'])) ?></td>
-                    <td class="border p-2 text-center"><?= esc($man['nama']) ? '<i class="fa-solid fa-circle-check text-green-600"></i>':'<i class="fa-solid fa-circle-xmark text-red-600"></i>' ?></td>
-                    <td class="border p-2 text-center"><?= date('d-m-Y H:i:s', strtotime($man['created_at'])) ?></td>
-                    <td class="border p-2 text-center">
-                        <div class="flex flex-row justify-center items-center gap-2">
-                            <button
-                                @click="deleteDocument(<?php $man['id'] ?>)"
-                                class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded flex items-center justify-center">
-                                <span>Hapus</span>
-                            </button>
-                        </div>
+                <tr class="hover:bg-slate-50">
+                    <td class="whitespace-nowrap px-4 py-3 text-slate-500"><?= $i + 1 ?></td>
+                    <td class="px-4 py-3">
+                        <span class="inline-flex rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700 ring-1 ring-emerald-100">
+                            <?= esc($data[$man['role']] ?? 'Manajemen') ?>
+                        </span>
+                    </td>
+                    <td class="px-4 py-3 font-semibold text-slate-900"><?= esc($man['jabatan']) ?></td>
+                    <td class="px-4 py-3 text-slate-700"><?= esc($man['nama']) ?></td>
+                    <td class="px-4 py-3 text-slate-600">
+                        <?= esc($man['kewarganegaraan']) . ', ' . esc($man['tempat_lahir']) . ' ' . date('d F Y', strtotime($man['tanggal_lahir'])) ?>
+                    </td>
+                    <td class="px-4 py-3 text-center">
+                        <?= esc($man['nama']) ? '<i class="fa-solid fa-circle-check text-emerald-600"></i>' : '<i class="fa-solid fa-circle-xmark text-red-600"></i>' ?>
+                    </td>
+                    <td class="whitespace-nowrap px-4 py-3 text-center text-slate-600"><?= date('d-m-Y H:i:s', strtotime($man['created_at'])) ?></td>
+                    <td class="px-4 py-3 text-center">
+                        <button
+                            @click="deleteDocument(<?= (int) $man['id'] ?>)"
+                            class="inline-flex items-center justify-center gap-2 rounded-md bg-red-600 px-3 py-2 text-xs font-bold text-white transition hover:bg-red-700">
+                            <i class="fa-solid fa-trash-can text-xs"></i>
+                            <span>Hapus</span>
+                        </button>
                     </td>
                 </tr>
             <?php endforeach; ?>
         <?php else: ?>
             <tr>
-                <td colspan="8" class="border p-4 text-center text-gray-500">
+                <td colspan="8" class="px-4 py-10 text-center text-slate-500">
                     Belum ada data.
                 </td>
             </tr>

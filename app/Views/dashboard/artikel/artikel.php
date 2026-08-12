@@ -1,5 +1,16 @@
-<div class="container mx-auto mt-28">
-    <div class="flex flex-col justify-center" x-data="articleForm()">
+<main class="min-h-screen bg-slate-50 px-4 pb-12 pt-28 md:px-8 lg:pt-24">
+    <div class="mx-auto max-w-7xl" x-data="articleForm()">
+        <div class="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end" data-aos="fade-up">
+            <div>
+                <p class="text-sm font-bold uppercase tracking-wide text-emerald-700">Artikel</p>
+                <h1 class="mt-2 text-3xl font-bold text-slate-900">Buat Artikel</h1>
+                <p class="mt-2 text-sm leading-6 text-slate-600">Tulis konten, pilih kategori, dan atur status publikasi.</p>
+            </div>
+            <a href="<?= base_url('artikel-list') ?>" class="inline-flex w-fit items-center gap-2 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:border-emerald-500 hover:text-emerald-700">
+                <i class="fa-solid fa-arrow-left text-xs"></i>
+                Daftar Artikel
+            </a>
+        </div>
 
         <!-- Flash errors (CI4 validation) -->
         <?php if (session('errors')): ?>
@@ -12,33 +23,36 @@
             </div>
         <?php endif; ?>
 
-        <form action="<?= site_url('/artikel/store') ?>" method="POST" enctype="multipart/form-data" class="bg-white rounded-md border shadow p-6">
+        <form action="<?= site_url('/artikel/store') ?>" method="POST" enctype="multipart/form-data" class="rounded-lg bg-white p-5 shadow-sm ring-1 ring-slate-200 md:p-6" data-aos="fade-up" data-aos-delay="100">
             <?= csrf_field() ?>
 
-            <div class="grid grid-cols-6 gap-8">
-                <div class="space-y-6 col-span-2">
-                    <!-- Title -->
-                    <div class="sm:col-span-full">
-                        <label for="title" class="block text-sm/6 font-medium text-gray-900">Judul</label>
+            <div class="grid gap-8 lg:grid-cols-[380px_1fr]">
+                <aside class="space-y-5 lg:sticky lg:top-24 lg:self-start">
+                    <div class="rounded-lg bg-slate-50 p-4 ring-1 ring-slate-200">
+                        <h2 class="font-bold text-slate-900">Informasi Artikel</h2>
+                        <p class="mt-1 text-xs leading-5 text-slate-500">Judul, kategori, tag, thumbnail, dan status publikasi.</p>
+                    </div>
+
+                    <div>
+                        <label for="title" class="block text-sm font-bold text-slate-800">Judul</label>
                         <div class="mt-2">
                             <input
                                 id="title"
                                 type="text"
                                 name="title"
-                                @input="slug = toSlug(title)"
+                                @input="slug = toSlug($event.target.value)"
                                 value="<?= old('title') ?>"
                                 required
                                 autocomplete="title"
-                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                                placeholder="Misal: Cara Membuat UI Modern dengan TailwindCSS"
+                                class="block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
+                                placeholder="Masukkan judul artikel"
                                 x-model="title" />
                         </div>
                     </div>
 
-                    <!-- Slug (auto) -->
-                    <div class="sm:col-span-full">
-                        <label for="slug" class="block text-sm/6 font-medium text-gray-900">Slug</label>
-                        <div class="mt-2 flex gap-3">
+                    <div>
+                        <label for="slug" class="block text-sm font-bold text-slate-800">Slug</label>
+                        <div class="mt-2">
                             <input
                                 id="slug"
                                 type="text"
@@ -46,21 +60,16 @@
                                 value="<?= old('slug') ?>"
                                 required
                                 autocomplete="slug"
-                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                class="block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                                 x-model="slug" />
-                            <!-- <button type="button" @click="slug = toSlug(title)"
-                                    class="px-3 py-2 rounded-xl border bg-gray-50 hover:bg-gray-100">
-                                    Generate
-                                </button> -->
                         </div>
-                        <p class="text-xs text-gray-500 mt-1">Otomatis dari judul, bisa disunting manual.</p>
+                        <p class="mt-1 text-xs text-slate-500">Otomatis dari judul, bisa disunting manual.</p>
                     </div>
 
-                    <!-- Category -->
                     <div>
-                        <label for="category_id" class="block text-sm font-medium mb-2">Kategori</label>
+                        <label for="category_id" class="block text-sm font-bold text-slate-800">Kategori</label>
                         <div class="mt-2 grid grid-cols-1">
-                            <select id="category_id" name="category_id" autocomplete="category_id" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <select id="category_id" name="category_id" autocomplete="category_id" data-select2 data-placeholder="Pilih kategori" class="col-start-1 row-start-1 w-full appearance-none rounded-md border border-slate-300 bg-white py-2 pl-3 pr-8 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
                                 <option value="" disabled <?= old('category_id') ? '' : 'selected' ?>>Pilih kategori</option>
                                 <?php /** @var array $categories */ ?>
                                 <?php if (isset($categories) && is_array($categories)): ?>
@@ -71,120 +80,145 @@
                                     <?php endforeach; ?>
                                 <?php endif; ?>
                             </select>
-                            <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4">
-                                <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
-                            </svg>
                         </div>
                     </div>
 
-                    <!-- Tags -->
                     <div>
-                        <label class="block text-sm font-medium mb-2">Tag</label>
+                        <label class="block text-sm font-bold text-slate-800">Tag</label>
                         <div class="flex gap-2">
                             <input
                                 id="tagsInput"
                                 type="text"
                                 name="tagsInput"
                                 @keydown.enter.prevent="addTags()"
-                                @keydown.,.prevent="addTags()"
+                                @keydown.comma.prevent="addTags()"
                                 autocomplete="tagsInput"
-                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                                class="block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100"
                                 x-model="tagsInput"
-                                placeholder="Pisahkan dengan koma, lalu Enter (mis: ci4, alpinejs, tailwind)" />
-                            <!-- <button type="button" @click="addTags()" class="px-3 py-2 rounded-xl border bg-gray-50 hover:bg-gray-100">Tambah</button> -->
+                                placeholder="Misal: berita, syariah" />
+                            <button type="button" @click="addTags()" class="inline-flex shrink-0 items-center justify-center rounded-md bg-slate-900 px-3 py-2 text-sm font-bold text-white transition hover:bg-emerald-700">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                            </button>
                         </div>
 
-                        <!-- chips -->
                         <div class="flex flex-wrap gap-2 mt-3">
                             <template x-for="(t, i) in tags" :key="i">
-                                <span class="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm">
+                                <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700 ring-1 ring-emerald-100">
                                     <span x-text="t"></span>
-                                    <button type="button" @click="removeTag(i)" class="text-gray-500 hover:text-red-600">&times;</button>
+                                    <button type="button" @click="removeTag(i)" class="text-emerald-500 hover:text-red-600">&times;</button>
                                 </span>
                             </template>
                         </div>
 
-                        <!-- hidden input untuk submit -->
                         <template x-for="(t, i) in tags" :key="'hidden-'+i">
                             <input type="hidden" name="tags[]" :value="t">
                         </template>
                     </div>
 
-                    <!-- Thumbnail -->
                     <div>
-                        <label class="block text-sm font-medium mb-2">Thumbnail</label>
-                        <div class="flex items-start gap-4">
-                            <div class="w-56 h-28 border rounded-xl overflow-hidden flex items-center justify-center bg-gray-50">
+                        <label class="block text-sm font-bold text-slate-800">Thumbnail</label>
+                        <div class="mt-2 grid gap-3">
+                            <div class="flex aspect-[16/9] w-full items-center justify-center overflow-hidden rounded-lg bg-slate-100 ring-1 ring-slate-200">
                                 <template x-if="thumbnailPreview">
-                                    <img :src="thumbnailPreview" alt="Preview" class="w-full h-full object-cover p-1 rounded-xl">
+                                    <img :src="thumbnailPreview" alt="Preview" class="h-full w-full object-cover">
                                 </template>
                                 <template x-if="!thumbnailPreview">
-                                    <span class="text-xs text-gray-400">Preview</span>
+                                    <div class="text-center text-slate-400">
+                                        <i class="fa-solid fa-image text-2xl"></i>
+                                        <p class="mt-2 text-xs">Preview thumbnail</p>
+                                    </div>
                                 </template>
                             </div>
-                            <div class="flex-1">
-                                <input type="file" name="thumbnail" accept="image/*" @change="onFileChange"
-                                    class="block w-full text-sm text-gray-700 file:mr-4 file:rounded-xl file:border-0 file:bg-indigo-600 file:px-4 file:py-2 file:text-white hover:file:bg-indigo-700">
-                                <p class="text-xs text-gray-500 mt-1">PNG/JPG maks. 2MB (atur di server-side).</p>
-                            </div>
+                            <input type="file" name="thumbnail" accept="image/*" @change="onFileChange"
+                                class="block w-full rounded-md border border-dashed border-slate-300 bg-slate-50 p-3 text-sm text-slate-700 file:mr-3 file:rounded-md file:border-0 file:bg-slate-900 file:px-3 file:py-2 file:text-sm file:font-bold file:text-white">
+                            <p class="text-xs text-slate-500">PNG/JPG maks. 2MB.</p>
                         </div>
                     </div>
 
-                    <!-- Status & Published At -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div>
-                            <label for="status" class="block text-sm font-medium mb-2">Status</label>
+                            <label for="status" class="block text-sm font-bold text-slate-800">Status</label>
                             <div class="mt-2 grid grid-cols-1">
-                                <select id="status" name="status" autocomplete="country-name" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                                <select id="status" name="status" autocomplete="country-name" data-select2 data-placeholder="Pilih status" class="col-start-1 row-start-1 w-full appearance-none rounded-md border border-slate-300 bg-white py-2 pl-3 pr-8 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
                                     <?php $st = old('status') ?: 'draft'; ?>
                                     <option value="draft" <?= $st === 'draft' ? 'selected' : '' ?>>Draft</option>
                                     <option value="published" <?= $st === 'published' ? 'selected' : '' ?>>Published</option>
                                     <option value="archived" <?= $st === 'archived' ? 'selected' : '' ?>>Archived</option>
                                 </select>
-                                <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4">
-                                    <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
-                                </svg>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium mb-2">Tanggal Publish</label>
+                            <label class="block text-sm font-bold text-slate-800">Tanggal Publish</label>
                             <input type="datetime-local" name="published_at"
                                 value="<?= old('published_at') ?>"
-                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                                class="mt-2 block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
                         </div>
                     </div>
 
-                    <!-- Actions -->
-                    <div class="flex items-center justify-end gap-3 pt-2">
-                        <a href="<?= site_url('/articles') ?>" class="px-4 py-2 rounded-xl border hover:bg-gray-50">Batal</a>
-                        <button type="submit" class="px-5 py-2.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700">Simpan</button>
+                    <div class="flex items-center justify-end gap-3 border-t border-slate-100 pt-5">
+                        <a href="<?= site_url('/artikel-list') ?>" class="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-bold text-slate-700 transition hover:border-emerald-500 hover:text-emerald-700">Batal</a>
+                        <button type="submit" class="inline-flex items-center gap-2 rounded-md bg-emerald-600 px-5 py-2 text-sm font-bold text-white transition hover:bg-emerald-700">
+                            <i class="fa-solid fa-floppy-disk text-xs"></i>
+                            Simpan
+                        </button>
                     </div>
-                </div>
+                </aside>
 
-                <div class="space-y-6 col-span-4">
-                    <!-- Content -->
-                    <div>
-                        <label class="block text-sm font-medium mb-2">Konten</label>
-                        <textarea id="editor" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                <div class="space-y-6">
+                    <div class="rounded-lg bg-slate-50 p-4 ring-1 ring-slate-200">
+                        <h2 class="font-bold text-slate-900">Konten Artikel</h2>
+                        <p class="mt-1 text-xs leading-5 text-slate-500">Gunakan editor untuk membuat artikel lengkap dengan gambar, tabel, dan format teks.</p>
+                    </div>
+
+                    <div class="overflow-hidden rounded-lg ring-1 ring-slate-200">
+                        <textarea id="editor" class="block w-full rounded-md bg-white px-3 py-2 text-sm text-slate-900 outline-none"
                             placeholder="Tulis artikel di sini..."></textarea>
-                        <!-- Hidden input untuk form -->
                         <input type="hidden" name="content" x-model="content" required>
                     </div>
-
-                    <!-- <div class="border border-red-400 rounded-md p-3">
-                        <p class="mb-4 text-xs font-bold">Preview HTML :</p>
-                        <pre id="preview" class="whitespace-pre-wrap text-sm text-gray-800"></pre>
-                    </div> -->
                 </div>
             </div>
         </form>
     </div>
-</div>
+</main>
 <style>
+    [x-cloak] {
+        display: none !important;
+    }
+
+    .ck.ck-editor {
+        width: 100% !important;
+    }
+
+    .ck.ck-editor__main {
+        background: #ffffff;
+    }
+
     .ck-editor__editable {
         position: relative !important;
-        height: 640px !important;
+        min-height: 520px !important;
+        max-height: 680px !important;
         overflow-y: auto !important;
+        padding: 1.25rem !important;
+        font-size: 1rem !important;
+        line-height: 1.75 !important;
+    }
+
+    .ck.ck-toolbar {
+        border-color: #e2e8f0 !important;
+        border-top-left-radius: 0.5rem !important;
+        border-top-right-radius: 0.5rem !important;
+    }
+
+    .ck.ck-editor__main > .ck-editor__editable {
+        border-color: #e2e8f0 !important;
+        border-bottom-left-radius: 0.5rem !important;
+        border-bottom-right-radius: 0.5rem !important;
+    }
+
+    @media (max-width: 1023px) {
+        .ck-editor__editable {
+            min-height: 420px !important;
+        }
     }
 </style>
 <script src="<?= base_url('assets/ckeditor5-46.0.0/ckeditor5/ckeditor5.umd.js') ?>"></script>
@@ -195,7 +229,6 @@
         Autoformat,
         AutoImage,
         Autosave,
-        Base64UploadAdapter,
         BlockQuote,
         Bold,
         CloudServices,
@@ -232,6 +265,50 @@
         Underline
     } = window.CKEDITOR;
 
+    class ArticleImageUploadAdapter {
+        constructor(loader) {
+            this.loader = loader;
+            this.xhr = null;
+        }
+
+        upload() {
+            return this.loader.file.then(file => new Promise((resolve, reject) => {
+                this.xhr = new XMLHttpRequest();
+                this.xhr.open('POST', '<?= site_url('/artikel/upload-image') ?>', true);
+                this.xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                this.xhr.responseType = 'json';
+
+                this.xhr.addEventListener('error', () => reject('Upload gambar gagal.'));
+                this.xhr.addEventListener('abort', () => reject('Upload gambar dibatalkan.'));
+                this.xhr.addEventListener('load', () => {
+                    const response = this.xhr.response;
+
+                    if (!response || this.xhr.status < 200 || this.xhr.status >= 300) {
+                        return reject(response?.error?.message || 'Upload gambar gagal.');
+                    }
+
+                    resolve({
+                        default: response.url
+                    });
+                });
+
+                const data = new FormData();
+                data.append('upload', file);
+                this.xhr.send(data);
+            }));
+        }
+
+        abort() {
+            if (this.xhr) {
+                this.xhr.abort();
+            }
+        }
+    }
+
+    function ArticleImageUploadAdapterPlugin(editor) {
+        editor.plugins.get('FileRepository').createUploadAdapter = loader => new ArticleImageUploadAdapter(loader);
+    }
+
     const editorConfig = {
         toolbar: {
             items: [
@@ -262,7 +339,6 @@
             Autoformat,
             AutoImage,
             Autosave,
-            Base64UploadAdapter,
             BlockQuote,
             Bold,
             CloudServices,
@@ -379,7 +455,8 @@
         placeholder: 'Type or paste your content here!',
         table: {
             contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties']
-        }
+        },
+        extraPlugins: [ArticleImageUploadAdapterPlugin]
         // extraPlugins: [function CustomClassesPlugin(editor) {
         //     // untuk <p>
         //     editor.conversion.for('downcast').elementToElement({
@@ -499,7 +576,7 @@
 
             init() {
                 // jika title ada dari old(), generate slug bila slug kosong
-                if (this.title && !this.slug) this.slug = toSlug(this.title);
+                if (this.title && !this.slug) this.slug = this.toSlug(this.title);
 
                 ClassicEditor.create(document.querySelector('#editor'), {
                         ...editorConfig,

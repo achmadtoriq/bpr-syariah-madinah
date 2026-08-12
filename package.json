@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "tailwindcss -i ./resources/css/input.css -o ./resources/css/cli-tailwindcss.css --minify"
+    "build:css": "npx tailwindcss@3 -i ./resources/css/input.css -o ./public/assets/css/style.css --minify",
+    "serve": "php spark serve",
+    "worker": "php spark email:watch"
   },
   "keywords": [],
   "author": "",

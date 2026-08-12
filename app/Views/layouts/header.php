@@ -1,138 +1,147 @@
 <?php
 $uri = service('uri');
 $arr_produk = array('/tabungan', '/deposito', '/pembiayaan', '/pelayanan');
-$arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/penghargaan', '/keuangan', '/publikasi');
+$arr_tentang_kami = array('/profil', '/managemen', '/struktur_organisasi', '/penghargaan', '/keuangan', '/piagam');
 ?>
 
-
-<!-- ✅ HEADER / NAVBAR -->
-<header class="w-full fixed top-0 left-0 shadow z-50 bg-white dura">
-    <div class="hidden md:block bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 text-white text-xs font-medium">
-        <div class="container mx-auto py-2">
-            <div class="flex flex-1 justify-between items-center">
-                <p class="antialiased md:subpixel-antialiased"><i class="fa-solid fa-phone"></i> (0322) 314 999</p>
-                <div class="grid grid-cols-2">
-                    <a href="https://www.instagram.com/bprsmadinahlamongan?igsh=bjZtNjljaTJxaTJ2" target="_blank" rel="noopener noreferrer" class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                    <a href="https://www.facebook.com/share/1VyH892rBD/" target="_blank" rel="noopener noreferrer" class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
-                </div>
+<!-- ✅ HEADER / NAVBAR (Corporate Blue Theme) -->
+<header class="w-full fixed top-0 left-0 z-50 transition-all duration-300">
+    <!-- Top Announcement Bar -->
+    <div class="hidden md:block bg-slate-900 text-slate-300 text-xs py-2 border-b border-slate-800">
+        <div class="container mx-auto max-w-7xl px-5 md:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2 text-slate-300"><i class="fa-solid fa-phone text-blue-400"></i> (0322) 314 999</span>
+                <span class="flex items-center gap-2 text-slate-400"><i class="fa-solid fa-clock text-amber-400"></i> Senin - Jumat: 08.00 - 15.00 WIB</span>
+                <span class="flex items-center gap-2 text-blue-400 font-semibold"><i class="fa-solid fa-shield-halved"></i> Berizin & Diawasi OJK</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://www.instagram.com/bprsmadinahlamongan?igsh=bjZtNjljaTJxaTJ2" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center gap-1.5"><i class="fa-brands fa-instagram text-pink-400"></i> Instagram</a>
+                <span class="text-slate-700">|</span>
+                <a href="https://www.facebook.com/share/1VyH892rBD/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center gap-1.5"><i class="fa-brands fa-square-facebook text-blue-400"></i> Facebook</a>
             </div>
         </div>
     </div>
-    <div class="container mx-auto py-4 flex items-center justify-between">
 
-        <!-- Logo -->
-        <img src="<?= base_url('assets/madinah.png') ?>" alt="Logo" class="w-auto h-7 md:h-10 px-4">
+    <!-- Main Navigation Bar -->
+    <div class="bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="container mx-auto max-w-7xl px-5 md:px-8 py-3.5 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="<?= base_url() ?>" class="flex items-center gap-3 group">
+                <img src="/assets/madinah.png" alt="Logo BPRS Syariah Madinah" class="h-9 md:h-11 w-auto transition group-hover:scale-105">
+            </a>
 
-        <!-- Desktop Nav -->
-        <!-- Navbar -->
-        <nav class="hidden md:flex space-x-12 px-4" x-data="{ open_kami: false, open_produk: false }">
-            <a href="<?= base_url() ?>" class="<?= $uri->getPath() === '/' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Home</a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8" x-data="{ open_kami: false, open_produk: false }">
+                <a href="<?= base_url() ?>" class="text-sm font-semibold transition <?= $uri->getPath() === '/' ? 'text-blue-700 font-bold border-b-2 border-blue-600 py-1' : 'text-slate-700 hover:text-blue-600' ?>">Home</a>
 
-            <!-- Dropdown "Tentang Kami" -->
-            <div class="relative" @mouseenter="open_kami = true" @mouseleave="open_kami = false">
-                <button class="focus:outline-none <?= in_array($uri->getPath(), $arr_tentang_kami) ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">
-                    Tentang Kami
-                </button>
-                <div x-show="open_kami" x-transition class="absolute bg-white shadow-md mt-2 rounded w-52 z-50">
-                    <a href="<?= base_url('/profil') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/profil' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Profil Perusahaan</a>
-                    <a href="<?= base_url('/managemen') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/managemen' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Manajemen</a>
-                    <a href="<?= base_url('/struktur_organisasi') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/struktur_organisasi' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Struktur Ogranisasi</a>
-                    <a href="<?= base_url('/awards') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/awards' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Penghargaan</a>
-                    <a href="<?= base_url('/keuangan') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/keuangan' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Keuangan</a>
-                    <a href="<?= base_url('/piagam') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/piagam' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Piagam Audit</a>
+                <!-- Dropdown "Tentang Kami" -->
+                <div class="relative" @mouseenter="open_kami = true" @mouseleave="open_kami = false">
+                    <button class="flex items-center gap-1.5 text-sm font-semibold focus:outline-none transition <?= in_array($uri->getPath(), $arr_tentang_kami) ? 'text-blue-700 font-bold border-b-2 border-blue-600 py-1' : 'text-slate-700 hover:text-blue-600' ?>">
+                        Tentang Kami
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" :class="open_kami ? 'rotate-180 text-blue-600' : ''"></i>
+                    </button>
+                    <div x-show="open_kami" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-100" class="absolute top-full left-0 bg-white shadow-xl rounded-xl py-2 w-56 border border-slate-100 z-50">
+                        <a href="<?= base_url('/profil') ?>" class="block px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition">Profil Perusahaan</a>
+                        <a href="<?= base_url('/managemen') ?>" class="block px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition">Manajemen</a>
+                        <a href="<?= base_url('/struktur_organisasi') ?>" class="block px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition">Struktur Organisasi</a>
+                        <a href="<?= base_url('/awards') ?>" class="block px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition">Penghargaan</a>
+                        <a href="<?= base_url('/keuangan') ?>" class="block px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition">Laporan Keuangan</a>
+                        <a href="<?= base_url('/piagam') ?>" class="block px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition">Laporan Piagam Audit</a>
+                    </div>
                 </div>
+
+                <!-- Dropdown "Produk" -->
+                <div class="relative" @mouseenter="open_produk = true" @mouseleave="open_produk = false">
+                    <button class="flex items-center gap-1.5 text-sm font-semibold focus:outline-none transition <?= in_array($uri->getPath(), $arr_produk) ? 'text-blue-700 font-bold border-b-2 border-blue-600 py-1' : 'text-slate-700 hover:text-blue-600' ?>">
+                        Produk & Layanan
+                        <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" :class="open_produk ? 'rotate-180 text-blue-600' : ''"></i>
+                    </button>
+                    <div x-show="open_produk" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-100" class="absolute top-full left-0 bg-white shadow-xl rounded-xl py-2 w-56 border border-slate-100 z-50">
+                        <a href="<?= base_url('/tabungan') ?>" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition flex items-center gap-2">
+                            <i class="fa-solid fa-piggy-bank text-blue-600"></i> Tabungan Syariah
+                        </a>
+                        <a href="<?= base_url('/deposito') ?>" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line text-amber-600"></i> Deposito Mudharabah
+                        </a>
+                        <a href="<?= base_url('/pembiayaan') ?>" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition flex items-center gap-2">
+                            <i class="fa-solid fa-hand-holding-dollar text-sky-600"></i> Pembiayaan Syariah
+                        </a>
+                        <a href="<?= base_url('/pelayanan') ?>" class="block px-4 py-2.5 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition flex items-center gap-2 border-t border-slate-100">
+                            <i class="fa-solid fa-ellipsis text-slate-500"></i> Layanan Lainnya
+                        </a>
+                    </div>
+                </div>
+
+                <a href="<?= base_url('/galeri') ?>" class="text-sm font-semibold transition <?= $uri->getPath() === '/galeri' ? 'text-blue-700 font-bold border-b-2 border-blue-600 py-1' : 'text-slate-700 hover:text-blue-600' ?>">Galeri</a>
+                <a href="<?= base_url('/hubungi_kami') ?>" class="text-sm font-semibold transition <?= $uri->getPath() === '/hubungi_kami' ? 'text-blue-700 font-bold border-b-2 border-blue-600 py-1' : 'text-slate-700 hover:text-blue-600' ?>">Kontak Kami</a>
+            </nav>
+
+            <!-- Quick Action CTA Buttons (Desktop) -->
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="#simulasi" class="inline-flex items-center justify-center gap-2 rounded-xl border border-blue-600/30 bg-blue-50 px-4 py-2 text-xs font-bold text-blue-700 transition hover:bg-blue-100">
+                    <i class="fa-solid fa-calculator text-blue-600"></i> Simulasi
+                </a>
+                <a href="<?= base_url('/hubungi_kami') ?>" class="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2 text-xs font-bold text-white shadow-md shadow-blue-600/20 transition hover:bg-blue-700 active:scale-95">
+                    <i class="fa-solid fa-paper-plane"></i> Hubungi Kami
+                </a>
             </div>
 
-            <!-- Dropdown "Produk" -->
-            <div class="relative" @mouseenter="open_produk = true" @mouseleave="open_produk = false">
-                <button class="focus:outline-none <?= in_array($uri->getPath(), $arr_produk) ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">
-                    Produk
-                </button>
-                <div x-show="open_produk" x-transition class="absolute bg-white shadow-md mt-2 rounded w-52 z-50">
-                    <a href="<?= base_url('/tabungan') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/tabungan' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Tabungan</a>
-                    <a href="<?= base_url('/deposito') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/deposito' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Deposito</a>
-                    <a href="<?= base_url('/pembiayaan') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/pembiayaan' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Pembiayaan</a>
-                    <a href="<?= base_url('/pelayanan') ?>" class="block px-4 py-2 <?= $uri->getPath() === '/pelayanan' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?> hover:bg-gray-100">Layanan Lainnya</a>
-                </div>
-            </div>
-
-            <a href="<?= base_url('/galeri') ?>" class="<?= $uri->getPath() === '/galeri' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Galeri</a>
-            <!-- <a href="<?= base_url('/berita') ?>" class="<?= $uri->getPath() === '/berita' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Berita</a>
-            <a href="<?= base_url('/karir') ?>" class="<?= $uri->getPath() === '/karir' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Karir</a> -->
-            <a href="<?= base_url('/hubungi_kami') ?>" class="<?= $uri->getPath() === '/hubungi_kami' ? 'text-blue-700 font-bold' : 'text-gray-700 hover:text-blue-500' ?>">Kontak Kami</a>
-        </nav>
-
-        <!-- Mobile Button -->
-        <button class="md:hidden text-gray-700 px-4" @click="open = !open">
-            <!-- Hamburger Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
+            <!-- Mobile Button -->
+            <button class="md:hidden text-slate-700 hover:text-blue-600 focus:outline-none p-2 rounded-lg" @click="open = !open" aria-label="Toggle Mobile Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" style="display: none;" />
+                </svg>
+            </button>
+        </div>
     </div>
 
-    <!-- Mobile Nav -->
-    <div x-show="open" x-transition x-data="{ openTentangKami: false, openProduk: false }">
-        <div class="md:hidden px-4">
-            <a href="<?= base_url('/') ?>" class="overflow-y-auto block p-2 text-gray-800 hover:text-blue-500 hover:bg-gray-200 rounded">Home</a>
+    <!-- Mobile Navigation Drawer -->
+    <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" class="md:hidden bg-white border-b border-slate-200 shadow-xl overflow-hidden" style="display: none;" x-data="{ openTentangKami: false, openProduk: false }">
+        <div class="px-5 py-4 space-y-2 max-h-[80vh] overflow-y-auto">
+            <a href="<?= base_url('/') ?>" class="block px-3 py-2.5 text-sm font-semibold text-slate-800 hover:bg-blue-50 hover:text-blue-700 rounded-lg">Home</a>
 
-            <!-- Tentang Kami Collapse -->
+            <!-- Mobile Tentang Kami Collapse -->
             <div>
-                <button @click="openTentangKami = !openTentangKami"
-                    class="w-full flex justify-between items-center p-2 text-gray-800 hover:bg-gray-200 rounded hover:text-blue-500">
+                <button @click="openTentangKami = !openTentangKami" class="w-full flex justify-between items-center px-3 py-2.5 text-sm font-semibold text-slate-800 hover:bg-blue-50 hover:text-blue-700 rounded-lg">
                     Tentang Kami
-                    <svg :class="openTentangKami ? 'rotate-180' : ''"
-                        class="w-5 h-5 transform transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M19 9l-7 7-7-7" />
-                    </svg>
+                    <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" :class="openTentangKami ? 'rotate-180 text-blue-600' : ''"></i>
                 </button>
-
-                <!-- Submenu Collapse -->
-                <div x-show="openTentangKami" x-collapse class="ml-4 mt-2 space-y-2">
-                    <a href="<?= base_url('/profil') ?>" class="block p-2 <?= $uri->getPath() === '/profil' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Profil Perusahaan</a>
-                    <a href="<?= base_url('/managemen') ?>" class="block p-2 <?= $uri->getPath() === '/managemen' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Manajemen</a>
-                    <a href="<?= base_url('/struktur_organisasi') ?>" class="block p-2 <?= $uri->getPath() === '/struktur_organisasi' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Struktur Ogranisasi</a>
-                    <a href="<?= base_url('/awards') ?>" class="block p-2 <?= $uri->getPath() === '/awards' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Penghargaan</a>
-                    <a href="<?= base_url('/keuangan') ?>" class="block p-2 <?= $uri->getPath() === '/keuangan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Keuangan</a>
-                    <a href="<?= base_url('/piagam') ?>" class="block p-2 <?= $uri->getPath() === '/piagam' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Laporan Piagam Audit</a>
+                <div x-show="openTentangKami" x-collapse class="ml-4 space-y-1 my-1 border-l-2 border-blue-500/30 pl-3">
+                    <a href="<?= base_url('/profil') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Profil Perusahaan</a>
+                    <a href="<?= base_url('/managemen') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Manajemen</a>
+                    <a href="<?= base_url('/struktur_organisasi') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Struktur Organisasi</a>
+                    <a href="<?= base_url('/awards') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Penghargaan</a>
+                    <a href="<?= base_url('/keuangan') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Laporan Keuangan</a>
+                    <a href="<?= base_url('/piagam') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Laporan Piagam Audit</a>
                 </div>
             </div>
 
-            <!-- Produk Collapse -->
+            <!-- Mobile Produk Collapse -->
             <div>
-                <button @click="openProduk = !openProduk"
-                    class="w-full flex justify-between items-center p-2 text-gray-800 hover:bg-gray-200 rounded hover:text-blue-500">
-                    Produk
-                    <svg :class="openProduk ? 'rotate-180' : ''"
-                        class="w-5 h-5 transform transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M19 9l-7 7-7-7" />
-                    </svg>
+                <button @click="openProduk = !openProduk" class="w-full flex justify-between items-center px-3 py-2.5 text-sm font-semibold text-slate-800 hover:bg-blue-50 hover:text-blue-700 rounded-lg">
+                    Produk & Layanan
+                    <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" :class="openProduk ? 'rotate-180 text-blue-600' : ''"></i>
                 </button>
-
-                <!-- Submenu Collapse -->
-                <div x-show="openProduk" x-collapse class="ml-4 mt-2 space-y-2">
-                    <a href="<?= base_url('/tabungan') ?>" class="block p-2 <?= $uri->getPath() === '/tabungan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Tabungan</a>
-                    <a href="<?= base_url('/deposito') ?>" class="block p-2 <?= $uri->getPath() === '/deposito' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Deposito</a>
-                    <a href="<?= base_url('/pembiayaan') ?>" class="block p-2 <?= $uri->getPath() === '/pembiayaan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Pembiayaan</a>
-                    <a href="<?= base_url('/pelayanan') ?>" class="block p-2 <?= $uri->getPath() === '/pelayanan' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?> hover:bg-gray-100">Layanan Lainnya</a>
+                <div x-show="openProduk" x-collapse class="ml-4 space-y-1 my-1 border-l-2 border-blue-500/30 pl-3">
+                    <a href="<?= base_url('/tabungan') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Tabungan Syariah</a>
+                    <a href="<?= base_url('/deposito') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Deposito Mudharabah</a>
+                    <a href="<?= base_url('/pembiayaan') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Pembiayaan Syariah</a>
+                    <a href="<?= base_url('/pelayanan') ?>" class="block py-2 text-xs font-semibold text-slate-700 hover:text-blue-700">Layanan Lainnya</a>
                 </div>
             </div>
 
-            <a href="<?= base_url('/galeri') ?>" class="block p-2 <?= $uri->getPath() === '/galeri' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Galeri</a>
-            <!-- <a href="<?= base_url('/berita') ?>" class="block p-2 <?= $uri->getPath() === '/berita' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Berita</a>
-            <a href="<?= base_url('/karir') ?>" class="block p-2 <?= $uri->getPath() === '/karir' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Karir</a> -->
-            <a href="<?= base_url('/hubungi_kami') ?>" class="block p-2 <?= $uri->getPath() === '/hubungi_kami' ? 'text-blue-700 font-bold' : 'text-gray-800 hover:text-blue-500' ?>">Kontak Kami</a>
-        </div>
+            <a href="<?= base_url('/galeri') ?>" class="block px-3 py-2.5 text-sm font-semibold text-slate-800 hover:bg-blue-50 hover:text-blue-700 rounded-lg">Galeri</a>
+            <a href="<?= base_url('/hubungi_kami') ?>" class="block px-3 py-2.5 text-sm font-semibold text-slate-800 hover:bg-blue-50 hover:text-blue-700 rounded-lg">Kontak Kami</a>
 
-        <div class="grid grid-cols-2 justify-between items-center bg-blue-700 p-2 text-white font-semibold text-center">
-            <p class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-instagram"></i> Instagram</p>
-            <p class="antialiased md:subpixel-antialiased px-2"><i class="fa-brands fa-square-facebook"></i> Facebook</p>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <a href="#simulasi" class="w-full py-2.5 text-center text-xs font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-xl">
+                    <i class="fa-solid fa-calculator mr-1"></i> Simulasi Bagi Hasil / Angsuran
+                </a>
+                <a href="<?= base_url('/hubungi_kami') ?>" class="w-full py-2.5 text-center text-xs font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow">
+                    Hubungi Kami
+                </a>
+            </div>
         </div>
     </div>
 </header>

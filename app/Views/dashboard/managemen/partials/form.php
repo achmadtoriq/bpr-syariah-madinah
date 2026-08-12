@@ -1,126 +1,111 @@
-<div class="max-w-4xl mx-auto p-4 border rounded">
-    <div class="w-full grid grid-cols-1">
-        <form @submit.prevent="submitForm" class="space-y-6">
-            <!-- CSRF -->
-            <input type="hidden" name="<?= csrf_token() ?>" x-model="csrf">
+<div class="mx-auto max-w-4xl">
+    <form @submit.prevent="submitForm" class="space-y-6">
+        <input type="hidden" name="<?= csrf_token() ?>" x-model="csrf">
 
-            <div class="sm:col-span-full">
-                <label class="block text-sm font-medium text-gray-900">Upload Photo</label>
-
-                <!-- Area Upload -->
-                <div class="mt-2 w-full relative border-2 border-dashed border-gray-300 rounded-md p-6 text-center cursor-pointer transition hover:bg-gray-50"
-                    @click="$refs.fileInput.click()"
-                    x-show="!imageUrl">
-                    <input type="file" accept="image/*" class="hidden" x-ref="fileInput" @change="handleFile">
-                    <div class="flex flex-col items-center justify-center">
-                        <span class="text-4xl text-gray-400">+</span>
-                        <p class="text-sm font-medium text-gray-700 mt-2">Upload file</p>
-                        <p class="text-xs text-gray-500 mt-1">PNG, JPG, SVG, WEBP, GIF</p>
-                    </div>
-                </div>
-
-                <!-- Preview -->
-                <div class="mt-2 relative border rounded overflow-hidden" x-show="imageUrl">
-                    <button @click="resetImage" type="button" class="absolute top-1 right-1 text-xl text-black aspect-square hover:text-red-600 z-10">
-                        <i class="fa-solid fa-circle-xmark"></i>
-                    </button>
-
-                    <img :src="imageUrl" x-ref="image" class="max-h-96 mx-auto" />
+        <div>
+            <label class="block text-sm font-bold text-slate-800">Upload Photo</label>
+            <div class="mt-2 cursor-pointer rounded-lg border-2 border-dashed border-slate-300 bg-slate-50 p-8 text-center transition hover:border-emerald-400 hover:bg-emerald-50/50"
+                @click="$refs.fileInput.click()"
+                x-show="!imageUrl">
+                <input type="file" accept="image/*" class="hidden" x-ref="fileInput" @change="handleFile">
+                <div class="flex flex-col items-center justify-center">
+                    <span class="inline-flex size-12 items-center justify-center rounded-md bg-white text-slate-500 shadow-sm">
+                        <i class="fa-solid fa-plus text-lg"></i>
+                    </span>
+                    <p class="mt-3 text-sm font-bold text-slate-700">Upload file</p>
+                    <p class="mt-1 text-xs text-slate-500">PNG, JPG, SVG, WEBP, GIF</p>
                 </div>
             </div>
 
-            <!-- Category -->
-            <div class="sm:col-span-full">
-                <label for="role_id" class="block text-sm font-medium mb-2">Kategori</label>
+            <div class="relative mt-2 overflow-hidden rounded-lg border border-slate-200 bg-slate-100" x-show="imageUrl">
+                <button @click="resetImage" type="button" class="absolute right-2 top-2 z-10 inline-flex size-8 items-center justify-center rounded-full bg-white text-red-600 shadow hover:bg-red-50">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+                <img :src="imageUrl" x-ref="image" class="mx-auto max-h-96" />
+            </div>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-2">
+            <div class="md:col-span-2">
+                <label for="role_id" class="block text-sm font-bold text-slate-800">Kategori</label>
                 <div class="mt-2 grid grid-cols-1">
-                    <select id="role_id" name="role_id" x-model="form.role" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <select id="role_id" name="role_id" x-model="form.role" data-select2 data-placeholder="Pilih kategori" class="col-start-1 row-start-1 w-full appearance-none rounded-md border border-slate-300 bg-white py-2 pl-3 pr-8 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
                         <option value="" disabled>Pilih kategori</option>
                         <?php
-                        $categories = array(
-                            "1" => "Pemegang Saham",
-                            "2" => "Dewan Komisaris",
-                            "3" => "Dewan Pengawas Syariah",
-                            "4" => "Direksi"
-                        );
+                        $categories = [
+                            '1' => 'Pemegang Saham',
+                            '2' => 'Dewan Komisaris',
+                            '3' => 'Dewan Pengawas Syariah',
+                            '4' => 'Direksi',
+                        ];
                         ?>
-                        <?php if (isset($categories) && is_array($categories)): ?>
-                            <?php foreach ($categories as $key => $cat): ?>
-                                <option value="<?= esc($key) ?>">
-                                    <?= esc($cat) ?>
-                                </option>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
+                        <?php foreach ($categories as $key => $cat): ?>
+                            <option value="<?= esc($key) ?>"><?= esc($cat) ?></option>
+                        <?php endforeach; ?>
                     </select>
-                    <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4">
-                        <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
-                    </svg>
                 </div>
             </div>
 
-            <div class="col-span-full">
-                <label for="jabatan" class="block text-sm font-medium mb-2">Jabatan</label>
-                <input type="text" name="jabatan" x-model="form.jabatan" class="border p-2 w-full">
+            <div>
+                <label for="jabatan" class="block text-sm font-bold text-slate-800">Jabatan</label>
+                <input type="text" name="jabatan" x-model="form.jabatan" class="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
             </div>
 
-            <div class="col-span-full">
-                <label for="name" class="block text-sm font-medium mb-2">Nama</label>
-                <input type="text" name="name" x-model="form.nama" class="border p-2 w-full">
+            <div>
+                <label for="name" class="block text-sm font-bold text-slate-800">Nama</label>
+                <input type="text" name="name" x-model="form.nama" class="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
             </div>
 
-            <div class="col-span-full">
-                <label for="kewarganegaraan" class="block text-sm font-medium mb-2">Kewarganegaraan</label>
-                <input type="text" name="kewarganegaraan" x-model="form.kewarganegaraan" class="border p-2 w-full">
+            <div>
+                <label for="kewarganegaraan" class="block text-sm font-bold text-slate-800">Kewarganegaraan</label>
+                <input type="text" name="kewarganegaraan" x-model="form.kewarganegaraan" class="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
             </div>
 
-            <div class="col-span-full">
-                <label for="tempat_lahir" class="block text-sm font-medium mb-2">Tempat Lahir</label>
-                <input type="text" name="tempat_lahir" x-model="form.tempat_lahir" class="border p-2 w-full">
+            <div>
+                <label for="tempat_lahir" class="block text-sm font-bold text-slate-800">Tempat Lahir</label>
+                <input type="text" name="tempat_lahir" x-model="form.tempat_lahir" class="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
             </div>
 
-            <div class="col-span-full">
-                <label for="tanggal_lahir" class="block text-sm font-medium mb-2">Tanggal Lahir</label>
-                <input type="date" name="tanggal_lahir" x-model="form.tanggal_lahir" class="border p-2 w-full">
+            <div>
+                <label for="tanggal_lahir" class="block text-sm font-bold text-slate-800">Tanggal Lahir</label>
+                <input type="date" name="tanggal_lahir" x-model="form.tanggal_lahir" class="mt-2 w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
             </div>
+        </div>
 
-            <div class="col-span-full space-y-4">
-                <!-- Pendidikan -->
-                <template x-for="(item, index) in form.pendidikan" :key="index">
-                    <div class="flex gap-2 mt-1">
-                        <input type="text" x-model="form.pendidikan[index]" class="border p-2 flex-1">
-                        <button x-show="index > 0" type="button" @click="removeField('pendidikan', index)" class="text-red-500 font-semibold"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                </template>
-                <button type="button" @click="addField('pendidikan')" class="bg-green-500 text-white font-semibold px-2 py-1 rounded mt-2">+ Pendidikan</button>
-            </div>
+        <?php
+        $repeaters = [
+            'pendidikan' => 'Pendidikan',
+            'pengalaman_kerja' => 'Pengalaman',
+            'pelatihan' => 'Pelatihan',
+        ];
+        ?>
+        <div class="grid gap-5 lg:grid-cols-3">
+            <?php foreach ($repeaters as $field => $label): ?>
+                <div class="rounded-lg bg-slate-50 p-4 ring-1 ring-slate-200">
+                    <label class="block text-sm font-bold text-slate-800"><?= esc($label) ?></label>
+                    <template x-for="(item, index) in form.<?= $field ?>" :key="index">
+                        <div class="mt-2 flex gap-2">
+                            <input type="text" x-model="form.<?= $field ?>[index]" class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
+                            <button x-show="index > 0" type="button" @click="removeField('<?= $field ?>', index)" class="inline-flex size-9 shrink-0 items-center justify-center rounded-md bg-red-50 text-red-600 ring-1 ring-red-100 hover:bg-red-100">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                    </template>
+                    <button type="button" @click="addField('<?= $field ?>')" class="mt-3 inline-flex items-center gap-2 rounded-md bg-white px-3 py-2 text-xs font-bold text-slate-700 ring-1 ring-slate-200 transition hover:text-emerald-700">
+                        <i class="fa-solid fa-plus text-xs"></i>
+                        <?= esc($label) ?>
+                    </button>
+                </div>
+            <?php endforeach; ?>
+        </div>
 
-            <div class="col-span-full space-y-4">
-                <!-- Pengalaman Kerja -->
-                <template x-for="(item, index) in form.pengalaman_kerja" :key="index">
-                    <div class="flex gap-2 mt-1">
-                        <input type="text" x-model="form.pengalaman_kerja[index]" class="border p-2 flex-1">
-                        <button x-show="index > 0" type="button" @click="removeField('pengalaman_kerja', index)" class="text-red-500 font-semibold"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                </template>
-                <button type="button" @click="addField('pengalaman_kerja')" class="bg-green-500 text-white font-semibold px-2 py-1 rounded mt-2">+ Pengalaman</button>
-            </div>
-
-            <div class="col-span-full space-y-4">
-                <!-- Pelatihan -->
-                <template x-for="(item, index) in form.pelatihan" :key="index">
-                    <div class="flex gap-2 mt-1">
-                        <input type="text" x-model="form.pelatihan[index]" class="border p-2 flex-1">
-                        <button x-show="index > 0" type="button" @click="removeField('pelatihan', index)" class="text-red-500 font-semibold"><i class="fa-solid fa-xmark"></i></button>
-                    </div>
-                </template>
-                <button type="button" @click="addField('pelatihan')" class="bg-green-500 text-white font-semibold px-2 py-1 rounded mt-2">+ Pelatihan</button>
-            </div>
-
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded mt-4 block">
+        <div class="flex justify-end">
+            <button type="submit" class="inline-flex items-center gap-2 rounded-md bg-emerald-600 px-5 py-2 text-sm font-bold text-white transition hover:bg-emerald-700">
+                <i class="fa-solid fa-floppy-disk text-xs"></i>
                 Simpan
             </button>
-        </form>
-    </div>
+        </div>
+    </form>
 
-    <!-- Notifikasi -->
-    <div x-show="message" x-text="message" class="mt-4 p-2 rounded bg-green-100 text-green-700"></div>
+    <div x-show="message" x-text="message" class="mt-5 rounded-md bg-emerald-50 p-3 text-sm font-semibold text-emerald-700 ring-1 ring-emerald-100"></div>
 </div>

@@ -84,6 +84,54 @@ class NewsController extends BaseController
         return redirect()->to('/artikel')->with('success', 'Artikel berhasil dibuat.');
     }
 
+    public function uploadImage()
+    {
+        $file = $this->request->getFile('upload');
+
+        if (!$file || !$file->isValid()) {
+            return $this->response
+                ->setStatusCode(ResponseInterface::HTTP_BAD_REQUEST)
+                ->setJSON([
+                    'error' => [
+                        'message' => 'Gambar tidak valid.',
+                    ],
+                ]);
+        }
+
+        if (!str_starts_with((string) $file->getMimeType(), 'image/')) {
+            return $this->response
+                ->setStatusCode(ResponseInterface::HTTP_BAD_REQUEST)
+                ->setJSON([
+                    'error' => [
+                        'message' => 'File harus berupa gambar.',
+                    ],
+                ]);
+        }
+
+        if ($file->getSizeByUnit('mb') > 5) {
+            return $this->response
+                ->setStatusCode(ResponseInterface::HTTP_BAD_REQUEST)
+                ->setJSON([
+                    'error' => [
+                        'message' => 'Ukuran gambar maksimal 5MB.',
+                    ],
+                ]);
+        }
+
+        $uploadPath = FCPATH . 'articles/uploads';
+
+        if (!is_dir($uploadPath)) {
+            mkdir($uploadPath, 0775, true);
+        }
+
+        $fileName = $file->getRandomName();
+        $file->move($uploadPath, $fileName);
+
+        return $this->response->setJSON([
+            'url' => base_url('articles/uploads/' . $fileName),
+        ]);
+    }
+
     public function show($slug = null)
     {
         $articleModel = new NewsModel();

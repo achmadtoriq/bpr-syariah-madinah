@@ -7,6 +7,7 @@ function fileUpload() {
     loading: false,
     loadingDownload: null,
     category: '',
+    searchQuery: '',
 
     checkFile() {
       const file = this.$refs.fileInput.files[0];
