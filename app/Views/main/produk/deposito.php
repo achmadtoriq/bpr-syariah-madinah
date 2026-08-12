@@ -110,6 +110,7 @@
                 <!-- Inputs Left -->
                 <div class="md:col-span-7 space-y-6">
                     <!-- Nominal Slider & Input -->
+                    <div class="space-y-2">
                         <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 mb-1">
                             <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Nominal Penempatan Deposito</label>
                             <div class="relative w-full sm:w-56">
