@@ -114,8 +114,8 @@
                         <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 mb-1">
                             <label class="text-xs font-bold text-slate-700 uppercase tracking-wider">Nominal Penempatan Deposito</label>
                             <div class="relative w-full sm:w-56">
-                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-blue-700 font-bold text-xs">Rp</span>
-                                <input type="text" inputmode="numeric" pattern="[0-9]*" :value="formatNumberInput(nominal)" @input="let val = $event.target.value.replace(/\D/g, ''); nominal = val ? parseInt(val, 10) : 0; $event.target.value = formatNumberInput(nominal)" class="w-full bg-white border border-slate-300 focus:border-blue-600 rounded-xl pl-9 pr-3 py-1.5 text-blue-700 font-extrabold text-sm focus:outline-none transition shadow-sm text-right">
+                                <span class="absolute left-3 top-1/2 -translate-y-1/2 text-blue-700 font-extrabold text-xs pointer-events-none">Rp</span>
+                                <input type="text" inputmode="numeric" pattern="[0-9]*" :value="formatNumberInput(nominal)" x-effect="$el.value = formatNumberInput(nominal)" @input="let val = $event.target.value.replace(/\D/g, ''); nominal = val ? parseInt(val, 10) : 0" class="w-full bg-white border-2 border-slate-300 focus:border-blue-600 rounded-xl pl-10 pr-3 py-2 text-slate-900 font-extrabold text-sm focus:outline-none transition shadow-sm text-left">
                             </div>
                         </div>
                         <input type="range" min="500000" max="100000000" step="500000" x-model.number="nominal" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600">
@@ -127,17 +127,17 @@
                     </div>
 
                     <!-- Preset Nominal Pills -->
-                    <div class="flex flex-wrap gap-2">
-                        <button @click="nominal = 1000000" :class="nominal === 1000000 ? 'bg-blue-600 text-white font-bold' : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 font-semibold'" class="px-3 py-1.5 text-xs rounded-xl transition cursor-pointer">
+                    <div class="flex flex-wrap gap-2.5">
+                        <button @click="nominal = 1000000" :class="nominal === 1000000 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-400 font-semibold'" class="px-4 py-2 text-xs rounded-xl border border-slate-300 transition cursor-pointer shadow-sm">
                             Rp 1 Juta
                         </button>
-                        <button @click="nominal = 5000000" :class="nominal === 5000000 ? 'bg-blue-600 text-white font-bold' : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 font-semibold'" class="px-3 py-1.5 text-xs rounded-xl transition cursor-pointer">
+                        <button @click="nominal = 5000000" :class="nominal === 5000000 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-400 font-semibold'" class="px-4 py-2 text-xs rounded-xl border border-slate-300 transition cursor-pointer shadow-sm">
                             Rp 5 Juta
                         </button>
-                        <button @click="nominal = 10000000" :class="nominal === 10000000 ? 'bg-blue-600 text-white font-bold' : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 font-semibold'" class="px-3 py-1.5 text-xs rounded-xl transition cursor-pointer">
+                        <button @click="nominal = 10000000" :class="nominal === 10000000 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-400 font-semibold'" class="px-4 py-2 text-xs rounded-xl border border-slate-300 transition cursor-pointer shadow-sm">
                             Rp 10 Juta
                         </button>
-                        <button @click="nominal = 50000000" :class="nominal === 50000000 ? 'bg-blue-600 text-white font-bold' : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200 font-semibold'" class="px-3 py-1.5 text-xs rounded-xl transition cursor-pointer">
+                        <button @click="nominal = 50000000" :class="nominal === 50000000 ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-md' : 'bg-white text-slate-700 border-slate-300 hover:bg-blue-50 hover:border-blue-400 font-semibold'" class="px-4 py-2 text-xs rounded-xl border border-slate-300 transition cursor-pointer shadow-sm">
                             Rp 50 Juta
                         </button>
                     </div>
