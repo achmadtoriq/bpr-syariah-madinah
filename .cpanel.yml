@@ -3,6 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/bprsmadi/bpr-syariah-madinah-test
     - /bin/cp deploy.sh $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH 2>/dev/null || true
+    - /bin/cp public/.htaccess $DEPLOYPATH/public/.htaccess 2>/dev/null || true
     - /bin/chmod +x $DEPLOYPATH/deploy.sh
     - $DEPLOYPATH/deploy.sh
