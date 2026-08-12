@@ -1,11 +1,8 @@
 ---
 # Konfigurasi Auto-Deployment cPanel Git Version Control
-# Ganti DEPLOYPATH sesuai lokasi folder website Anda di cPanel
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/username/public_html
-    - /bin/cp -R * $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH 2>/dev/null || true
+    - export DEPLOYPATH=/home/bprsmadi/repositories/bpr-syariah-madinah
     - cd $DEPLOYPATH
     - chmod +x deploy.sh
     - ./deploy.sh
